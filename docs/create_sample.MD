@@ -1,9 +1,0 @@
-# Sample design
-
-The sampling design is the protocol for selecting the subset of spatial units (e.g., pixels or segments) that will form the basis of the analysis of area and accuracy. Is it recommended that the sampling design is a probability sampling design, which incorporates randomization in the selection protocol and is defined in terms of inclusion probabilities such that the inclusion probability is known and greater than zero for each unit in the sample. A variety of probability sampling designs are applicable, with the most commonly used designs being simple random, stratified random, systematic and clustered. When choosing a design, three main decisions are whether to use clusters, whether to use strata, and whether to use a systematic or simple random protocol. The primary motivation for cluster sampling is to reduce the cost of data collection – for example, if the map is large and high resolution data need to be collected for each unit in the sample, a clustered design will allow for collection only for the primary sampling units and not for the entire population (cluster designs as defined in this text include 2-stage designs). However, the use of clusters is recommended only if cost savings or practical advantages are substantial as it results in a more complex analysis and because the potential correlation among units within a cluster (i.e., intracluster correlation) often reduces precision relative to a simple random sample of equal size. The use of strata is usually motivated by the fact that land cover change is a small proportion of the total map and if not stratifying the sample, a very large sample might be required to implement the analysis. A stratified design is therefore usually a good choice, especially if  the aim is to estimate land cover change. 
-
-Currently, we have implemented three sampling designs:
-
-- [Stratified Random](./)
-- [Simple Random](./)
-- [Systematic](./)

@@ -1,0 +1,49 @@
+Google Earth Engine Assessment Toolbox
+======================================
+
+Tools and guidance for performing an accuracy assessment and area estimation on the Google Earth Engine.
+
+
+Background
+__________
+
+.. toctree::
+   :maxdepth: 2
+   :caption: test
+
+   motivation
+   definitions
+
+Sampling
+________
+
+.. toctree::
+   :maxdepth: 2
+
+   srs_sample
+   str_sample
+   sys_sample
+   cluster_sample
+
+Interpretation
+_____________
+
+.. toctree::
+   :maxdepth: 2
+
+   resp_design
+   tsviewer
+   colearth
+   timesync
+
+
+
+
+
+Indices and tables
+==================
+
+* :ref:`genindex`
+* :ref:`modindex`
+* :ref:`search`
+

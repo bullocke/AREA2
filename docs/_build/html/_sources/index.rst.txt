@@ -1,5 +1,5 @@
-Google Earth Engine Assessment Toolbox
-======================================
+Google Earth Engine Area/Accuracy Estimation Toolbox
+====================================================
 
 Tools and guidance for estimating accuracy and area on the Google Earth Engine.
 

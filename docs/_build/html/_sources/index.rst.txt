@@ -1,7 +1,7 @@
 Google Earth Engine Assessment Toolbox
 ======================================
 
-Tools and guidance for performing an accuracy assessment and area estimation on the Google Earth Engine.
+Tools and guidance for estimating accuracy and area on the Google Earth Engine.
 
 .. toctree::
    :maxdepth: 2

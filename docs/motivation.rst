@@ -8,7 +8,7 @@ A common bottleneck in the implementation of inference protocols is the collecti
 
 - **Sampling design**: support for four designs: simple random, simple systematic stratified random and stratified systematic. For stratified designs, a map should provided where the map classes correspond to strata. Currently, the assessment unit is a 30 m x 30 m pixel and the output a shapefile that contains the locations of the units in the sample. Users can arbitrarily set or determine the sample size and the allocation of sample units to strata according to the literature recommendations.
 - **Response design**: support for visualization of time series of Landsat data and display of Landsat and Sentinel-2 for sample locations.
-- **Analysis**: support for use of the stratified estimator[1,4]_ and the model-assisted regression estimator[2,5]_. Both estimator provide estimates of the area of each category in the map provided; user's and producer's accuracy of each category; overall map accuracy; and confidence intervals for each estimate.
+- **Analysis**: support for use of the stratified estimator [1]_ and the model-assisted regression estimator [2]_. Both estimator provide estimates of the area of each category in the map provided; user's and producer's accuracy of each category; overall map accuracy; and confidence intervals for each estimate.
 
 .. [1] Olofsson P, et al. (2013). Making better use of accuracy data in land change studies: Estimating accuracy and area... Remote Sensing of Environment, 129, 122-131.
 

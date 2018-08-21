@@ -1,6 +1,5 @@
 
 
-
 <!DOCTYPE html>
 <!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
@@ -9,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Index &mdash; gee-assessment-tools 0.1 documentation</title>
+  <title>Overview &mdash; gee-assessment-tools 0.1 documentation</title>
   
 
   
@@ -27,8 +26,10 @@
 
   <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <link rel="index" title="Index" href="#" />
-    <link rel="search" title="Search" href="search.html" /> 
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Theoretical background" href="motivation.html" />
+    <link rel="prev" title="Google Earth Engine Area/Accuracy Estimation Toolbox" href="index.html" /> 
 
   
   <script src="_static/js/modernizr.min.js"></script>
@@ -82,8 +83,8 @@
             
             
               <p class="caption"><span class="caption-text">Background</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="overview.html">Overview</a></li>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Overview</a></li>
 <li class="toctree-l1"><a class="reference internal" href="motivation.html">Theoretical background</a></li>
 <li class="toctree-l1"><a class="reference internal" href="definitions.html">Terminology</a></li>
 </ul>
@@ -151,12 +152,14 @@
     
       <li><a href="index.html">Docs</a> &raquo;</li>
         
-      <li>Index</li>
+      <li>Overview</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
+            <a href="_sources/overview.rst.txt" rel="nofollow"> View page source</a>
+          
         
       </li>
     
@@ -168,11 +171,15 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-
-<h1 id="index">Index</h1>
-
-<div class="genindex-jumpbox">
- 
+  <div class="section" id="overview">
+<h1>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h1>
+<p>As explained in the <a href="#id1"><span class="problematic" id="id2">`Theoretical Background`_</span></a>, areas of map categories should not be obtained by counting pixels in maps because of classification errors. Instead, a sample of reference observations need to be collected to which an unbiased estimator is applied to obtain an area estimate with confidence intervals. The tools provided here lend support for each step the estimation workflow.</p>
+<p>The first step is selecting the sample locations where to observe reference conditions. Support for several sampling designs are provided. If land change is of interest, which is often a small part of the study area, stratified sampling is recommended with the categories of change map are used to define strata. Simple random sampling is also supported, as are stratified and simple systematic sampling.</p>
+<p>The big benefit of Google Earth Engine is that the data needed to observe the reference conditions on the land surface are available without having to download the data. A couple of different applications are available to users to collect the reference observations</p>
+<p>Response Design</p>
+<p>Timeseries Viewer</p>
+<p>Collection Earth</p>
+<p>TimeSync</p>
 </div>
 
 
@@ -180,6 +187,15 @@
            
           </div>
           <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="motivation.html" class="btn btn-neutral float-right" title="Theoretical background" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral" title="Google Earth Engine Area/Accuracy Estimation Toolbox" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
   
 
   <hr/>

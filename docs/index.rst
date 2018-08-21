@@ -7,6 +7,7 @@ Tools and guidance for estimating area and map accuracy on the Google Earth Engi
    :maxdepth: 2
    :caption: Background
 
+   overview
    motivation
    definitions
 

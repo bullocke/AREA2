@@ -1,4 +1,3 @@
-.. _background:
 Theoretical background
 ======================
 

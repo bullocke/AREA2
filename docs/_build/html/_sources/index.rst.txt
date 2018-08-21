@@ -32,6 +32,8 @@ Tools and guidance for estimating area and map accuracy on the Google Earth Engi
    :maxdepth: 2
    :caption: Analysis
 
-   str_estimator
-   direct_estimator
-   ratio_estimator
+   estimator_guidance
+   estimator_str
+   estimator_post_str
+   estimator_mod
+   estimator_ratio

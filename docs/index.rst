@@ -5,10 +5,10 @@ Tools and guidance for estimating area and map accuracy on the Google Earth Engi
 
 .. toctree::
    :maxdepth: 2
-   :caption: Background
+   :caption: Introduction
 
    overview
-   motivation
+   background
    definitions
 
 .. toctree::

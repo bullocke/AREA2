@@ -1,5 +1,5 @@
-Systematic Sample
-=================
+Simple Systematic Sample
+========================
 
-Instructions for creating a systematic sample. 
+Instructions for creating a simple systematic sample. 
 

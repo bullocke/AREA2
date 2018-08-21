@@ -1,7 +1,7 @@
 Google Earth Engine Area/Accuracy Estimation Toolbox
 ====================================================
 
-Tools and guidance for estimating accuracy and area on the Google Earth Engine.
+Tools and guidance for estimating area and map accuracy on the Google Earth Engine.
 
 .. toctree::
    :maxdepth: 2

@@ -92,13 +92,13 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="srs_sample.html">Simple Random Sample</a></li>
 <li class="toctree-l1"><a class="reference internal" href="str_sample.html">Stratified Random Sample</a></li>
-<li class="toctree-l1"><a class="reference internal" href="sys_sample.html">Systematic Sample</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sys_sample.html">Simple Systematic Sample</a></li>
+<li class="toctree-l1"><a class="reference internal" href="str_sys_sample.html">Stratified Systematic Sample</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Interpretation</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="resp_design.html">Response Design</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tsviewer.html">Timeseries Viewer</a></li>
-<li class="toctree-l1"><a class="reference internal" href="colearth.html">Collection Earth</a></li>
+<li class="toctree-l1"><a class="reference internal" href="colearth.html">Collect Earth</a></li>
 <li class="toctree-l1"><a class="reference internal" href="timesync.html">TimeSync</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Analysis</span></p>
@@ -173,11 +173,9 @@
   <div class="section" id="overview">
 <h1>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h1>
 <p>As explained in the <a class="reference external" href="https://gee-assessment-tools.readthedocs.io/en/latest/background.html">Theoretical Background</a>, areas of map categories should not be obtained by counting pixels in maps because of classification errors. Instead, a sample of reference observations need to be collected to which an unbiased estimator is applied to obtain an area estimate with confidence intervals. The tools provided here lend support for each step the estimation workflow.</p>
-<p>The first step is selecting the sample locations where to observe reference conditions. Support for several sampling designs are provided. If land change is of interest, which is often a small part of the study area, <a class="reference external" href="https://gee-assessment-tools.readthedocs.io/en/latest/str_sample.html">stratified sampling</a> is recommended with the categories of change map are used to define strata. <a class="reference external" href="https://gee-assessment-tools.readthedocs.io/en/latest/srs_sample.html">Simple random</a> sampling is also supported, as are <a class="reference external" href="https://gee-assessment-tools.readthedocs.io/en/latest/sys_sample.html">stratified</a> and <a class="reference external" href="https://gee-assessment-tools.readthedocs.io/en/latest/sys_str_sample.html">simple systematic</a> sampling.</p>
-<p>The big benefit of Google Earth Engine is that the data needed to observe the reference conditions on the land surface are available without having to download the data. A couple of different applications are available to users to collect the reference observations</p>
-<p><a class="reference external" href="https://gee-assessment-tools.readthedocs.io/en/latest/tsviewer.html">Timeseries Viewer</a></p>
-<p><a class="reference external" href="https://gee-assessment-tools.readthedocs.io/en/latest/colearth.html">Collection Earth</a></p>
-<p><a class="reference external" href="https://gee-assessment-tools.readthedocs.io/en/latest/timesync.html">TimeSync</a></p>
+<p>The first step is selecting the sample locations where you will need to observe reference conditions. Support for several sampling designs are provided. If land change is of interest, which is often a small part of the study area, <a class="reference external" href="https://gee-assessment-tools.readthedocs.io/en/latest/str_sample.html">stratified sampling</a> is recommended with the categories of change map are used to define strata. <a class="reference external" href="https://gee-assessment-tools.readthedocs.io/en/latest/srs_sample.html">Simple random</a> sampling is also supported, as are <a class="reference external" href="https://gee-assessment-tools.readthedocs.io/en/latest/sys_sample.html">stratified</a> and <a class="reference external" href="https://gee-assessment-tools.readthedocs.io/en/latest/sys_str_sample.html">simple systematic</a> sampling.</p>
+<p>The big benefit of Google Earth Engine is that the data needed to observe the reference conditions on the land surface are available without having to download the data. A couple of different applications are available to users to collect the reference observations: <a class="reference external" href="https://gee-assessment-tools.readthedocs.io/en/latest/tsviewer.html">Timeseries Viewer</a> is Google Earth Engine application that extracts time series of all available Landsat and Sentinel-2 observations for reconstruction of changes on the land surface. <a class="reference external" href="https://gee-assessment-tools.readthedocs.io/en/latest/colearth.html">Collect Earth</a> is part of UN-FAO’s OpenForis initiative provides access to high resolution data in Google Earth and Bing Maps. <a class="reference external" href="https://gee-assessment-tools.readthedocs.io/en/latest/timesync.html">TimeSync</a> is similar to the Timeseries Viewer and provide access to time series of Landsat data.</p>
+<p>Once the sample data has been collected, an estimator that corresponds to the sampling design provide an estimate when applied to the sample data. Support for application of various estimators are provided in addition to guidance for choosing an appropriate estimator.</p>
 </div>
 
 

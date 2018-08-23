@@ -1,4 +1,4 @@
 TimeSync
 ________
 
-Sample interpretation using TimeSync.
+Coming soon

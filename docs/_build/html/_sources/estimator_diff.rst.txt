@@ -1,4 +1,5 @@
-Simple Random Sample
+Stratified Estimator
 ====================
 
 Coming soon
+

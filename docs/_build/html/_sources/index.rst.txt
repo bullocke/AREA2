@@ -36,4 +36,5 @@ Tools and guidance for estimating area and map accuracy on the Google Earth Engi
    estimator_str
    estimator_post_str
    estimator_mod
+   estimator_diff
    estimator_ratio

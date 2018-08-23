@@ -1,7 +1,7 @@
 Choosing an estimator
 =====================
 
-We provide support for four different estimators. Consider the following when choosing between estimators:
+We provide support for five different estimators. Consider the following when choosing between estimators:
 
 **Stratified estimator**. The stratified estimator is recommended for estimating population parameters from sample data obtained by stratified random sampling. The estimator is expressed as the sum of the means of the simple random samples within strata weighted by stratum weights calculated as relative proportions of the population within strata.
 

@@ -1,4 +1,4 @@
-Model-assisted Difference Estimator
+Model-assisted Difference Estimator |check|
 ===================================
 
 Coming soon

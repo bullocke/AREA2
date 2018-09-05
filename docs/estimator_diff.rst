@@ -15,7 +15,7 @@ Coming soon
 |bsolb|  
 |Cap|    
 |capand| 
-|capbrcup
+|capbrcup| 
 |capcap| 
 |capcup| 
 |capdot| 
@@ -25,7 +25,7 @@ Coming soon
 |ccupssm|
 |coprod| 
 |Cup|    
-|cupbrcap
+|cupbrcap| 
 |cupcap| 
 |cupcup| 
 |cupdot| 
@@ -70,9 +70,9 @@ Coming soon
 |osol|   
 |Otimes| 
 |otimes| 
-|otimesas
+|otimesas| 
 |ovbar|  
-|plusacir
+|plusacir| 
 |plusb|  
 |pluscir|
 |plusdo| 
@@ -102,11 +102,11 @@ Coming soon
 |sum|    
 |supdot| 
 |timesb| 
-|timesbar
+|timesbar| 
 |timesd| 
 |top|    
 |tridot| 
-|triminus
+|triminus| 
 |triplus|
 |trisb|  
 |tritime|

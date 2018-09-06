@@ -1,7 +1,7 @@
 .. include:: <isopub.txt> 
 
 Choosing an estimator |check|
-=====================
+=============================
 
 We provide support for five different estimators. Consider the following when choosing between estimators:
 

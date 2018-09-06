@@ -1,5 +1,7 @@
-Stratified Random Sample
-========================
+.. include:: <isopub.txt> 
+
+Stratified Random Sample |cir|
+==============================
 
 Coming soon
 

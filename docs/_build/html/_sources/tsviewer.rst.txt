@@ -1,5 +1,7 @@
-Timeseries Viewer
-_________________
+.. include:: <isopub.txt> 
+
+Timeseries Viewer |cir|
+=======================
 
 Coming soon
 

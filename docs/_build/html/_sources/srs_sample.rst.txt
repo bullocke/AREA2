@@ -19,6 +19,5 @@ Target sample size
  7-2. If choosing to specify an arbitrary sample size, simply add a number under *Specify sample size*, and click *Create sample*.
 
  
- 
-To view, the sample in the Display pane, click *Add to map*
-To export the sample, click *Export sample* and select the desired file format.
+8. To view, the sample in the Display pane, click *Add to map*
+9. To export the sample, click *Export sample* and select the desired file format.

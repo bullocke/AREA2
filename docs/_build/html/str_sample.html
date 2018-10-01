@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Stratified Random Sample ○ &mdash; gee-assessment-tools 0.1 documentation</title>
+  <title>Stratified Random Sample ✓ &mdash; gee-assessment-tools 0.1 documentation</title>
   
 
   
@@ -29,7 +29,7 @@
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Simple Systematic Sample ○" href="sys_sample.html" />
-    <link rel="prev" title="Simple Random Sample ○" href="srs_sample.html" /> 
+    <link rel="prev" title="Simple Random Sample ✓" href="srs_sample.html" /> 
 
   
   <script src="_static/js/modernizr.min.js"></script>
@@ -90,8 +90,8 @@
 </ul>
 <p class="caption"><span class="caption-text">Sampling</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="srs_sample.html">Simple Random Sample ○</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Stratified Random Sample ○</a></li>
+<li class="toctree-l1"><a class="reference internal" href="srs_sample.html">Simple Random Sample ✓</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Stratified Random Sample ✓</a></li>
 <li class="toctree-l1"><a class="reference internal" href="sys_sample.html">Simple Systematic Sample ○</a></li>
 <li class="toctree-l1"><a class="reference internal" href="str_sys_sample.html">Stratified Systematic Sample ○</a></li>
 </ul>
@@ -154,7 +154,7 @@
     
       <li><a href="index.html">Docs</a> &raquo;</li>
         
-      <li>Stratified Random Sample ○</li>
+      <li>Stratified Random Sample ✓</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -173,9 +173,54 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="stratified-random-sample-cir">
-<h1>Stratified Random Sample ○<a class="headerlink" href="#stratified-random-sample-cir" title="Permalink to this headline">¶</a></h1>
-<p>Coming soon</p>
+  <div class="section" id="stratified-random-sample-check">
+<h1>Stratified Random Sample ✓<a class="headerlink" href="#stratified-random-sample-check" title="Permalink to this headline">¶</a></h1>
+<p>Selecting a sample by stratified random sampling requires you to specify a map to define strata,  a total sample size, and an allocation of sample units to strata.</p>
+<ol class="arabic simple">
+<li>Start by running the Sampling Design script in the Scripts pane.</li>
+<li>In the first entry box <em>Specify an image ID and sampling scheme</em>, specify a map that defines the study area. Because you are not using strata or clusters, the contents of the map does not matter.</li>
+<li>Under <em>Specify band if a multi-band map (if not, specify 1)</em>: if you are using a map that contains multiple bands, specify which band you want to use to define the study area.  Otherwise, just specify “1”.</li>
+<li>If the map has a no-data value or if you want to exclude a certain value in the map when defining the study area, specify the value in <em>Specify no data value</em>.</li>
+<li>Click <em>Load image</em> – the map should be displayed in the image pane.</li>
+<li>Under <em>Select a sampling scheme</em>, select <em>Stratified Random</em></li>
+<li>Under <em>Determine sample size</em>, you can either specify an arbitrary sample size or determine the sample size by specifying a target standard error of the anticipated overall accuracy of the map that is being assessed.</li>
+</ol>
+<dl class="docutils">
+<dt>If specifying arbitrary sample size</dt>
+<dd><ol class="first last upperroman simple">
+<li>If choosing to specify an arbitrary sample size, simply specify the sample size in each stratum.</li>
+<li>Click <em>Create sample</em>.</li>
+</ol>
+</dd>
+<dt>If specifying a target precision of the overall accuracy</dt>
+<dd><ol class="first last upperroman simple">
+<li>To determine the sample size required to meet a certain target standard error of the overall accuracy require you to specify the anticipated user’s accuracy of each of the map classes used as strata under <em>Specify anticipated user’s accuracies (0-1)</em></li>
+<li>Then <em>Specify target standard error of overall accuracy (0-1)</em> and click <em>Calculate sample size</em> – the sample size is calculated using Equation 13 in <a class="footnote-reference" href="#id3" id="id1">[1]</a> which is derived from Equation 5.25 in <a class="footnote-reference" href="#id4" id="id2">[2]</a>.</li>
+<li>Click <em>Create sample</em>.</li>
+</ol>
+</dd>
+<dt>If specifying a target precision of an area estimate</dt>
+<dd><ol class="first last upperroman simple">
+<li>[Coming soon]</li>
+</ol>
+</dd>
+</dl>
+<ol class="arabic simple" start="8">
+<li>To view, the sample in the Display pane, click <em>Add to map</em></li>
+<li>To export the sample, click <em>Export sample</em> and select the desired file format.</li>
+</ol>
+<table class="docutils footnote" frame="void" id="id3" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id1">[1]</a></td><td>Olofsson, P., Foody, G. M., Herold, M., Stehman, S. V., Woodcock, C. E., &amp; Wulder, M. A. (2014). Good practices for estimating area and assessing accuracy of land change. <em>Remote Sensing of Environment</em>, 148, 42-57.</td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="id4" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id2">[2]</a></td><td>Cochran, W. G. (1977). <em>Sampling techniques</em>. John Wiley &amp; Sons.</td></tr>
+</tbody>
+</table>
 </div>
 
 
@@ -189,7 +234,7 @@
         <a href="sys_sample.html" class="btn btn-neutral float-right" title="Simple Systematic Sample ○" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="srs_sample.html" class="btn btn-neutral" title="Simple Random Sample ○" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="srs_sample.html" class="btn btn-neutral" title="Simple Random Sample ✓" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

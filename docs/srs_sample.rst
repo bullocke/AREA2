@@ -13,15 +13,13 @@ Selecting a sample by simple random sampling requires you to specify the study a
 6. Under *Select a sampling scheme*, select *Simple Random* 
 7. Under *Determine sample size*, you can either specify an arbitrary sample size or determine the sample size by specifying a target standard error of the anticipated overall accuracy of the map that is being assessed.
 
-Arbitrary sample size
+If specifying arbitrary sample size
  7-1. If choosing to specify an arbitrary sample size, simply add a number under *Specify sample size*.
  7-2. Click *Create sample*. 
-Target sample size
- 7-2. To determine the sample size required to meet a certain target standard error of the overall accuracy, first specify the anticipated overall accuracy of the map you are assessing under *Specify anticipated overall accuracy (0-1)*
- 7-3. Then *Specify target standard error of overall accuracy (0-1)* and click *Calculate sample size* -- the sample size is calculated using Equation 12 in [1]_ which is derived from Equation 4.2 in [2]_.
- 7-2. Click *Create sample*. 
- 
- 
+If specifying a target precision
+ 7-1. To determine the sample size required to meet a certain target standard error of the overall accuracy, first specify the anticipated overall accuracy of the map you are assessing under *Specify anticipated overall accuracy (0-1)*
+ 7-2. Then *Specify target standard error of overall accuracy (0-1)* and click *Calculate sample size* -- the sample size is calculated using Equation 12 in [1]_ which is derived from Equation 4.2 in [2]_.
+ 7-3. Click *Create sample*. 
  
 8. To view, the sample in the Display pane, click *Add to map*
 9. To export the sample, click *Export sample* and select the desired file format.

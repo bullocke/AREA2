@@ -14,10 +14,31 @@ Selecting a sample by simple random sampling requires you to specify the study a
 7. Under *Determine sample size*, you can either specify an arbitrary sample size or determine the sample size by specifying a target standard error of the anticipated overall accuracy of the map that is being assessed.
 
 Arbitrary sample size
- 7-1. If choosing to specify an arbitrary sample size, simply add a number under *Specify sample size*, and click *Create sample*.
+ 7-1. If choosing to specify an arbitrary sample size, simply add a number under *Specify sample size*.
+ 7-2. Click *Create sample*. 
 Target sample size
- 7-2. If choosing to specify an arbitrary sample size, simply add a number under *Specify sample size*, and click *Create sample*.
-
+ 7-2. To determine the sample size required to meet a certain target standard error of the overall accuracy, first specify the anticipated overall accuracy of the map you are assessing under *Specify anticipated overall accuracy (0-1)*
+ 7-3. Then *Specify target standard error of overall accuracy (0-1)* and click *Calculate sample size* -- the sample size is calculated using Equation 12 in [1]_ which is derived from Equation 4.2 in [2]_.
+ 7-2. Click *Create sample*. 
+ 
+ 
  
 8. To view, the sample in the Display pane, click *Add to map*
 9. To export the sample, click *Export sample* and select the desired file format.
+
+
+.. [1] Olofsson, P., Foody, G. M., Herold, M., Stehman, S. V., Woodcock, C. E., & Wulder, M. A. (2014). Good practices for estimating area and assessing accuracy of land change. Remote Sensing of Environment, 148, 42-57.
+.. [2] Cochran, W. G. (1977). Sampling techniques. John Wiley & Sons.
+
+
+
+
+
+
+
+
+
+
+
+
+

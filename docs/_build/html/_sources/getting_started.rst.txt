@@ -12,5 +12,5 @@ Getting started |check|
 
 
 .. image:: screen_shot.png
-   :width: 400pt
+   :width: 600pt
    

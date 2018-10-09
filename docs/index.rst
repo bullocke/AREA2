@@ -10,6 +10,7 @@ Tools and guidance for estimating area and map accuracy on the Google Earth Engi
    overview
    background
    definitions
+   getting_started
 
 .. toctree::
    :maxdepth: 2

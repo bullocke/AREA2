@@ -11,6 +11,6 @@ Getting started |check|
 6. text
 
 
-.. image:: screen_shot.jpg
+.. image:: screen_shot.png
    :width: 40pt
    

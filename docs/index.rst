@@ -20,6 +20,7 @@ Tools and guidance for estimating area and map accuracy on the Google Earth Engi
    str_sample
    sys_sample
    str_sys_sample
+   twostage_sample
 
 .. toctree::
    :maxdepth: 2
@@ -39,3 +40,4 @@ Tools and guidance for estimating area and map accuracy on the Google Earth Engi
    estimator_mod
    estimator_diff
    estimator_ratio
+   estiamtor_twostage

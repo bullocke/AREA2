@@ -1,7 +1,7 @@
 .. include:: <isopub.txt> 
 
-Stratified Systematic Sample |cir|
-==================================
+Stratified Systematic Sampling |cir|
+====================================
 
 Coming soon
 

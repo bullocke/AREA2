@@ -1,7 +1,7 @@
 .. include:: <isopub.txt> 
 
-Stratified Random Sample |check|
-================================
+Stratified Random Sampling |check|
+==================================
 
 Selecting a sample by stratified random sampling requires you to specify a map to define strata,  a total sample size, and an allocation of sample units to strata. 
 

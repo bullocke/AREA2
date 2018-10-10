@@ -1,7 +1,7 @@
 .. include:: <isopub.txt> 
 
-Simple Systematic Sample |cir|
-==============================
+Simple Systematic Sampling |cir|
+================================
 
 Coming soon
 

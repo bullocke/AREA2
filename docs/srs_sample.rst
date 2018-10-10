@@ -1,7 +1,7 @@
 .. include:: <isopub.txt> 
 
-Simple Random Sample |check|
-============================
+Simple Random Sampling |check|
+==============================
 
 Selecting a sample by simple random sampling requires you to specify the study area and a sample size. 
 

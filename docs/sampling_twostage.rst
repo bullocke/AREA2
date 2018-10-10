@@ -1,6 +1,6 @@
 .. include:: <isopub.txt> 
 
-Two-stage sampling |cir|
+Two-stage Sampling |cir|
 ========================
 
 Coming soon

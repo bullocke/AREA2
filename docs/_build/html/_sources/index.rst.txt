@@ -16,11 +16,11 @@ Tools and guidance for estimating area and map accuracy on the Google Earth Engi
    :maxdepth: 2
    :caption: Sampling
 
-   srs_sample
-   str_sample
-   sys_sample
-   str_sys_sample
-   twostage_sample
+   sampling_srs
+   sampling_str
+   sampling_sys
+   sampling_str_sys
+   sampling_twostage
 
 .. toctree::
    :maxdepth: 2

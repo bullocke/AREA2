@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Google Earth Engine Area/Accuracy Estimation Toolbox &mdash; gee-assessment-tools 0.1 documentation</title>
+  <title>Simple Random Sampling ✓ &mdash; gee-assessment-tools 0.1 documentation</title>
   
 
   
@@ -28,7 +28,8 @@
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Overview ✓" href="overview.html" /> 
+    <link rel="next" title="Stratified Random Sampling ✓" href="sampling_str.html" />
+    <link rel="prev" title="Getting started ✓" href="getting_started.html" /> 
 
   
   <script src="_static/js/modernizr.min.js"></script>
@@ -47,7 +48,7 @@
           
 
           
-            <a href="#" class="icon icon-home"> gee-assessment-tools
+            <a href="index.html" class="icon icon-home"> gee-assessment-tools
           
 
           
@@ -89,8 +90,8 @@
 <li class="toctree-l1"><a class="reference internal" href="getting_started.html">Getting started ✓</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Sampling</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="sampling_srs.html">Simple Random Sampling ✓</a></li>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Simple Random Sampling ✓</a></li>
 <li class="toctree-l1"><a class="reference internal" href="sampling_str.html">Stratified Random Sampling ✓</a></li>
 <li class="toctree-l1"><a class="reference internal" href="sampling_sys.html">Simple Systematic Sampling ○</a></li>
 <li class="toctree-l1"><a class="reference internal" href="sampling_str_sys.html">Stratified Systematic Sampling ○</a></li>
@@ -125,7 +126,7 @@
       <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="#">gee-assessment-tools</a>
+          <a href="index.html">gee-assessment-tools</a>
         
       </nav>
 
@@ -154,15 +155,15 @@
 
   <ul class="wy-breadcrumbs">
     
-      <li><a href="#">Docs</a> &raquo;</li>
+      <li><a href="index.html">Docs</a> &raquo;</li>
         
-      <li>Google Earth Engine Area/Accuracy Estimation Toolbox</li>
+      <li>Simple Random Sampling ✓</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="_sources/index.rst.txt" rel="nofollow"> View page source</a>
+            <a href="_sources/sampling_srs.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -175,48 +176,49 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="google-earth-engine-area-accuracy-estimation-toolbox">
-<h1>Google Earth Engine Area/Accuracy Estimation Toolbox<a class="headerlink" href="#google-earth-engine-area-accuracy-estimation-toolbox" title="Permalink to this headline">¶</a></h1>
-<p>Tools and guidance for estimating area and map accuracy on the Google Earth Engine.</p>
-<div class="toctree-wrapper compound">
-<p class="caption"><span class="caption-text">Introduction</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="overview.html">Overview ✓</a></li>
-<li class="toctree-l1"><a class="reference internal" href="background.html">Theoretical background ✓</a></li>
-<li class="toctree-l1"><a class="reference internal" href="definitions.html">Terminology ✓</a></li>
-<li class="toctree-l1"><a class="reference internal" href="getting_started.html">Getting started ✓</a></li>
-</ul>
-</div>
-<div class="toctree-wrapper compound">
-<p class="caption"><span class="caption-text">Sampling</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="sampling_srs.html">Simple Random Sampling ✓</a></li>
-<li class="toctree-l1"><a class="reference internal" href="sampling_str.html">Stratified Random Sampling ✓</a></li>
-<li class="toctree-l1"><a class="reference internal" href="sampling_sys.html">Simple Systematic Sampling ○</a></li>
-<li class="toctree-l1"><a class="reference internal" href="sampling_str_sys.html">Stratified Systematic Sampling ○</a></li>
-<li class="toctree-l1"><a class="reference internal" href="sampling_twostage.html">Two-stage Sampling ○</a></li>
-</ul>
-</div>
-<div class="toctree-wrapper compound">
-<p class="caption"><span class="caption-text">Interpretation</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="tsviewer.html">Timeseries Viewer ○</a></li>
-<li class="toctree-l1"><a class="reference internal" href="colearth.html">Collect Earth ○</a></li>
-<li class="toctree-l1"><a class="reference internal" href="timesync.html">TimeSync ○</a></li>
-</ul>
-</div>
-<div class="toctree-wrapper compound">
-<p class="caption"><span class="caption-text">Analysis</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="estimator_guidance.html">Choosing an estimator ✓</a></li>
-<li class="toctree-l1"><a class="reference internal" href="estimator_str.html">Stratified Estimator ○</a></li>
-<li class="toctree-l1"><a class="reference internal" href="estimator_post_str.html">Post-stratified Estimator ○</a></li>
-<li class="toctree-l1"><a class="reference internal" href="estimator_mod.html">Model-assisted Regression Estimator ○</a></li>
-<li class="toctree-l1"><a class="reference internal" href="estimator_diff.html">Model-assisted Difference Estimator ○</a></li>
-<li class="toctree-l1"><a class="reference internal" href="estimator_ratio.html">Model-assisted Ratio Estimator ○</a></li>
-<li class="toctree-l1"><a class="reference internal" href="estimator_twostage.html">Two-stage Estimator ○</a></li>
-</ul>
-</div>
+  <div class="section" id="simple-random-sampling-check">
+<h1>Simple Random Sampling ✓<a class="headerlink" href="#simple-random-sampling-check" title="Permalink to this headline">¶</a></h1>
+<p>Selecting a sample by simple random sampling requires you to specify the study area and a sample size.</p>
+<ol class="arabic simple">
+<li>Start by running the Sampling Design script in the Scripts pane.</li>
+<li>In the first entry box <em>Specify an image ID and sampling scheme</em>, specify a map that defines the study area. Because you are not using strata or clusters, the contents of the map does not matter.</li>
+<li>Under <em>Specify band if a multi-band map (if not, specify 1)</em>: if you are using a map that contains multiple bands, specify which band you want to use to define the study area.  Otherwise, just specify “1”.</li>
+<li>If the map has a no-data value or if you want to exclude a certain value in the map when defining the study area, specify the value in <em>Specify no data value</em>.</li>
+<li>Click <em>Load image</em> – the map should be displayed in the image pane.</li>
+<li>Under <em>Select a sampling scheme</em>, select <em>Simple Random</em></li>
+<li>Under <em>Determine sample size</em>, you can either specify an arbitrary sample size or determine the sample size by specifying a target standard error of the anticipated overall accuracy of the map that is being assessed.</li>
+</ol>
+<dl class="docutils">
+<dt>If specifying arbitrary sample size</dt>
+<dd><ol class="first last upperroman simple">
+<li>If choosing to specify an arbitrary sample size, simply add a number under <em>Specify sample size</em>.</li>
+<li>Click <em>Create sample</em>.</li>
+</ol>
+</dd>
+<dt>If specifying a target precision</dt>
+<dd><ol class="first last upperroman simple">
+<li>To determine the sample size required to meet a certain target standard error of the overall accuracy, first specify the anticipated overall accuracy of the map you are assessing under <em>Specify anticipated overall accuracy (0-1)</em></li>
+<li>Then <em>Specify target standard error of overall accuracy (0-1)</em> and click <em>Calculate sample size</em> – the sample size is calculated using Equation 12 in <a class="footnote-reference" href="#id3" id="id1">[1]</a> which is derived from Equation 4.2 in <a class="footnote-reference" href="#id4" id="id2">[2]</a>.</li>
+<li>Click <em>Create sample</em>.</li>
+</ol>
+</dd>
+</dl>
+<ol class="arabic simple" start="8">
+<li>To view, the sample in the Display pane, click <em>Add to map</em></li>
+<li>To export the sample, click <em>Export sample</em> and select the desired file format.</li>
+</ol>
+<table class="docutils footnote" frame="void" id="id3" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id1">[1]</a></td><td>Olofsson, P., Foody, G. M., Herold, M., Stehman, S. V., Woodcock, C. E., &amp; Wulder, M. A. (2014). Good practices for estimating area and assessing accuracy of land change. <em>Remote Sensing of Environment</em>, 148, 42-57.</td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="id4" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id2">[2]</a></td><td>Cochran, W. G. (1977). <em>Sampling techniques</em>. John Wiley &amp; Sons.</td></tr>
+</tbody>
+</table>
 </div>
 
 
@@ -227,8 +229,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="overview.html" class="btn btn-neutral float-right" title="Overview ✓" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="sampling_str.html" class="btn btn-neutral float-right" title="Stratified Random Sampling ✓" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
+      
+        <a href="getting_started.html" class="btn btn-neutral" title="Getting started ✓" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

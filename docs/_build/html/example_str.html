@@ -187,10 +187,14 @@
   <div class="section" id="stratified-estimation-cir">
 <h1>Stratified Estimation ○<a class="headerlink" href="#stratified-estimation-cir" title="Permalink to this headline">¶</a></h1>
 <p>An example is provided here to illustrate the estimation of the area of forest loss for the country of Cambodia between 2000 and 2010 using stratified estimation. The example has three different parts: 1) sampling design – a sample is selected by stratified random sampling; 2) response design which involves observing the reference conditions at sample unit in  various satellite data available in Google Earth Engine; and 3) the analysis which is based on the application of a stratified estimator to the sample data.</p>
-<p>Note that all data are made-up and do not reflect actual conditions in Cambodia!</p>
+<p><strong>Note that the sample data are made-up and do not reflect actual conditions in Cambodia!</strong></p>
 <div class="section" id="sampling-design">
 <h2>1. Sampling Design<a class="headerlink" href="#sampling-design" title="Permalink to this headline">¶</a></h2>
-<p>Because the area of forest loss is small relative the total study area, using non-stratified designs would require a very large sample size to ensure a sufficient number of observations of forest loss in the sample data. To use a stratified design, we will first need to define a stratification. In this case we will use the</p>
+<ol class="arabic simple">
+<li>Because the area of forest loss is small relative the total study area, using non-stratified designs would require a very large sample size to ensure a sufficient number of observations of forest loss in the sample data. To use a stratified design, we will first need to define a stratification. In this case, we will extract a map of Cambodia from a global map <a class="footnote-reference" href="#id2" id="id1">[1]</a> of forest, non-forest, forest loss, and forest gain. The map will serve a stratification of study area. (A tutorial from BEEODA illustrating the creation of a local stratification from the global map is provided here: <a class="reference external" href="https://github.com/beeoda/tutorials/blob/master/Use_of_global_tree_cover_and_change_datasets/2_extract_map.pdf">https://github.com/beeoda/tutorials/blob/master/Use_of_global_tree_cover_and_change_datasets/2_extract_map.pdf</a>)</li>
+<li>Once you have identified a stratification, highlight the script “1_sampling_design” in the Script Manager and click <em>Run</em>. (Check <a class="reference external" href="https://gee-assessment-tools.readthedocs.io/en/latest/overview.html">Overview</a> to familiarize yourself with GEE interface.)</li>
+<li>Text</li>
+</ol>
 </div>
 <div class="section" id="response-design">
 <h2>2. Response Design<a class="headerlink" href="#response-design" title="Permalink to this headline">¶</a></h2>
@@ -199,6 +203,12 @@
 <div class="section" id="analysis">
 <h2>3. Analysis<a class="headerlink" href="#analysis" title="Permalink to this headline">¶</a></h2>
 <p>Text</p>
+<table class="docutils footnote" frame="void" id="id2" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id1">[1]</a></td><td>Hansen, M. C., Potapov, P. V., Moore, R., Hancher, M., Turubanova, S. A. A., Tyukavina, A., … &amp; Kommareddy, A. (2013). High-resolution global maps of 21st-century forest cover change. <em>Science</em>, 342(6160), 850-853.</td></tr>
+</tbody>
+</table>
 </div>
 </div>
 

@@ -25,7 +25,14 @@ If specifying a target precision of the overall accuracy
  
   
 If specifying a target precision of an area estimate 
- I. [Coming soon]
+ I. To determine the sample size required to meet a certain target standard error of the area estimate of a  certain class, you first need to specify which class to target. When loading the stratification in Step 5., console will print the strata weights ("Area weights of strata:"). The stratification used in Examples: Stratified estimation has the following strata and weights:
+ ::
+ Non-forest, 1: 0.4121145148447316
+ Forest, 2: 0.4932060695340039
+ Water, 3: 0.021949073613706845
+ Forest loss, 4: 0.0667431639819303
+ Forest gain, 5: 0.003646535473503892
+ Forest gain/loss, 6: 0.0023406425521234372
   
  
 8. To view, the sample in the Display pane, click *Add to map*

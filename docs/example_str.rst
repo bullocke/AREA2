@@ -8,4 +8,6 @@ An example is provided here to illustrate the estimation of the area of forest l
 Note that all data are made-up and do not reflect actual conditions in Cambodia! 
 
 1. Sampling Design
-Because the area of forest loss is small relative the total study area 
+------------------
+
+Because the area of forest loss is small relative the total study area, using non-stratified designs would requrie very sample sizes to allow us to  

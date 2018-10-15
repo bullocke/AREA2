@@ -10,7 +10,7 @@ An example is provided here to illustrate the estimation of the area of forest l
 1. Sampling Design
 ------------------
 
-1. Because the area of forest loss is small relative the total study area, using non-stratified designs would require a very large sample size to ensure a sufficient number of observations of forest loss in the sample data. To use a stratified design, we will first need to define a stratification. In this case, we will extract a map of Cambodia from a global map [1]_ of forest, non-forest, forest loss, and forest gain. The map will serve a stratification of study area. (A tutorial from BEEODA illustrating the creation of a local stratification from the global map is provided `here <https://github.com/beeoda/tutorials/blob/master/Use_of_global_tree_cover_and_change_datasets/2_extract_map.pdf>`_)
+1. Because the area of forest loss is small relative the total study area, using non-stratified designs would require a very large sample size to ensure a sufficient number of observations of forest loss in the sample data. To use a stratified design, we will first need to define a stratification. In this case, we will extract a map of Cambodia from a global map [1]_ of forest, non-forest, forest loss, and forest gain. The map will serve a stratification of study area. (A tutorial from BEEODA illustrating the creation of a local stratification from the global map is provided `here <https://github.com/beeoda/tutorials/tree/master/Use_of_global_tree_cover_and_change_datasets>`_)
 
 2. Once you have identified a stratification, highlight the script "1_sampling_design" in the Script Manager and click *Run*. (Check `Overview <https://gee-assessment-tools.readthedocs.io/en/latest/overview.html>`_ to familiarize yourself with GEE interface.)
 

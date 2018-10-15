@@ -221,17 +221,18 @@
 </pre></div>
 </div>
 <ol class="last upperroman simple" start="2">
-<li>Assume that we want to estimate stratum 4 (Forest loss) – simply select “4” under <em>Select target class</em></li>
+<li>Assume that we want to estimate stratum 4 (Forest loss) – simply select “4” under <em>Select target class</em>.</li>
 <li>The second step is to specify how much Forest loss according to the reference data is present in the other strata. The amount of actual Forest loss present in the Forest loss stratum, equals the user’s accuracy of the <em>Forest loss</em> map class. Specify the anticipated user’s accuracy of the Forest loss map class.</li>
 <li>Then specify the anticipated proportion of forest loss present in the other strata. These proportions equals the anticipated omission of forest loss in each of the map classes.</li>
 <li>Finally, specify the target standard error of the class of interest. In my case, the area of forest loss was mapped at 0.066 of the total map area. While the area of forest loss is unknown, the mapped area is best “guesstimate”. If trying to achieve a 95% confidence interval of pm 0.01, we would need to specify a target standard error of 0.005 of the study area.</li>
-<li>Click calculate sample size to use Equation 13 in <a class="footnote-reference" href="#id5" id="id3">[1]</a>  but with the overall accuracy substituted for the area of a map class. The equation is derived from Equation 5.25 in <a class="footnote-reference" href="#id6" id="id4">[2]</a>.</li>
+<li>Click <em>Calculate sample size</em> to apply Equation 13 in <a class="footnote-reference" href="#id5" id="id3">[1]</a>  but with the overall accuracy substituted for the area of a map class. The equation is derived from Equation 5.25 in <a class="footnote-reference" href="#id6" id="id4">[2]</a>.</li>
+<li>Allocate the sample to strata and click <em>Create sample</em> – note that a proportional allocation, but with a sufficient sample size in smaller classes, is preferable when estimating the area of a class.</li>
 </ol>
 </dd>
 </dl>
 <ol class="arabic simple" start="8">
 <li>To view, the sample in the Display pane, click <em>Add to map</em></li>
-<li>To export the sample, click <em>Export sample</em> and select the desired file format.</li>
+<li>To export the sample, click <em>Export sample</em> and open the <em>Task</em> tab next to the <em>Console</em> tab. Two tasks called “sample” appear – the first saves as a GEE asset and the second as a CSV file when clicking <em>Run</em>.</li>
 </ol>
 <table class="docutils footnote" frame="void" id="id5" rules="none">
 <colgroup><col class="label" /><col /></colgroup>

@@ -38,15 +38,16 @@ If specifying a target precision of an area estimate
 
 
  
- II. Assume that we want to estimate stratum 4 (Forest loss) -- simply select "4" under *Select target class*
+ II. Assume that we want to estimate stratum 4 (Forest loss) -- simply select "4" under *Select target class*.
  III. The second step is to specify how much Forest loss according to the reference data is present in the other strata. The amount of actual Forest loss present in the Forest loss stratum, equals the user's accuracy of the *Forest loss* map class. Specify the anticipated user's accuracy of the Forest loss map class.
  IV. Then specify the anticipated proportion of forest loss present in the other strata. These proportions equals the anticipated omission of forest loss in each of the map classes.
  V. Finally, specify the target standard error of the class of interest. In my case, the area of forest loss was mapped at 0.066 of the total map area. While the area of forest loss is unknown, the mapped area is best "guesstimate". If trying to achieve a 95% confidence interval of \pm 0.01, we would need to specify a target standard error of 0.005 of the study area.
- VI. Click calculate sample size to use Equation 13 in [1]_  but with the overall accuracy substituted for the area of a map class. The equation is derived from Equation 5.25 in [2]_.
+ VI. Click *Calculate sample size* to apply Equation 13 in [1]_  but with the overall accuracy substituted for the area of a map class. The equation is derived from Equation 5.25 in [2]_.
+ VII. Allocate the sample to strata and click *Create sample* -- note that a proportional allocation, but with a sufficient sample size in smaller classes, is preferable when estimating the area of a class.
  
  
 8. To view, the sample in the Display pane, click *Add to map*
-9. To export the sample, click *Export sample* and select the desired file format.
+9. To export the sample, click *Export sample* and open the *Task* tab next to the *Console* tab. Two tasks called "sample" appear -- the first saves as a GEE asset and the second as a CSV file when clicking *Run*.  
 
 
 .. [1] Olofsson, P., Foody, G. M., Herold, M., Stehman, S. V., Woodcock, C. E., & Wulder, M. A. (2014). Good practices for estimating area and assessing accuracy of land change. *Remote Sensing of Environment*, 148, 42-57.

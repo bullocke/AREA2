@@ -10,4 +10,16 @@ Note that all data are made-up and do not reflect actual conditions in Cambodia!
 1. Sampling Design
 ------------------
 
-Because the area of forest loss is small relative the total study area, using non-stratified designs would requrie very sample sizes to allow us to  
+Because the area of forest loss is small relative the total study area, using non-stratified designs would require a very large sample size to ensure a sufficient number of observations of forest loss in the sample data. To use a stratified design, we will first need to define a stratification. In this case we will use the 
+
+
+
+2. Response Design
+------------------
+
+Text
+
+3. Analysis
+------------------
+
+Text

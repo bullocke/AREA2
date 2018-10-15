@@ -202,15 +202,16 @@
 <dt>If specifying a target precision of the overall accuracy</dt>
 <dd><ol class="first last upperroman simple">
 <li>To determine the sample size required to meet a certain target standard error of the overall accuracy require you to specify the anticipated user’s accuracy of each of the map classes used as strata under <em>Specify anticipated user’s accuracies (0-1)</em></li>
-<li>Then <em>Specify target standard error of overall accuracy (0-1)</em> and click <em>Calculate sample size</em> – the sample size is calculated using Equation 13 in <a class="footnote-reference" href="#id3" id="id1">[1]</a> which is derived from Equation 5.25 in <a class="footnote-reference" href="#id4" id="id2">[2]</a>.</li>
+<li>Then <em>Specify target standard error of overall accuracy (0-1)</em> and click <em>Calculate sample size</em> – the sample size is calculated using Equation 13 in <a class="footnote-reference" href="#id5" id="id1">[1]</a> which is derived from Equation 5.25 in <a class="footnote-reference" href="#id6" id="id2">[2]</a>.</li>
 <li>Click <em>Create sample</em>.</li>
 </ol>
 </dd>
 <dt>If specifying a target precision of an area estimate</dt>
 <dd><ol class="first upperroman simple">
-<li>To determine the sample size required to meet a certain target standard error of the area estimate of a  certain class, you first need to specify which class to target. When loading the stratification in Step 5., console will print the strata weights (“Area weights of strata:”). The stratification used in Examples: Stratified estimation has the following strata and weights:</li>
+<li>To determine the sample size required to meet a certain target standard error of the area estimate of a  certain class, you first need to specify which class to target. When loading the stratification in Step 5., console will print the strata weights – the stratification used in Examples: Stratified estimation has the following strata and weights:</li>
 </ol>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">List</span> <span class="p">(</span><span class="mi">6</span> <span class="n">elements</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">Area</span> <span class="n">weights</span> <span class="n">of</span> <span class="n">strata</span><span class="p">:</span>
+<span class="go">    List (6 elements)</span>
 <span class="go">    1: 0.41211</span>
 <span class="go">    2: 0.49320</span>
 <span class="go">    3: 0.02195</span>
@@ -219,23 +220,28 @@
 <span class="go">    6: 0.00234</span>
 </pre></div>
 </div>
-<p class="last">Non-forest, Forest, Water, Forest loss, Forest gain, Forest gain/loss</p>
+<p class="last">Where 1 is Non-forest, 2 is Forest, 3 is Water, 4 is Forest loss, 5 is Forest gain, and 6 is Forest gain/loss.
+II. Assume that we want to estimate stratum 4 (Forest loss) – simply select “4” under <em>Select target class</em>
+III. The second step is to specify how much Forest loss according to the reference data is present in the other strata. The amount of actual Forest loss present in the Forest loss stratum, equals the user’s accuracy of the <em>Forest loss</em> map class. Specify the anticipated user’s accuracy of the Forest loss map class.
+IV. Then specify the anticipated proportion of forest loss present in the other strata. These proportions equals the anticipated omission of forest loss in each of the map classes.
+V. Finally, specify the target standard error of the class of interest. In my case, the area of forest loss was mapped at 0.066 of the total map area. While the area of forest loss is unknown, the mapped area is best “guesstimate”. If trying to achieve a 95% confidence interval of pm 0.01, we would need to specify a target standard error of 0.005 of the study area.
+VI. Click calculate sample size to use Equation 13 in <a class="footnote-reference" href="#id5" id="id3">[1]</a>  but with the overall accuracy substituted for the area of a map class. The equation is derived from Equation 5.25 in <a class="footnote-reference" href="#id6" id="id4">[2]</a>.</p>
 </dd>
 </dl>
 <ol class="arabic simple" start="8">
 <li>To view, the sample in the Display pane, click <em>Add to map</em></li>
 <li>To export the sample, click <em>Export sample</em> and select the desired file format.</li>
 </ol>
-<table class="docutils footnote" frame="void" id="id3" rules="none">
+<table class="docutils footnote" frame="void" id="id5" rules="none">
 <colgroup><col class="label" /><col /></colgroup>
 <tbody valign="top">
-<tr><td class="label"><a class="fn-backref" href="#id1">[1]</a></td><td>Olofsson, P., Foody, G. M., Herold, M., Stehman, S. V., Woodcock, C. E., &amp; Wulder, M. A. (2014). Good practices for estimating area and assessing accuracy of land change. <em>Remote Sensing of Environment</em>, 148, 42-57.</td></tr>
+<tr><td class="label">[1]</td><td><em>(<a class="fn-backref" href="#id1">1</a>, <a class="fn-backref" href="#id3">2</a>)</em> Olofsson, P., Foody, G. M., Herold, M., Stehman, S. V., Woodcock, C. E., &amp; Wulder, M. A. (2014). Good practices for estimating area and assessing accuracy of land change. <em>Remote Sensing of Environment</em>, 148, 42-57.</td></tr>
 </tbody>
 </table>
-<table class="docutils footnote" frame="void" id="id4" rules="none">
+<table class="docutils footnote" frame="void" id="id6" rules="none">
 <colgroup><col class="label" /><col /></colgroup>
 <tbody valign="top">
-<tr><td class="label"><a class="fn-backref" href="#id2">[2]</a></td><td>Cochran, W. G. (1977). <em>Sampling techniques</em>. John Wiley &amp; Sons.</td></tr>
+<tr><td class="label">[2]</td><td><em>(<a class="fn-backref" href="#id2">1</a>, <a class="fn-backref" href="#id4">2</a>)</em> Cochran, W. G. (1977). <em>Sampling techniques</em>. John Wiley &amp; Sons.</td></tr>
 </tbody>
 </table>
 </div>

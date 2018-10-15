@@ -25,9 +25,10 @@ If specifying a target precision of the overall accuracy
  
   
 If specifying a target precision of an area estimate 
- I. To determine the sample size required to meet a certain target standard error of the area estimate of a  certain class, you first need to specify which class to target. When loading the stratification in Step 5., console will print the strata weights ("Area weights of strata:"). The stratification used in Examples: Stratified estimation has the following strata and weights::
+ I. To determine the sample size required to meet a certain target standard error of the area estimate of a  certain class, you first need to specify which class to target. When loading the stratification in Step 5., console will print the strata weights -- the stratification used in Examples: Stratified estimation has the following strata and weights::
  
-   >>> List (6 elements)
+   >>> Area weights of strata:
+       List (6 elements)
        1: 0.41211
        2: 0.49320
        3: 0.02195
@@ -36,7 +37,12 @@ If specifying a target precision of an area estimate
        6: 0.00234
 
 
- Non-forest, Forest, Water, Forest loss, Forest gain, Forest gain/loss   
+ Where 1 is Non-forest, 2 is Forest, 3 is Water, 4 is Forest loss, 5 is Forest gain, and 6 is Forest gain/loss. 
+ II. Assume that we want to estimate stratum 4 (Forest loss) -- simply select "4" under *Select target class*
+ III. The second step is to specify how much Forest loss according to the reference data is present in the other strata. The amount of actual Forest loss present in the Forest loss stratum, equals the user's accuracy of the *Forest loss* map class. Specify the anticipated user's accuracy of the Forest loss map class.
+ IV. Then specify the anticipated proportion of forest loss present in the other strata. These proportions equals the anticipated omission of forest loss in each of the map classes.
+ V. Finally, specify the target standard error of the class of interest. In my case, the area of forest loss was mapped at 0.066 of the total map area. While the area of forest loss is unknown, the mapped area is best "guesstimate". If trying to achieve a 95% confidence interval of \pm 0.01, we would need to specify a target standard error of 0.005 of the study area.
+ VI. Click calculate sample size to use Equation 13 in [1]_  but with the overall accuracy substituted for the area of a map class. The equation is derived from Equation 5.25 in [2]_.
  
  
 8. To view, the sample in the Display pane, click *Add to map*

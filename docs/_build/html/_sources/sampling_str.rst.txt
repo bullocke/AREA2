@@ -25,7 +25,7 @@ If specifying a target precision of the overall accuracy
  
   
 If specifying a target precision of an area estimate 
- I. To determine the sample size required to meet a certain target standard error of the area estimate of a  certain class, you first need to specify which class to target. When loading the stratification in Step 5., console will print the strata weights -- the stratification used in Examples: Stratified estimation has the following strata and weights::
+ I. To determine the sample size required to meet a certain target standard error of the area estimate of a  certain class, you first need to specify which class to target. When loading the stratification in Step 5., console will print the strata weights -- the stratification used in Examples: Stratified estimation has the following strata and weights (1 is Non-forest, 2 is Forest, 3 is Water, 4 is Forest loss, 5 is Forest gain, and 6 is Forest gain/loss)::
  
    >>> Area weights of strata:
        List (6 elements)
@@ -37,7 +37,7 @@ If specifying a target precision of an area estimate
        6: 0.00234
 
 
- Where 1 is Non-forest, 2 is Forest, 3 is Water, 4 is Forest loss, 5 is Forest gain, and 6 is Forest gain/loss. 
+ 
  II. Assume that we want to estimate stratum 4 (Forest loss) -- simply select "4" under *Select target class*
  III. The second step is to specify how much Forest loss according to the reference data is present in the other strata. The amount of actual Forest loss present in the Forest loss stratum, equals the user's accuracy of the *Forest loss* map class. Specify the anticipated user's accuracy of the Forest loss map class.
  IV. Then specify the anticipated proportion of forest loss present in the other strata. These proportions equals the anticipated omission of forest loss in each of the map classes.

@@ -10,11 +10,13 @@ An example is provided here to illustrate the estimation of the area of forest l
 1. Sampling Design
 ------------------
 
-1. Because the area of forest loss is small relative the total study area, using non-stratified designs would require a very large sample size to ensure a sufficient number of observations of forest loss in the sample data. To use a stratified design, we will first need to define a stratification. In this case, we will extract a map of Cambodia from a global map [1]_ of forest, non-forest, forest loss, and forest gain. The map will serve a stratification of study area. (A tutorial from BEEODA illustrating the creation of a local stratification from the global map is provided `here <https://github.com/beeoda/tutorials/tree/master/Use_of_global_tree_cover_and_change_datasets>`_)
+1. Because the area of forest loss is small relative the total study area, using non-stratified designs would require a very large sample size to ensure a sufficient number of observations of forest loss in the sample data. To use a stratified design, we will first need to define a stratification. In this case, we will extract a map of Cambodia from a global map [1]_ of forest, non-forest, forest loss, and forest gain. The map will serve a stratification of study area. Preferably, use the GeoTIFF format. (A tutorial from BEEODA illustrating the creation of a local stratification from the global map is provided `here <https://github.com/beeoda/tutorials/tree/master/Use_of_global_tree_cover_and_change_datasets>`_)
 
-2. Once you have identified a stratification, highlight the script "1_sampling_design" in the Script Manager and click *Run*. (Check `Overview <https://gee-assessment-tools.readthedocs.io/en/latest/overview.html>`_ to familiarize yourself with GEE interface.)
+2. You can download the stratification of Cambodia `here <https://drive.google.com/open?id=1XYzslxY0F7X0Dum58-4_KTEBGqm2EEe3>`_. Once downloaded to your local computer, click the *Assets* tab next to the *Scripts* tab and *NEW* > *Image upload* > *SELECT*; click *Advanced* > *Masking mode* > and set *No-data value* to "0". Click *OK* to upload the stratification as an image file. You can check the progress in the *Tasks* tab (the upload will take several minutes).
 
-3. Text
+3. Once the stratification has been added to *Assets*, highlight the script "1_sampling_design" in the *Scripts* tab and click *Run*. (Check `Overview <https://gee-assessment-tools.readthedocs.io/en/latest/overview.html>`_ to familiarize yourself with GEE interface if you have done so already.)
+
+4. Text
 
 
 2. Response Design

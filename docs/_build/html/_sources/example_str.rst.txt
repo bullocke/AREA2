@@ -26,11 +26,13 @@ An example is provided here to illustrate the estimation of the area of forest l
       0.0667431639819303
 	   
 	   
-7. Text 
+7. To determine the sample size, *n*, we'll use Equation 5.25 in [2]_
 
 .. math::
 
-   n = \frac{ \sum_{h}W_h S_h }{S(P^)}
+   n = \left(\frac{\sum_{h} W_h S_h}{S(\hat{y})}\right )^2
+   
+   where :math:`S(\hat{y})` is the standard error
    
 8. Text
 
@@ -47,3 +49,5 @@ Text
 
 
 .. [1] Hansen, M. C., Potapov, P. V., Moore, R., Hancher, M., Turubanova, S. A. A., Tyukavina, A., ... & Kommareddy, A. (2013). High-resolution global maps of 21st-century forest cover change. *Science*, 342(6160), 850-853.
+
+.. [2] Cochran, W. G. (1977). *Sampling techniques*. John Wiley & Sons.

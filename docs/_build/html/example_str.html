@@ -191,7 +191,7 @@
 <div class="section" id="sampling-design">
 <h2>1. Sampling Design<a class="headerlink" href="#sampling-design" title="Permalink to this headline">¶</a></h2>
 <ol class="arabic simple">
-<li>Because the area of forest loss is small relative the total study area, using non-stratified designs would require a very large sample size to ensure a sufficient number of observations of forest loss in the sample data. To use a stratified design, we will first need to define a stratification. In this case, we will extract a map of Cambodia from a global map <a class="footnote-reference" href="#id3" id="id1">[1]</a> of forest, non-forest, forest loss, and forest gain. The map will serve a stratification of study area. Preferably, use the GeoTIFF format. (A tutorial from BEEODA illustrating the creation of a local stratification from the global map is provided <a class="reference external" href="https://github.com/beeoda/tutorials/tree/master/Use_of_global_tree_cover_and_change_datasets">here</a>)</li>
+<li>Because the area of forest loss is small relative the total study area, using non-stratified designs would require a very large sample size to ensure a sufficient number of observations of forest loss in the sample data. To use a stratified design, we will first need to define a stratification. In this case, we will extract a map of Cambodia from a global map <a class="footnote-reference" href="#id4" id="id1">[1]</a> of forest, non-forest, forest loss, and forest gain. The map will serve a stratification of study area. Preferably, use the GeoTIFF format. (A tutorial from BEEODA illustrating the creation of a local stratification from the global map is provided <a class="reference external" href="https://github.com/beeoda/tutorials/tree/master/Use_of_global_tree_cover_and_change_datasets">here</a>)</li>
 <li>You can download the stratification of Cambodia <a class="reference external" href="https://drive.google.com/open?id=1XYzslxY0F7X0Dum58-4_KTEBGqm2EEe3">here</a>. Once downloaded to your local computer, click the <em>Assets</em> tab next to the <em>Scripts</em> tab and <em>NEW</em> &gt; <em>Image upload</em> &gt; <em>SELECT</em>; click <em>Advanced</em> &gt; <em>Masking mode</em> &gt; and set <em>No-data value</em> to “0”. Click <em>OK</em> to upload the stratification as an image file. You can check the progress in the <em>Tasks</em> tab (the upload will take several minutes).</li>
 <li>Once the stratification has been added to <em>Assets</em>, highlight the script “1_sampling_design” in the <em>Scripts</em> tab and click <em>Run</em>. (Check <a class="reference external" href="https://gee-assessment-tools.readthedocs.io/en/latest/overview.html">Overview</a> to familiarize yourself with GEE interface if you have done so already.)</li>
 <li>In Sampling Design dialog, add the path to the stratification under <em>Specify an image to define study area</em>. The path is likely something like “users/[your name]/stratification_cambodia_utm_small”. Set the band to “1” and mask value to “0” and click <em>Load image</em>.</li>
@@ -203,10 +203,10 @@
 </pre></div>
 </div>
 <ol class="arabic simple" start="7">
-<li>Text</li>
+<li>To determine the sample size, <em>n</em>, we’ll use Equation 5.25 in <a class="footnote-reference" href="#id5" id="id3">[2]</a></li>
 </ol>
 <div class="math notranslate nohighlight">
-\[n = \frac{ \sum_{h}W_h S_h }{S(P^)}\]</div>
+\[ \begin{align}\begin{aligned}n = \left(\frac{\sum_{h} W_h S_h}{S(\hat{y})}\right )^2\\where :math:`S(\hat{y})` is the standard error\end{aligned}\end{align} \]</div>
 <ol class="arabic simple" start="8">
 <li>Text</li>
 </ol>
@@ -218,10 +218,16 @@
 <div class="section" id="analysis">
 <h2>3. Analysis<a class="headerlink" href="#analysis" title="Permalink to this headline">¶</a></h2>
 <p>Text</p>
-<table class="docutils footnote" frame="void" id="id3" rules="none">
+<table class="docutils footnote" frame="void" id="id4" rules="none">
 <colgroup><col class="label" /><col /></colgroup>
 <tbody valign="top">
 <tr><td class="label"><a class="fn-backref" href="#id1">[1]</a></td><td>Hansen, M. C., Potapov, P. V., Moore, R., Hancher, M., Turubanova, S. A. A., Tyukavina, A., … &amp; Kommareddy, A. (2013). High-resolution global maps of 21st-century forest cover change. <em>Science</em>, 342(6160), 850-853.</td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="id5" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id3">[2]</a></td><td>Cochran, W. G. (1977). <em>Sampling techniques</em>. John Wiley &amp; Sons.</td></tr>
 </tbody>
 </table>
 </div>

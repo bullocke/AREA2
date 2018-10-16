@@ -30,7 +30,7 @@ An example is provided here to illustrate the estimation of the area of forest l
 
 .. math::
 
-   \frac{ \sum_{t=0}^{N}f(t,k) }{N}
+   n = \frac{ \sum_{h}W_h S_h }{S(P^)}
    
 8. Text
 

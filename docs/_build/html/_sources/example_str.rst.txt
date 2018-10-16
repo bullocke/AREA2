@@ -22,14 +22,8 @@ An example is provided here to illustrate the estimation of the area of forest l
 
 6. Further, we will *Determine sample size* by setting a *Target SE of a class*, in this case, class number 4, Forest loss. The application will print in the Dialog and Console the area proportion of class 4::
 
-  >>> Area weights of strata:
-      List (6 elements)
-      1: 0.41211
-      2: 0.49320
-      3: 0.02195
-      4: 0.06674
-      5: 0.00365
-      6: 0.00234
+  >>> Area proportion of class 4:
+      0.0667431639819303
 	   
 	   
 7. Text 

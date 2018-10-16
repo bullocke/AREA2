@@ -21,6 +21,7 @@ An example is provided here to illustrate the estimation of the area of forest l
 5. Because the objective of the exercise is to estimate the area forest loss which is a small part of the study area, the sample will be selected by stratified random sampling -- under *Select a sampling scheme* select *Stratified random*. 
 
 6. Further, we will *Determine sample size* by setting a *Target SE of a class*, in this case, class number 4, Forest loss. The application will print in the Dialog and Console the area proportion of class 4::
+
    >>> Area weights of strata:
        0.0667431639819303 
 

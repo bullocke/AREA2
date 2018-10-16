@@ -16,7 +16,16 @@ An example is provided here to illustrate the estimation of the area of forest l
 
 3. Once the stratification has been added to *Assets*, highlight the script "1_sampling_design" in the *Scripts* tab and click *Run*. (Check `Overview <https://gee-assessment-tools.readthedocs.io/en/latest/overview.html>`_ to familiarize yourself with GEE interface if you have done so already.)
 
-4. Text
+4. In Sampling Design dialog, add the path to the stratification under *Specify an image to define study area*. The path is likely something like "users/[your name]/stratification_cambodia_utm_small". Set the band to "1" and mask value to "0" and click *Load image*. 
+
+5. Because the objective of the exercise is to estimate the area forest loss which is a small part of the study area, the sample will be selected by stratified random sampling -- under *Select a sampling scheme* select *Stratified random*. 
+
+6. Further, we will *Determine sample size* by setting a *Target SE of a class*, in this case, class number 4, Forest loss. The application will print in the Dialog the area proportion of the class 4::
+ 
+   >>> Area proportion of class 4: 0.0667431639819303
+
+
+7. Text 
 
 
 2. Response Design

@@ -190,11 +190,24 @@
 <p><strong>Note that the sample data are made-up and do not reflect actual conditions in Cambodia!</strong></p>
 <div class="section" id="sampling-design">
 <h2>1. Sampling Design<a class="headerlink" href="#sampling-design" title="Permalink to this headline">¶</a></h2>
-<ol class="arabic simple">
-<li>Because the area of forest loss is small relative the total study area, using non-stratified designs would require a very large sample size to ensure a sufficient number of observations of forest loss in the sample data. To use a stratified design, we will first need to define a stratification. In this case, we will extract a map of Cambodia from a global map <a class="footnote-reference" href="#id3" id="id1">[1]</a> of forest, non-forest, forest loss, and forest gain. The map will serve a stratification of study area. Preferably, use the GeoTIFF format. (A tutorial from BEEODA illustrating the creation of a local stratification from the global map is provided <a class="reference external" href="https://github.com/beeoda/tutorials/tree/master/Use_of_global_tree_cover_and_change_datasets">here</a>)</li>
-<li>You can download the stratification of Cambodia <a class="reference external" href="https://drive.google.com/open?id=1XYzslxY0F7X0Dum58-4_KTEBGqm2EEe3">here</a>. Once downloaded to your local computer, click the <em>Assets</em> tab next to the <em>Scripts</em> tab and <em>NEW</em> &gt; <em>Image upload</em> &gt; <em>SELECT</em>; click <em>Advanced</em> &gt; <em>Masking mode</em> &gt; and set <em>No-data value</em> to “0”. Click <em>OK</em> to upload the stratification as an image file. You can check the progress in the <em>Tasks</em> tab (the upload will take several minutes).</li>
-<li>Once the stratification has been added to <em>Assets</em>, highlight the script “1_sampling_design” in the <em>Scripts</em> tab and click <em>Run</em>. (Check <a class="reference external" href="https://gee-assessment-tools.readthedocs.io/en/latest/overview.html">Overview</a> to familiarize yourself with GEE interface if you have done so already.)</li>
-<li>Text</li>
+<ol class="arabic">
+<li><p class="first">Because the area of forest loss is small relative the total study area, using non-stratified designs would require a very large sample size to ensure a sufficient number of observations of forest loss in the sample data. To use a stratified design, we will first need to define a stratification. In this case, we will extract a map of Cambodia from a global map <a class="footnote-reference" href="#id3" id="id1">[1]</a> of forest, non-forest, forest loss, and forest gain. The map will serve a stratification of study area. Preferably, use the GeoTIFF format. (A tutorial from BEEODA illustrating the creation of a local stratification from the global map is provided <a class="reference external" href="https://github.com/beeoda/tutorials/tree/master/Use_of_global_tree_cover_and_change_datasets">here</a>)</p>
+</li>
+<li><p class="first">You can download the stratification of Cambodia <a class="reference external" href="https://drive.google.com/open?id=1XYzslxY0F7X0Dum58-4_KTEBGqm2EEe3">here</a>. Once downloaded to your local computer, click the <em>Assets</em> tab next to the <em>Scripts</em> tab and <em>NEW</em> &gt; <em>Image upload</em> &gt; <em>SELECT</em>; click <em>Advanced</em> &gt; <em>Masking mode</em> &gt; and set <em>No-data value</em> to “0”. Click <em>OK</em> to upload the stratification as an image file. You can check the progress in the <em>Tasks</em> tab (the upload will take several minutes).</p>
+</li>
+<li><p class="first">Once the stratification has been added to <em>Assets</em>, highlight the script “1_sampling_design” in the <em>Scripts</em> tab and click <em>Run</em>. (Check <a class="reference external" href="https://gee-assessment-tools.readthedocs.io/en/latest/overview.html">Overview</a> to familiarize yourself with GEE interface if you have done so already.)</p>
+</li>
+<li><p class="first">In Sampling Design dialog, add the path to the stratification under <em>Specify an image to define study area</em>. The path is likely something like “users/[your name]/stratification_cambodia_utm_small”. Set the band to “1” and mask value to “0” and click <em>Load image</em>.</p>
+</li>
+<li><p class="first">Because the objective of the exercise is to estimate the area forest loss which is a small part of the study area, the sample will be selected by stratified random sampling – under <em>Select a sampling scheme</em> select <em>Stratified random</em>.</p>
+</li>
+<li><p class="first">Further, we will <em>Determine sample size</em> by setting a <em>Target SE of a class</em>, in this case, class number 4, Forest loss. The application will print in the Dialog the area proportion of the class 4:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>&gt;&gt;&gt; Area proportion of class 4: 0.0667431639819303
+</pre></div>
+</div>
+</li>
+<li><p class="first">Text</p>
+</li>
 </ol>
 </div>
 <div class="section" id="response-design">

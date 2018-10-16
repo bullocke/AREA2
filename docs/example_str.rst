@@ -32,7 +32,8 @@ An example is provided here to illustrate the estimation of the area of forest l
 
    n = \left(\frac{\sum_{h} W_h S_h}{S(\hat{y})}\right )^2
    
-   where :math:`S(\hat{y})` is the standard error
+
+where :math:`S(\hat{y})` is the standard error
    
 8. Text
 

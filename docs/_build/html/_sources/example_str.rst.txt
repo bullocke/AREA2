@@ -26,7 +26,9 @@ An example is provided here to illustrate the estimation of the area of forest l
       0.0667431639819303
 	   
 	   
-7. Text .. math::
+7. Text 
+
+.. math::
 
    \frac{ \sum_{t=0}^{N}f(t,k) }{N}
    

@@ -33,9 +33,14 @@ An example is provided here to illustrate the estimation of the area of forest l
    n = \left(\frac{\sum_{h} W_h S_h}{S(\hat{y})}\right )^2
    
 
-where :math:`S(\hat{y})` is the standard error
-   
-8. Text
+where :math:`W_h` are the strata weights that are automatically extracted from the stratification. :math:`S_h` are the stratum standard deviations, calculated as :math:`S_h = \sqrt{p_h (1-p_h)}` where :math:`p_h` is the anticipated area of Forest loss according to the reference data in stratum *h*. For class 4, :math:`p_h` simply becomes the anticipated user's accuracy of the Forest loss class. Let's assume a user's accuracy of 0.7; specify "0.7" under *Anticipated users accuracy (0-1) for class 4*.
+
+8. For the other strata, :math:`p_h` becomes the anticipated area of Forest loss according to the reference data in stratum *h*. Just like the user's accuracy of Forest loss, these numbers are unknown and we have to make a best guess
+
+9. The denominator :math:`S(\hat{y})` is the target standard error of the area estimate of forest loss that we aim to achieve.
+
+  
+10. Text
 
 
 2. Response Design

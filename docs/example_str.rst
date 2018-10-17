@@ -10,7 +10,7 @@ An example is provided here to illustrate the estimation of the area of forest l
 1. Sampling Design
 ------------------
 
-1. Because the area of forest loss is small relative the total study area, using non-stratified designs would require a very large sample size to ensure a sufficient number of observations of forest loss in the sample data. To use a stratified design, we will first need to define a stratification. In this case, we will extract a map of Cambodia from a global map [1]_ of forest, non-forest, forest loss, and forest gain. The map will serve a stratification of study area. Preferably, use the GeoTIFF format. (A tutorial from BEEODA illustrating the creation of a local stratification from the global map is provided `here <https://github.com/beeoda/tutorials/tree/master/Use_of_global_tree_cover_and_change_datasets>`_)
+1. Because the area of forest loss is small relative the total study area, using non-stratified designs would require a very large sample size to ensure a sufficient number of observations of forest loss in the sample data. To use a stratified design, we will first need to define a stratification. In this case, we will extract a map of Cambodia from a global map [1]_ of (1) forest, (2) non-forest, (3) water, (4) forest loss, (5) forest gain, and (6) forest loss and gain. The map will serve a stratification of study area. Preferably, use the GeoTIFF format. (A tutorial from BEEODA illustrating the creation of a local stratification from the global map is provided `here <https://github.com/beeoda/tutorials/tree/master/Use_of_global_tree_cover_and_change_datasets>`_)
 
 2. You can download the stratification of Cambodia `here <https://drive.google.com/open?id=1XYzslxY0F7X0Dum58-4_KTEBGqm2EEe3>`_. Once downloaded to your local computer, click the *Assets* tab next to the *Scripts* tab and *NEW* > *Image upload* > *SELECT*; click *Advanced* > *Masking mode* > and set *No-data value* to "0". Click *OK* to upload the stratification as an image file. You can check the progress in the *Tasks* tab (the upload will take several minutes).
 
@@ -32,13 +32,17 @@ An example is provided here to illustrate the estimation of the area of forest l
 
    n = \left(\frac{\sum_{h} W_h \mbox{SD}_h}{\mbox{SE}(\hat{y})}\right )^2
    
-where :math:`W_h` are the strata weights that are automatically extracted from the stratification; :math:`\mbox{SD}_h` are the stratum standard deviations, calculated as :math:`\mbox{SD}_h= \sqrt{p_h (1-p_h)}` where :math:`p_h` is the anticipated area of Forest loss according to the reference data in stratum :math:`h`. For class 4, :math:`p_h` simply becomes the anticipated user's accuracy of the Forest loss class. Let's assume a user's accuracy of 0.7; specify "0.7" under *Anticipated users accuracy (0-1) for class 4*.
+where :math:`W_h` are the strata weights that are automatically extracted from the stratification; :math:`\mbox{SD}_h` are the stratum standard deviations, calculated as :math:`\mbox{SD}_h= \sqrt{p_h (1-p_h)}` where :math:`p_h` is the anticipated area of Forest loss according to the reference data in stratum :math:`h`. For class 4, :math:`p_h` simply becomes the anticipated user's accuracy of the Forest loss class. Let's assume a user's accuracy of 0.6; specify "0.6" under *Anticipated users accuracy (0-1) for class 4*.
 
-8. For the other strata, :math:`p_h` becomes the anticipated area of Forest loss according to the reference data in stratum :math:`h`. Just like the user's accuracy of Forest loss, these numbers are unknown and we have to make a best guess.  Let's assume an area proportion of Forest loss  of 0.01 in Forest and Non-forest but zero in the other strata: add under *Specify anticipated proportion of class 4 in other strata* the following :math:`p_1 = p_2 = 0.01` and :math:`p_3 = p_5 = p_6 = 0`.
+8. For the other strata, :math:`p_h` becomes the anticipated area of Forest loss according to the reference data in stratum :math:`h`. Just like the user's accuracy of Forest loss, these numbers are unknown and we have to make a best guess.  Let's assume an area proportion of Forest loss  of 0.01 in the region classified as Forest, Non-forest and Water but zero in the other forest change strata: add under *Specify anticipated proportion of class 4 in other strata* the following :math:`p_1 = p_2 = p_3 = 0.01` and :math:`p_5 = p_6 = 0`.
 
-9. The denominator :math:`\mbox{SE}(\hat{y})` is the target standard error of the area estimate of forest loss that we aim to achieve. The target standard error has a substantial impact on the sample size; trying to achieve a small error will result in a larger sample. While the area of forest loss is unknown, we know that the mapped area proportion is 0.066. A target standard error expressed as an area proportion of  0.005 is equivalent of a 95% confidence interval of :math:`\pm 1.96 \times 0.005 = 0.01` or a margin of error of :math:`0.01 \div 0.066 = 15%`. 
+9. The denominator :math:`\mbox{SE}(\hat{y})` is the target standard error of the area estimate of forest loss that we aim to achieve. The target standard error has a substantial impact on the sample size; trying to achieve a small error will result in a larger sample. While the area of forest loss is unknown, we know that the mapped area proportion is 0.066. A target standard error expressed as an area proportion of  0.005 is equivalent of a 95\% confidence interval of :math:`\pm 1.96 \times 0.005 = 0.01` or a margin of error of :math:`0.01 \div 0.066 = 15\%`. Specify 0.005 under *Set target SE of the area of class 4*; the Dialog should look like this:
 
-  
+.. image:: str_dialog.png
+   :width: 600pt
+   
+
+
 10. Text
 
 

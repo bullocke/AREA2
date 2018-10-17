@@ -39,7 +39,7 @@ where :math:`W_h` are the strata weights that are automatically extracted from t
 9. The denominator :math:`\mbox{SE}(\hat{y})` is the target standard error of the area estimate of forest loss that we aim to achieve. The target standard error has a substantial impact on the sample size; trying to achieve a small error will result in a larger sample. While the area of forest loss is unknown, we know that the mapped area proportion is 0.066. A target standard error expressed as an area proportion of  0.005 is equivalent of a 95\% confidence interval of :math:`\pm 1.96 \times 0.005 = 0.01` or a margin of error of :math:`0.01 \div 0.066 = 15\%`. Specify 0.005 under *Set target SE of the area of class 4*; the Dialog should look like this:
 
 .. image:: str_dialog.png
-   :width: 600pt
+   :width: 300pt
    
 
 

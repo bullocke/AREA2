@@ -36,7 +36,7 @@ where :math:`W_h` are the strata weights that are automatically extracted from t
 
 8. For the other strata, :math:`p_h` becomes the anticipated area of Forest loss according to the reference data in stratum :math:`h`. Just like the user's accuracy of Forest loss, these numbers are unknown and we have to make a best guess.  Let's assume an area proportion of Forest loss  of 0.01 in Forest and Non-forest but zero in the other strata: add under *Specify anticipated proportion of class 4 in other strata* the following :math:`p_1 = p_2 = 0.01` and :math:`p_3 = p_5 = p_6 = 0`.
 
-9. The denominator :math:`\textup{SE}(\hat{y})` is the target standard error of the area estimate of forest loss that we aim to achieve.
+9. The denominator :math:`\textup{SE}(\hat{y})` is the target standard error of the area estimate of forest loss that we aim to achieve. The target standard error has a substantial impact on the sample size; trying to achieve a small error will result in a larger sample. While the area of forest loss is unknown, we know that the mapped area proportion is 0.066. A target standard error expressed as an area proportion of  0.005 is equivalent of a 95% confidence interval of :math:`\pm 1.96 \times 0.005 = 0.01` or a margin of error of :math:`0.01 \div 0.066 = 15%`. 
 
   
 10. Text

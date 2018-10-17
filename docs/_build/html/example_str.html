@@ -191,7 +191,7 @@
 <div class="section" id="sampling-design">
 <h2>1. Sampling Design<a class="headerlink" href="#sampling-design" title="Permalink to this headline">¶</a></h2>
 <ol class="arabic simple">
-<li>Because the area of forest loss is small relative the total study area, using non-stratified designs would require a very large sample size to ensure a sufficient number of observations of forest loss in the sample data. To use a stratified design, we will first need to define a stratification. In this case, we will extract a map of Cambodia from a global map <a class="footnote-reference" href="#id4" id="id1">[1]</a> of (1) forest, (2) non-forest, (3) water, (4) forest loss, (5) forest gain, and (6) forest loss and gain. The map will serve a stratification of study area. Preferably, use the GeoTIFF format. (A tutorial from BEEODA illustrating the creation of a local stratification from the global map is provided <a class="reference external" href="https://github.com/beeoda/tutorials/tree/master/Use_of_global_tree_cover_and_change_datasets">here</a>)</li>
+<li>Because the area of forest loss is small relative the total study area, using non-stratified designs would require a very large sample size to ensure a sufficient number of observations of forest loss in the sample data. To use a stratified design, we will first need to define a stratification. In this case, we will extract a map of Cambodia from a global map <a class="footnote-reference" href="#id5" id="id1">[1]</a> of (1) forest, (2) non-forest, (3) water, (4) forest loss, (5) forest gain, and (6) forest loss and gain. The map will serve a stratification of study area. Preferably, use the GeoTIFF format. (A tutorial from BEEODA illustrating the creation of a local stratification from the global map is provided <a class="reference external" href="https://github.com/beeoda/tutorials/tree/master/Use_of_global_tree_cover_and_change_datasets">here</a>)</li>
 <li>You can download the stratification of Cambodia <a class="reference external" href="https://drive.google.com/open?id=1XYzslxY0F7X0Dum58-4_KTEBGqm2EEe3">here</a>. Once downloaded to your local computer, click the <em>Assets</em> tab next to the <em>Scripts</em> tab and <em>NEW</em> &gt; <em>Image upload</em> &gt; <em>SELECT</em>; click <em>Advanced</em> &gt; <em>Masking mode</em> &gt; and set <em>No-data value</em> to “0”. Click <em>OK</em> to upload the stratification as an image file. You can check the progress in the <em>Tasks</em> tab (the upload will take several minutes).</li>
 <li>Once the stratification has been added to <em>Assets</em>, highlight the script “1_sampling_design” in the <em>Scripts</em> tab and click <em>Run</em>. (Check <a class="reference external" href="https://gee-assessment-tools.readthedocs.io/en/latest/overview.html">Overview</a> to familiarize yourself with GEE interface if you have done so already.)</li>
 <li>In Sampling Design dialog, add the path to the stratification under <em>Specify an image to define study area</em>. The path is likely something like “users/[your name]/stratification_cambodia_utm_small”. Set the band to “1” and mask value to “0” and click <em>Load image</em>.</li>
@@ -203,7 +203,7 @@
 </pre></div>
 </div>
 <ol class="arabic simple" start="7">
-<li>To determine the sample size, <em>n</em>, we’ll use Equation 5.25 in <a class="footnote-reference" href="#id5" id="id3">[2]</a></li>
+<li>To determine the sample size, <em>n</em>, we’ll use Equation 5.25 in <a class="footnote-reference" href="#id6" id="id3">[2]</a></li>
 </ol>
 <div class="math notranslate nohighlight">
 \[n = \left(\frac{\sum_{h} W_h \mbox{SD}_h}{\mbox{SE}(\hat{y})}\right )^2\]</div>
@@ -212,9 +212,9 @@
 <li>For the other strata, <span class="math notranslate nohighlight">\(p_h\)</span> becomes the anticipated area of Forest loss according to the reference data in stratum <span class="math notranslate nohighlight">\(h\)</span>. Just like the user’s accuracy of Forest loss, these numbers are unknown and we have to make a best guess.  Let’s assume an area proportion of Forest loss  of 0.01 in the region classified as Forest, Non-forest and Water but zero in the other forest change strata: add under <em>Specify anticipated proportion of class 4 in other strata</em> the following <span class="math notranslate nohighlight">\(p_1 = p_2 = p_3 = 0.01\)</span> and <span class="math notranslate nohighlight">\(p_5 = p_6 = 0\)</span>.</li>
 <li>The denominator <span class="math notranslate nohighlight">\(\mbox{SE}(\hat{y})\)</span> is the target standard error of the area estimate of forest loss that we aim to achieve. The target standard error has a substantial impact on the sample size; trying to achieve a small error will result in a larger sample. While the area of forest loss is unknown, we know that the mapped area proportion is 0.066. A target standard error expressed as an area proportion of  0.005 is equivalent of a 95% confidence interval of <span class="math notranslate nohighlight">\(\pm 1.96 \times 0.005 = 0.01\)</span> or a margin of error of <span class="math notranslate nohighlight">\(0.01 \div 0.066 = 15\%\)</span>. Specify 0.005 under <em>Set target SE of the area of class 4</em>; the Dialog should look like this:</li>
 </ol>
-<a class="reference internal image-reference" href="_images/str_dialog.png"><img alt="_images/str_dialog.png" src="_images/str_dialog.png" style="width: 300pt;" /></a>
+<a class="reference internal image-reference" href="_images/str_dialog.png"><img alt="_images/str_dialog.png" src="_images/str_dialog.png" style="width: 400pt;" /></a>
 <ol class="arabic simple" start="10">
-<li>Text</li>
+<li>Click <em>Calculate sample size</em>; a sample of 625 units is recommended. To estimate area (or any estimate across strata such as overall and producer’s accuracy as opposed to user’s accuracy), a proportional allocation of the sample to strata is preferable <a class="footnote-reference" href="#id7" id="id4">[3]</a>.  The problem with proportional allocation is that the sample size will be very small in the smaller strata. A proportional allocation would yield 258, 308, 14, 42, 2, 1 sample units respectively.</li>
 </ol>
 </div>
 <div class="section" id="response-design">
@@ -224,16 +224,22 @@
 <div class="section" id="analysis">
 <h2>3. Analysis<a class="headerlink" href="#analysis" title="Permalink to this headline">¶</a></h2>
 <p>Text</p>
-<table class="docutils footnote" frame="void" id="id4" rules="none">
+<table class="docutils footnote" frame="void" id="id5" rules="none">
 <colgroup><col class="label" /><col /></colgroup>
 <tbody valign="top">
 <tr><td class="label"><a class="fn-backref" href="#id1">[1]</a></td><td>Hansen, M. C., Potapov, P. V., Moore, R., Hancher, M., Turubanova, S. A. A., Tyukavina, A., … &amp; Kommareddy, A. (2013). High-resolution global maps of 21st-century forest cover change. <em>Science</em>, 342(6160), 850-853.</td></tr>
 </tbody>
 </table>
-<table class="docutils footnote" frame="void" id="id5" rules="none">
+<table class="docutils footnote" frame="void" id="id6" rules="none">
 <colgroup><col class="label" /><col /></colgroup>
 <tbody valign="top">
 <tr><td class="label"><a class="fn-backref" href="#id3">[2]</a></td><td>Cochran, W. G. (1977). <em>Sampling techniques</em>. John Wiley &amp; Sons.</td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="id7" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id4">[3]</a></td><td>Olofsson, P., Foody, G. M., Herold, M., Stehman, S. V., Woodcock, C. E., &amp; Wulder, M. A. (2014). Good practices for estimating area and assessing accuracy of land change. <em>Remote Sensing of Environment</em>, 148, 42-57.</td></tr>
 </tbody>
 </table>
 </div>

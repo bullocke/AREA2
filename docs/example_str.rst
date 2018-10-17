@@ -39,11 +39,9 @@ where :math:`W_h` are the strata weights that are automatically extracted from t
 9. The denominator :math:`\mbox{SE}(\hat{y})` is the target standard error of the area estimate of forest loss that we aim to achieve. The target standard error has a substantial impact on the sample size; trying to achieve a small error will result in a larger sample. While the area of forest loss is unknown, we know that the mapped area proportion is 0.066. A target standard error expressed as an area proportion of  0.005 is equivalent of a 95\% confidence interval of :math:`\pm 1.96 \times 0.005 = 0.01` or a margin of error of :math:`0.01 \div 0.066 = 15\%`. Specify 0.005 under *Set target SE of the area of class 4*; the Dialog should look like this:
 
 .. image:: str_dialog.png
-   :width: 300pt
+   :width: 400pt
    
-
-
-10. Text
+10. Click *Calculate sample size*; a sample of 625 units is recommended. To estimate area (or any estimate across strata such as overall and producer's accuracy as opposed to user's accuracy), a proportional allocation of the sample to strata is preferable [3]_.  The problem with proportional allocation is that the sample size will be very small in the smaller strata. A proportional allocation would yield 258, 308, 14, 42, 2, 1 sample units respectively. 
 
 
 2. Response Design
@@ -60,3 +58,5 @@ Text
 .. [1] Hansen, M. C., Potapov, P. V., Moore, R., Hancher, M., Turubanova, S. A. A., Tyukavina, A., ... & Kommareddy, A. (2013). High-resolution global maps of 21st-century forest cover change. *Science*, 342(6160), 850-853.
 
 .. [2] Cochran, W. G. (1977). *Sampling techniques*. John Wiley & Sons.
+
+.. [3] Olofsson, P., Foody, G. M., Herold, M., Stehman, S. V., Woodcock, C. E., & Wulder, M. A. (2014). Good practices for estimating area and assessing accuracy of land change. *Remote Sensing of Environment*, 148, 42-57.

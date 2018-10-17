@@ -12,15 +12,15 @@ An example is provided here to illustrate the estimation of the area of forest l
 
 1. Because the area of forest loss is small relative the total study area, using non-stratified designs would require a very large sample size to ensure a sufficient number of observations of forest loss in the sample data. To use a stratified design, we will first need to define a stratification. In this case, we will extract a map of Cambodia from a global map [1]_ of (1) forest, (2) non-forest, (3) water, (4) forest loss, (5) forest gain, and (6) forest loss and gain. The map will serve a stratification of study area. Preferably, use the GeoTIFF format. (A tutorial from BEEODA illustrating the creation of a local stratification from the global map is provided `here <https://github.com/beeoda/tutorials/tree/master/Use_of_global_tree_cover_and_change_datasets>`_)
 
-2. You can download the stratification of Cambodia `here <https://drive.google.com/open?id=1XYzslxY0F7X0Dum58-4_KTEBGqm2EEe3>`_. Once downloaded to your local computer, click the *Assets* tab next to the *Scripts* tab and *NEW* > *Image upload* > *SELECT*; click *Advanced* > *Masking mode* > and set *No-data value* to "0". Click *OK* to upload the stratification as an image file. You can check the progress in the *Tasks* tab (the upload will take several minutes).
+2. **Stratification.** You can download the stratification of Cambodia `here <https://drive.google.com/open?id=1XYzslxY0F7X0Dum58-4_KTEBGqm2EEe3>`_. Once downloaded to your local computer, click the *Assets* tab next to the *Scripts* tab and *NEW* > *Image upload* > *SELECT*; click *Advanced* > *Masking mode* > and set *No-data value* to "0". Click *OK* to upload the stratification as an image file. You can check the progress in the *Tasks* tab (the upload will take several minutes).
 
 3. Once the stratification has been added to *Assets*, highlight the script "1_sampling_design" in the *Scripts* tab and click *Run*. (Check `Overview <https://gee-assessment-tools.readthedocs.io/en/latest/overview.html>`_ to familiarize yourself with GEE interface if you have done so already.)
 
 4. In Sampling Design dialog, add the path to the stratification under *Specify an image to define study area*. The path is likely something like "users/[your name]/stratification_cambodia_utm_small". Set the band to "1" and mask value to "0" and click *Load image*. 
 
-5. Because the objective of the exercise is to estimate the area forest loss which is a small part of the study area, the sample will be selected by stratified random sampling -- under *Select a sampling scheme* select *Stratified random*. 
+5. **Sampling scheme.** Because the objective of the exercise is to estimate the area forest loss which is a small part of the study area, the sample will be selected by stratified random sampling -- under *Select a sampling scheme* select *Stratified random*. 
 
-6. Further, we will *Determine sample size* by setting a *Target SE of a class*, in this case, class number 4, Forest loss. The application will print in the Dialog and Console the area proportion of class 4::
+6. **Sample size.** Further, we will *Determine sample size* by setting a *Target SE of a class*, in this case, class number 4, Forest loss. The application will print in the Dialog and Console the area proportion of class 4::
 
   >>> Area proportion of class 4:
       0.0667431639819303
@@ -36,13 +36,20 @@ where :math:`W_h` are the strata weights that are automatically extracted from t
 
 8. For the other strata, :math:`p_h` becomes the anticipated area of Forest loss according to the reference data in stratum :math:`h`. Just like the user's accuracy of Forest loss, these numbers are unknown and we have to make a best guess.  Let's assume an area proportion of Forest loss  of 0.01 in the region classified as Forest, Non-forest and Water but zero in the other forest change strata: add under *Specify anticipated proportion of class 4 in other strata* the following :math:`p_1 = p_2 = p_3 = 0.01` and :math:`p_5 = p_6 = 0`.
 
-9. The denominator :math:`\mbox{SE}(\hat{y})` is the target standard error of the area estimate of forest loss that we aim to achieve. The target standard error has a substantial impact on the sample size; trying to achieve a small error will result in a larger sample. While the area of forest loss is unknown, we know that the mapped area proportion is 0.066. A target standard error expressed as an area proportion of  0.005 is equivalent of a 95\% confidence interval of :math:`\pm 1.96 \times 0.005 = 0.01` or a margin of error of :math:`0.01 \div 0.066 = 15\%`. Specify 0.005 under *Set target SE of the area of class 4*; the Dialog should look like this:
+9. The denominator :math:`\mbox{SE}(\hat{y})` is the target standard error of the area estimate of forest loss :math:`\hat{y}` that we aim to achieve. The target standard error has a substantial impact on the sample size; trying to achieve a small error will result in a larger sample. While the area of forest loss is unknown, we know that the mapped area proportion is 0.066. A target standard error expressed as an area proportion of  0.005 is equivalent of a 95\% confidence interval of :math:`\pm 1.96 \times 0.005 = 0.01` or a margin of error of :math:`0.01 \div 0.066 = 15\%`. Specify 0.005 under *Set target SE of the area of class 4*; the Dialog should look like this:
 
 .. image:: str_dialog.png
-   :width: 400pt
+   :width: 300pt
    
-10. Click *Calculate sample size*; a sample of 625 units is recommended. To estimate area (or any estimate across strata such as overall and producer's accuracy as opposed to user's accuracy), a proportional allocation of the sample to strata is preferable [3]_.  The problem with proportional allocation is that the sample size will be very small in the smaller strata. A proportional allocation would yield 258, 308, 14, 42, 2, 1 sample units respectively. 
+10. **Allocation.** Click *Calculate sample size*; a sample of 625 units is recommended. The next step is to allocate the sample to strata. To estimate area (or any estimate across strata such as overall and producer's accuracy as opposed to user's accuracy), a proportional allocation of the sample to strata is preferable [3]_.  The problem with proportional allocation is that the sample size will be very small in the smaller strata. A proportional allocation would yield 258, 308, 14, 42, 2, 1 sample units respectively. If bumping the sample size in the very small strata to 30, in forest loss stratum from 42 to 50, and keep the sample size at 250 and 300 in the forest and non-forest stratum, we get the following allocation -- specify under *Allocate sample to strata* the following and click *Create sample*:
+   1. Forest: 250
+   2. Non-forest: 300
+   3. Water: 30
+   4. Forest loss: 50
+   5. Forest gain: 30
+   6. Forest gain/loss: 30   
 
+11. **Export sample.** Clicking *Add to map* will display the sample units as red dots in the Map display. The final step is to export the sample: click the Tasks tab, and then *Export sample* in the Dialog -- an entry named "sample" will appear in Tasks. Click the *Run* button right next to the "sample" entry. 
 
 2. Response Design
 ------------------

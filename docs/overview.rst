@@ -1,7 +1,7 @@
 .. include:: <isopub.txt> 
 
 Overview |check|
-========
+================
 
 As explained in the `Theoretical Background <https://gee-assessment-tools.readthedocs.io/en/latest/background.html>`_, areas of map categories should not be obtained by counting pixels in maps because of classification errors. Instead, a sample of reference observations need to be collected to which an unbiased estimator is applied to obtain an area estimate with confidence intervals. The tools provided here lend support for each step the estimation workflow.
 

@@ -44,6 +44,6 @@ Tools and guidance for estimating area and map accuracy on the Google Earth Engi
   
 .. toctree::
    :maxdepth: 2
-   :caption: Examples
+   :caption: Tutorials
   
    example_str

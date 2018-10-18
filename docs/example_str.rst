@@ -10,9 +10,9 @@ An example is provided here to illustrate the estimation of the area of forest l
 1. Sampling Design
 ------------------
 
-1. Because the area of forest loss is small relative the total study area, using non-stratified designs would require a very large sample size to ensure a sufficient number of observations of forest loss in the sample data. To use a stratified design, we will first need to define a stratification. In this case, we will extract a map of Cambodia from a global map [1]_ of (1) forest, (2) non-forest, (3) water, (4) forest loss, (5) forest gain, and (6) forest loss and gain. The map will serve a stratification of study area. Preferably, use the GeoTIFF format. (A tutorial from BEEODA illustrating the creation of a local stratification from the global map is provided `here <https://github.com/beeoda/tutorials/tree/master/Use_of_global_tree_cover_and_change_datasets>`_)
+1. **Stratification.** Because the area of forest loss is small relative the total study area, using non-stratified designs would require a very large sample size to ensure a sufficient number of observations of forest loss in the sample data. To use a stratified design, we will first need to define a stratification. In this case, we will extract a map of Cambodia from a global map [1]_ of (1) forest, (2) non-forest, (3) water, (4) forest loss, (5) forest gain, and (6) forest loss and gain. The map will serve a stratification of study area. Preferably, use the GeoTIFF format. (A tutorial from BEEODA illustrating the creation of a local stratification from the global map is provided `here <https://github.com/beeoda/tutorials/tree/master/Use_of_global_tree_cover_and_change_datasets>`_)
 
-2. **Stratification.** You can download the stratification of Cambodia `here <https://drive.google.com/open?id=1XYzslxY0F7X0Dum58-4_KTEBGqm2EEe3>`_. Once downloaded to your local computer, click the *Assets* tab next to the *Scripts* tab and *NEW* > *Image upload* > *SELECT*; click *Advanced* > *Masking mode* > and set *No-data value* to "0". Click *OK* to upload the stratification as an image file. You can check the progress in the *Tasks* tab (the upload will take several minutes).
+2. You can download the stratification of Cambodia `here <https://drive.google.com/open?id=1XYzslxY0F7X0Dum58-4_KTEBGqm2EEe3>`_. Once downloaded to your local computer, click the *Assets* tab next to the *Scripts* tab and *NEW* > *Image upload* > *SELECT*; click *Advanced* > *Masking mode* > and set *No-data value* to "0". Click *OK* to upload the stratification as an image file. You can check the progress in the *Tasks* tab (the upload will take several minutes).
 
 3. Once the stratification has been added to *Assets*, highlight the script "1_sampling_design" in the *Scripts* tab and click *Run*. (Check `Overview <https://gee-assessment-tools.readthedocs.io/en/latest/overview.html>`_ to familiarize yourself with GEE interface if you have done so already.)
 
@@ -49,12 +49,14 @@ where :math:`W_h` are the strata weights that are automatically extracted from t
    5. Forest gain: 30
    6. Forest gain/loss: 30   
 
-11. **Export sample.** Clicking *Add to map* will display the sample units as red dots in the Map display. The final step is to export the sample: click the Tasks tab, and then *Export sample* in the Dialog -- an entry named "sample" will appear in Tasks. Click the *Run* button right next to the "sample" entry. 
+11. **Export sample.** Clicking *Add to map* will display the sample units as red dots in the Map display. The final step is to export the sample: click the Tasks tab, and then *Export sample* in the Dialog -- two entries named "sample" will appear in Tasks. These are identical but one is of exporting the sample as a CSV file and one as a KML file for use in Google Earth. Click the *Run* button right next one of the  "sample" entries and save as an GEE asset; redo for the other sample entry but save as a KML file on Google Drive. 
 
 2. Response Design
 ------------------
 
-Text
+We now need to provide reference observations for unit in the sample that we designed in the previous step. Reference data are required for observing reference conditions. A powerful reference dataset is the combination of high resolution imagery and time series. Different  applications have been developed that allow you to display such data at sample locations. In this tutorial we will use an application in the Earth Engine called Time Series Viewer. (Other applications include TimeSync and Collect Earth Online.)
+
+1. Text
 
 3. Analysis
 ------------------

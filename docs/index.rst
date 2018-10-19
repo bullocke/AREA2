@@ -1,5 +1,5 @@
-Google Earth Engine Area/Accuracy Estimation Toolbox
-====================================================
+GARET: Google Earth Engine Area/Accuracy Estimation Toolbox
+===========================================================
 
 Tools and guidance for estimating area and map accuracy on the Google Earth Engine.
 

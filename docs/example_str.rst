@@ -54,7 +54,7 @@ where :math:`W_h` are the strata weights that are automatically extracted from t
 2. Response Design
 ------------------
 
-We now need to provide reference observations for unit in the sample that we designed in the previous step. Reference data are required for observing reference conditions. A powerful reference dataset is the combination of high resolution imagery and time series. Different  applications have been developed that allow you to display such data at sample locations. In this tutorial we will use an application in the Earth Engine called Time Series Viewer. (Other applications include TimeSync and Collect Earth Online.)
+We now need to provide reference observations for each unit in the sample that we designed in the previous step. Reference data are required for observing reference conditions. A powerful reference dataset is the combination of high resolution imagery and time series. Different  applications have been developed that allow you to display such data at sample locations. In this tutorial we will use an application in the Earth Engine called Time Series Viewer. (Other applications include TimeSync and Collect Earth Online.)
 
 1. Text
 

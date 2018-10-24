@@ -117,7 +117,6 @@
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Stratified Estimation ○</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#sampling-design">1. Sampling Design</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#response-design">2. Response Design</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#analysis">3. Analysis</a></li>
 </ul>
 </li>
 </ul>
@@ -233,23 +232,24 @@
 <div class="section" id="response-design">
 <h2>2. Response Design<a class="headerlink" href="#response-design" title="Permalink to this headline">¶</a></h2>
 <p>We now need to provide reference observations for each unit in the sample that we designed in the previous step. Reference data are required for observing reference conditions. A powerful reference dataset is the combination of high resolution imagery and time series. Different  applications have been developed that allow you to display such data at sample locations. In this tutorial we will use an application in the Earth Engine called Time Series Viewer. (Other applications include <a class="reference external" href="https://gee-assessment-tools.readthedocs.io/en/latest/timesync.html">TimeSync</a> and <a class="reference external" href="https://gee-assessment-tools.readthedocs.io/en/latest/coleearth.html">Collect Earth Online</a> .)</p>
-<ol class="arabic simple">
-<li>To view satellite data at sample locations, display the script 2_Time_Series_Viewer in the Code Editor.</li>
-<li>In the Assets tab, click the GEE Asset Table contains the sample (you created the GEE Asset in Step 11 above). A dialog box should pop up with the header “Table: [file name]” – click <em>Import</em>.</li>
-<li>This will import the sample into 2_Time_Series_Viewer:</li>
-</ol>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">Imports</span> <span class="p">(</span><span class="mi">1</span> <span class="n">entry</span><span class="p">)</span>
-<span class="go">    var table: Table users/[your name]/[file name]</span>
-</pre></div>
-</div>
+<p>1. To view satellite data at sample locations, first run the script 1_5_save_feature_timeseries – specify the  the GEE Asset Table that contains the sample (i.e. the GEE Asset you created in  Sampling Design, Step 11, above), and click OK. 2. An entry in the Tasks tab will appear called TSData. In the Tasks tab, click Run next to TSData as save as a GEE Asset. This will extract time series data at each location in the sample. It might take a while.
+3. When done, display the script 2_Time_Series_Viewer in the Code Editor.
+4. In the Assets tab, click the GEE Asset Table contains the sample (i.e. the GEE Asset you created in Step 2). A dialog box should pop up with the header “Table: [file name]” – click <em>Import</em>.
+3. This will import the sample into 2_Time_Series_Viewer:</p>
+<blockquote>
+<div><dl class="docutils">
+<dt>Imports (1 entry)</dt>
+<dd>var table: Table users/[your name]/[file name]</dd>
+</dl>
+</div></blockquote>
 <p>Change “table:” to “sample:” such that it looks like this:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">Imports</span> <span class="p">(</span><span class="mi">1</span> <span class="n">entry</span><span class="p">)</span>
 <span class="go">    var sample: Table users/[your name]/[file name]</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="analysis">
-<h2>3. Analysis<a class="headerlink" href="#analysis" title="Permalink to this headline">¶</a></h2>
+<p>4. Click Run.
+3. Analysis
+——————</p>
 <p>Text</p>
 <table class="docutils footnote" frame="void" id="id5" rules="none">
 <colgroup><col class="label" /><col /></colgroup>

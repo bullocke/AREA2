@@ -1,7 +1,7 @@
 .. include:: <isopub.txt> 
 
-Stratified Estimation |cir|
-===========================
+Stratified estimation of area of forest loss |cir|
+==================================================
 
 An example is provided here to illustrate the estimation of the area of forest loss for the country of Cambodia between 2000 and 2010 using stratified estimation. The example has three different parts: 1) sampling design -- a sample is selected by stratified random sampling; 2) response design which involves observing the reference conditions at sample unit in  various satellite data available in Google Earth Engine; and 3) the analysis which is based on the application of a stratified estimator to the sample data.
 
@@ -64,13 +64,15 @@ We now need to provide reference observations for each unit in the sample that w
    Imports (1 entry)
    var table: Table users/[your name]/[file name]
 
-Change "table:" to "sample:" such that it looks like this:
+Change "table:" to "sample:" such that it looks like this::
 
-  >>> Imports (1 entry)
-      var sample: Table users/[your name]/[file name]
+   Imports (1 entry)
+   var sample: Table users/[your name]/[file name]
 
 	  
 4. Click Run.
+
+
 3. Analysis
 ------------------
 

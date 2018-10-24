@@ -57,12 +57,9 @@ where :math:`W_h` are the strata weights that are automatically extracted from t
 We now need to provide reference observations for each unit in the sample that we designed in the previous step. Reference data are required for observing reference conditions. A powerful reference dataset is the combination of high resolution imagery and time series. Different  applications have been developed that allow you to display such data at sample locations. In this tutorial we will use an application in the Earth Engine called Time Series Viewer. (Other applications include `TimeSync <https://gee-assessment-tools.readthedocs.io/en/latest/timesync.html>`_ and `Collect Earth Online <https://gee-assessment-tools.readthedocs.io/en/latest/coleearth.html>`_ .)
 
 1. To view satellite data at sample locations, first run the script 1_5_save_feature_timeseries -- specify the  the GEE Asset Table that contains the sample (i.e. the GEE Asset you created in  Sampling Design, Step 11, above), and click OK. 2. An entry in the Tasks tab will appear called TSData. In the Tasks tab, click Run next to TSData as save as a GEE Asset. This will extract time series data at each location in the sample. It might take a while. 
-
-3. When done, display the script 2_Time_Series_Viewer in the Code Editor.
-
-4. In the Assets tab, click the GEE Asset Table contains the sample (i.e. the GEE Asset you created in Step 2). A dialog box should pop up with the header "Table: [file name]" -- click *Import*.
-
-3. This will import the sample into 2_Time_Series_Viewer::
+2. When done, display the script 2_Time_Series_Viewer in the Code Editor.
+3. In the Assets tab, click the GEE Asset Table contains the sample (i.e. the GEE Asset you created in Step 2). A dialog box should pop up with the header "Table: [file name]" -- click *Import*.
+4. This will import the sample into 2_Time_Series_Viewer::
 
    Imports (1 entry)
    var table: Table users/[your name]/[file name]
@@ -73,7 +70,7 @@ Change "table:" to "sample:" such that it looks like this::
    var sample: Table users/[your name]/[file name]
 
 	  
-4. Click Run.
+5. Click Run.
 
 
 3. Analysis

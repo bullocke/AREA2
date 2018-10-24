@@ -233,14 +233,13 @@
 <div class="section" id="response-design">
 <h2>2. Response Design<a class="headerlink" href="#response-design" title="Permalink to this headline">¶</a></h2>
 <p>We now need to provide reference observations for each unit in the sample that we designed in the previous step. Reference data are required for observing reference conditions. A powerful reference dataset is the combination of high resolution imagery and time series. Different  applications have been developed that allow you to display such data at sample locations. In this tutorial we will use an application in the Earth Engine called Time Series Viewer. (Other applications include <a class="reference external" href="https://gee-assessment-tools.readthedocs.io/en/latest/timesync.html">TimeSync</a> and <a class="reference external" href="https://gee-assessment-tools.readthedocs.io/en/latest/coleearth.html">Collect Earth Online</a> .)</p>
-<ol class="arabic simple">
-<li>To view satellite data at sample locations, first run the script 1_5_save_feature_timeseries – specify the  the GEE Asset Table that contains the sample (i.e. the GEE Asset you created in  Sampling Design, Step 11, above), and click OK. 2. An entry in the Tasks tab will appear called TSData. In the Tasks tab, click Run next to TSData as save as a GEE Asset. This will extract time series data at each location in the sample. It might take a while.</li>
-</ol>
-<ol class="arabic simple" start="3">
-<li>When done, display the script 2_Time_Series_Viewer in the Code Editor.</li>
-<li>In the Assets tab, click the GEE Asset Table contains the sample (i.e. the GEE Asset you created in Step 2). A dialog box should pop up with the header “Table: [file name]” – click <em>Import</em>.</li>
-</ol>
-<ol class="arabic" start="3">
+<ol class="arabic">
+<li><p class="first">To view satellite data at sample locations, first run the script 1_5_save_feature_timeseries – specify the  the GEE Asset Table that contains the sample (i.e. the GEE Asset you created in  Sampling Design, Step 11, above), and click OK. 2. An entry in the Tasks tab will appear called TSData. In the Tasks tab, click Run next to TSData as save as a GEE Asset. This will extract time series data at each location in the sample. It might take a while.</p>
+</li>
+<li><p class="first">When done, display the script 2_Time_Series_Viewer in the Code Editor.</p>
+</li>
+<li><p class="first">In the Assets tab, click the GEE Asset Table contains the sample (i.e. the GEE Asset you created in Step 2). A dialog box should pop up with the header “Table: [file name]” – click <em>Import</em>.</p>
+</li>
 <li><p class="first">This will import the sample into 2_Time_Series_Viewer:</p>
 <p>Imports (1 entry)
 var table: Table users/[your name]/[file name]</p>
@@ -251,7 +250,7 @@ var table: Table users/[your name]/[file name]</p>
 <span class="n">var</span> <span class="n">sample</span><span class="p">:</span> <span class="n">Table</span> <span class="n">users</span><span class="o">/</span><span class="p">[</span><span class="n">your</span> <span class="n">name</span><span class="p">]</span><span class="o">/</span><span class="p">[</span><span class="n">file</span> <span class="n">name</span><span class="p">]</span>
 </pre></div>
 </div>
-<ol class="arabic simple" start="4">
+<ol class="arabic simple" start="5">
 <li>Click Run.</li>
 </ol>
 </div>

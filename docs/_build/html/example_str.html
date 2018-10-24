@@ -236,12 +236,10 @@
 3. When done, display the script 2_Time_Series_Viewer in the Code Editor.
 4. In the Assets tab, click the GEE Asset Table contains the sample (i.e. the GEE Asset you created in Step 2). A dialog box should pop up with the header “Table: [file name]” – click <em>Import</em>.
 3. This will import the sample into 2_Time_Series_Viewer:</p>
-<blockquote>
-<div><dl class="docutils">
-<dt>Imports (1 entry)</dt>
-<dd>var table: Table users/[your name]/[file name]</dd>
-</dl>
-</div></blockquote>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Imports</span> <span class="p">(</span><span class="mi">1</span> <span class="n">entry</span><span class="p">)</span>
+<span class="n">var</span> <span class="n">table</span><span class="p">:</span> <span class="n">Table</span> <span class="n">users</span><span class="o">/</span><span class="p">[</span><span class="n">your</span> <span class="n">name</span><span class="p">]</span><span class="o">/</span><span class="p">[</span><span class="n">file</span> <span class="n">name</span><span class="p">]</span>
+</pre></div>
+</div>
 <p>Change “table:” to “sample:” such that it looks like this:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">Imports</span> <span class="p">(</span><span class="mi">1</span> <span class="n">entry</span><span class="p">)</span>
 <span class="go">    var sample: Table users/[your name]/[file name]</span>

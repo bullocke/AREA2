@@ -59,10 +59,10 @@ We now need to provide reference observations for each unit in the sample that w
 1. To view satellite data at sample locations, first run the script 1_5_save_feature_timeseries -- specify the  the GEE Asset Table that contains the sample (i.e. the GEE Asset you created in  Sampling Design, Step 11, above), and click OK. 2. An entry in the Tasks tab will appear called TSData. In the Tasks tab, click Run next to TSData as save as a GEE Asset. This will extract time series data at each location in the sample. It might take a while. 
 3. When done, display the script 2_Time_Series_Viewer in the Code Editor.
 4. In the Assets tab, click the GEE Asset Table contains the sample (i.e. the GEE Asset you created in Step 2). A dialog box should pop up with the header "Table: [file name]" -- click *Import*.
-3. This will import the sample into 2_Time_Series_Viewer:
+3. This will import the sample into 2_Time_Series_Viewer::
 
    Imports (1 entry)
-      var table: Table users/[your name]/[file name]
+   var table: Table users/[your name]/[file name]
 
 Change "table:" to "sample:" such that it looks like this:
 

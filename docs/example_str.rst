@@ -64,6 +64,7 @@ We now need to provide reference observations for each unit in the sample that w
    Imports (1 entry)
    var table: Table users/[your name]/[file name]
 
+   
 Change "table:" to "sample:" such that it looks like this::
 
    Imports (1 entry)

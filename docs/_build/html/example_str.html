@@ -98,7 +98,7 @@
 </ul>
 <p class="caption"><span class="caption-text">Interpretation</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="tsviewer.html">Timeseries Viewer ○</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tsviewer.html">Time Series Viewer ○</a></li>
 <li class="toctree-l1"><a class="reference internal" href="colearth.html">Collect Earth ○</a></li>
 <li class="toctree-l1"><a class="reference internal" href="timesync.html">TimeSync ○</a></li>
 </ul>
@@ -227,14 +227,20 @@
 </ol>
 </div></blockquote>
 <ol class="arabic simple" start="11">
-<li><strong>Export sample.</strong> Clicking <em>Add to map</em> will display the sample units as red dots in the Map display. The final step is to export the sample: click the Tasks tab, and then <em>Export sample</em> in the Dialog – two entries named “sample” will appear in Tasks. These are identical but one is of exporting the sample as a CSV file and one as a KML file for use in Google Earth. Click the <em>Run</em> button right next one of the  “sample” entries and save as an GEE asset; redo for the other sample entry but save as a KML file on Google Drive.</li>
+<li><strong>Export sample.</strong> Clicking <em>Add to map</em> will display the sample units as red dots in the Map display. The final step is to export the sample: click the Tasks tab, and then <em>Export sample</em> in the Dialog – two entries named “sample” will appear in Tasks. These are identical but one is of exporting the sample as a CSV file and one as a GEE Asset file for use in Google Earth Engine. Click the <em>Run</em> button right next one of the  “sample” entries and save as an GEE Asset; redo for the other sample entry but save as a CSV file on Google Drive.</li>
 </ol>
 </div>
 <div class="section" id="response-design">
 <h2>2. Response Design<a class="headerlink" href="#response-design" title="Permalink to this headline">¶</a></h2>
-<p>We now need to provide reference observations for each unit in the sample that we designed in the previous step. Reference data are required for observing reference conditions. A powerful reference dataset is the combination of high resolution imagery and time series. Different  applications have been developed that allow you to display such data at sample locations. In this tutorial we will use an application in the Earth Engine called Time Series Viewer. (Other applications include TimeSync and Collect Earth Online.)</p>
-<ol class="arabic simple">
-<li>Text</li>
+<p>We now need to provide reference observations for each unit in the sample that we designed in the previous step. Reference data are required for observing reference conditions. A powerful reference dataset is the combination of high resolution imagery and time series. Different  applications have been developed that allow you to display such data at sample locations. In this tutorial we will use an application in the Earth Engine called Time Series Viewer. (Other applications include <a class="reference external" href="https://gee-assessment-tools.readthedocs.io/en/latest/timesync.html">TimeSync</a> and <a class="reference external" href="https://gee-assessment-tools.readthedocs.io/en/latest/coleearth.html">Collect Earth Online</a> .)</p>
+<ol class="arabic">
+<li><p class="first">To view satellite data at sample locations, display the script 2_Time_Series_Viewer in the Code Editor.</p>
+</li>
+<li><p class="first">In the Assets tab, click the GEE Asset Table contains the sample (you created the GEE Asset in Step 11 above). A dialog box should pop up with the header “Table: [file name]” – click <em>Import</em>.</p>
+</li>
+<li><p class="first">This will import the sample into the Time Series Viewer:</p>
+<p>It’s very convenient to use this form.</p>
+</li>
 </ol>
 </div>
 <div class="section" id="analysis">

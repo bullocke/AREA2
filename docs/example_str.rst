@@ -49,14 +49,19 @@ where :math:`W_h` are the strata weights that are automatically extracted from t
    5. Forest gain: 30
    6. Forest gain/loss: 30   
 
-11. **Export sample.** Clicking *Add to map* will display the sample units as red dots in the Map display. The final step is to export the sample: click the Tasks tab, and then *Export sample* in the Dialog -- two entries named "sample" will appear in Tasks. These are identical but one is of exporting the sample as a CSV file and one as a KML file for use in Google Earth. Click the *Run* button right next one of the  "sample" entries and save as an GEE asset; redo for the other sample entry but save as a KML file on Google Drive. 
+11. **Export sample.** Clicking *Add to map* will display the sample units as red dots in the Map display. The final step is to export the sample: click the Tasks tab, and then *Export sample* in the Dialog -- two entries named "sample" will appear in Tasks. These are identical but one is of exporting the sample as a CSV file and one as a GEE Asset file for use in Google Earth Engine. Click the *Run* button right next one of the  "sample" entries and save as an GEE Asset; redo for the other sample entry but save as a CSV file on Google Drive. 
 
 2. Response Design
 ------------------
 
-We now need to provide reference observations for each unit in the sample that we designed in the previous step. Reference data are required for observing reference conditions. A powerful reference dataset is the combination of high resolution imagery and time series. Different  applications have been developed that allow you to display such data at sample locations. In this tutorial we will use an application in the Earth Engine called Time Series Viewer. (Other applications include TimeSync and Collect Earth Online.)
+We now need to provide reference observations for each unit in the sample that we designed in the previous step. Reference data are required for observing reference conditions. A powerful reference dataset is the combination of high resolution imagery and time series. Different  applications have been developed that allow you to display such data at sample locations. In this tutorial we will use an application in the Earth Engine called Time Series Viewer. (Other applications include `TimeSync <https://gee-assessment-tools.readthedocs.io/en/latest/timesync.html>`_ and `Collect Earth Online <https://gee-assessment-tools.readthedocs.io/en/latest/coleearth.html>`_ .)
 
-1. Text
+1. To view satellite data at sample locations, display the script 2_Time_Series_Viewer in the Code Editor.
+2. In the Assets tab, click the GEE Asset Table contains the sample (you created the GEE Asset in Step 11 above). A dialog box should pop up with the header "Table: [file name]" -- click *Import*.
+3. This will import the sample into the Time Series Viewer::
+
+   It's very convenient to use this form.
+
 
 3. Analysis
 ------------------

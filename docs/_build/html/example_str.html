@@ -236,10 +236,15 @@
 <ol class="arabic simple">
 <li>To view satellite data at sample locations, display the script 2_Time_Series_Viewer in the Code Editor.</li>
 <li>In the Assets tab, click the GEE Asset Table contains the sample (you created the GEE Asset in Step 11 above). A dialog box should pop up with the header “Table: [file name]” – click <em>Import</em>.</li>
-<li>This will import the sample into the Time Series Viewer:</li>
+<li>This will import the sample into 2_Time_Series_Viewer:</li>
 </ol>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">Imports</span> <span class="p">(</span><span class="mi">1</span> <span class="n">entry</span><span class="p">)</span>
-<span class="go">    var table: users/[your name]/[file name]</span>
+<span class="go">    var table: Table users/[your name]/[file name]</span>
+</pre></div>
+</div>
+<p>Change “table:” to “sample:” such that it looks like this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">Imports</span> <span class="p">(</span><span class="mi">1</span> <span class="n">entry</span><span class="p">)</span>
+<span class="go">    var sample: Table users/[your name]/[file name]</span>
 </pre></div>
 </div>
 </div>

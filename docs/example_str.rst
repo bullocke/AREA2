@@ -58,13 +58,15 @@ We now need to provide reference observations for each unit in the sample that w
 
 1. To view satellite data at sample locations, display the script 2_Time_Series_Viewer in the Code Editor.
 2. In the Assets tab, click the GEE Asset Table contains the sample (you created the GEE Asset in Step 11 above). A dialog box should pop up with the header "Table: [file name]" -- click *Import*.
-3. This will import the sample into the Time Series Viewer:
+3. This will import the sample into 2_Time_Series_Viewer:
 
   >>> Imports (1 entry)
-      var table: users/[your name]/[file name]
+      var table: Table users/[your name]/[file name]
 
- 
+Change "table:" to "sample:" such that it looks like this:
 
+  >>> Imports (1 entry)
+      var sample: Table users/[your name]/[file name]
 
 3. Analysis
 ------------------

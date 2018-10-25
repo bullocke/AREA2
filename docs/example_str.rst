@@ -69,7 +69,8 @@ We now need to provide reference observations for each unit in the sample that w
 .. image:: response_design.png
    :width: 600pt
    
-   Figure 1. Screen shot of using Time Series Viewer to collect reference observations for sample units.
+
+Figure 1. Screen shot of using Time Series Viewer to collect reference observations for sample units.
 
 9. To record the reference labels, open the CSV file you created in Sampling Design, Step 11, in Google Sheets. Delete the column "classification" and add columns "reference", "reference_name", "date_event", "confidence" to the right of column ".geo". 
 

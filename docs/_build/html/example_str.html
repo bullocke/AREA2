@@ -235,10 +235,10 @@
 <p>We now need to provide reference observations for each unit in the sample that we designed in the previous step. Reference data are required for observing reference conditions. A powerful reference dataset is the combination of high resolution imagery and time series. Different  applications have been developed that allow you to display such data at sample locations. In this tutorial we will use an application in the Earth Engine called Time Series Viewer. (Other applications include <a class="reference external" href="https://gee-assessment-tools.readthedocs.io/en/latest/timesync.html">TimeSync</a> and <a class="reference external" href="https://gee-assessment-tools.readthedocs.io/en/latest/coleearth.html">Collect Earth Online</a> .)</p>
 <ol class="arabic simple">
 <li>To view satellite data at sample locations, first run the script 1_5_save_feature_timeseries – specify the  the GEE Asset Table that contains the sample (i.e. the GEE Asset you created in  Sampling Design, Step 11, above), and click OK. 2. An entry in the Tasks tab will appear called TSData. In the Tasks tab, click Run next to TSData as save as a GEE Asset. This will extract time series data at each location in the sample. It might take a while.</li>
-<li>When done, display the script 2_Time_Series_Viewer in the Code Editor.</li>
+<li>When done, display the script 2_0_Time_Series_Viewer in the Code Editor.</li>
 <li>In the Assets tab, click the GEE Asset Table contains the sample (i.e. the GEE Asset you created in Step 2). A dialog box should pop up with the header “Table: [file name]” – click <em>Import</em>.</li>
 <li>This will import the sample into 2_Time_Series_Viewer; at the top of the script where is it says “Imports (1 entry)”, change the second line by replacing “table:” with “sample:” such that it looks like in the Figure below.</li>
-<li>Click <em>Save</em> and then <em>Run</em> in the Code Editor to run the script 2_Time_Series_Viewer.</li>
+<li>Click <em>Save</em> and then <em>Run</em> in the Code Editor to run the script 2_0_Time_Series_Viewer.</li>
 <li>In the dialog that appears next to the Map pane, check the box <em>Load data from feature collection</em></li>
 <li>Click either Next or add “1” as <em>Search ID</em> and hit Enter – the first unit in the sample will appear as a red square in the Map pane and plots of time series  of surface reflectance and spectral transforms based on Landsat data will appear in the Dialog (as shown in the Figure below).</li>
 </ol>

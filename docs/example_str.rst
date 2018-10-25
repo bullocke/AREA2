@@ -62,14 +62,26 @@ We now need to provide reference observations for each unit in the sample that w
 4. This will import the sample into 2_Time_Series_Viewer; at the top of the script where is it says "Imports (1 entry)", change the second line by replacing "table:" with "sample:" such that it looks like in the Figure below.
 5. Click *Save* and then *Run* in the Code Editor to run the script 2_0_Time_Series_Viewer.
 6. In the dialog that appears next to the Map pane, check the box *Load data from feature collection*
-7. Click either Next or add "1" as *Search ID* and hit Enter -- the first unit in the sample will appear as a red square in the Map pane and plots of time series  of surface reflectance and spectral transforms based on Landsat data will appear in the Dialog (as shown in the Figure below).
+7. Click either Next or add "1" as *Search ID* and hit Enter -- the first unit in the sample will appear as a red square in the Map pane and plots of time series  of surface reflectance and spectral transforms based on Landsat data will appear in the Dialog (as shown in Figure 1 below).
+8. Clicking a point in the time series will display the associated Landsat image in the Map pane -- use this data to collect reference observations on the land surface. In this example, the response legend corresponds to the map legend -- i.e. each sample unit will be labeled either forest, non-forest, water, forest loss, forest gain, and forest gain/loss (the latter being pixels that experienced forest loss but recovered during the study period 2000-2010). 
 
 
 .. image:: response_design.png
    :width: 600pt
+   
+   Figure 1. Screen shot of using Time Series Viewer to collect reference observations for sample units.
 
+9. To record the reference labels, open the CSV file you created in Sampling Design, Step 11, in Google Sheets. Delete the column "classification" and add columns "reference", "reference_name", "date_event", "confidence" to the right of column ".geo". 
 
+10. In column "reference", record the grid code of the reference label (1: forest, 2: non-forest, 3: water, 4: forest loss, 5: forest gain, and 6: forest loss and gain); in column "reference_name", write the name of the reference label; in "date_event", note the year of the loss or gain events; in column "confidence", indicate by how confident you are that the label is correct -- specify 1 if label is uncertain, 2 if probable but not certain, and 3 if certain. For example, I am certain that sample unit #7 in Figure 1 above experienced a forest loss event in 2010. I would then add 
 
+	reference: 1
+	reference_name: Forest loss  
+	date_event: 2010
+	confidence: 3
+
+	
+	
 3. Analysis
 ------------------
 

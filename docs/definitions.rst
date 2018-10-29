@@ -33,7 +33,7 @@ Commission error is the proportion or percentage of the area mapped as the categ
 
 
 Confidence interval
-A 95% confidence interval for a population parameter, , expresses uncertainty in the parameter estimate, :math:`\hat{\mu}`, and is calculated using the sample data.  Confidence intervals are often, but not necessarily, in the form  :math:`\hat{\mu} \pm a\times \mbox{SD}_h` where :math:`\mbox{SE}_h`  is the standard error of the estimate and a is a statistic related to the desired confidence level (see z-score). Among the aggregate set of confidence intervals constructed using all samples that could be realized using the sampling design, 95% of such intervals are expected to include the true value of the population parameter :math:`\mu` , although which intervals do and which do not include :math:`\mu` is generally unknown. The IPCC Good Practice Guidelines (IPCC, 2006, Section 3.1.3) recommend the use of 95% confidence intervals in greenhouse gas inventories. 
+A 95% confidence interval for a population parameter, :math:`\mu`, expresses uncertainty in the parameter estimate, :math:`\hat{\mu}`, and is calculated using the sample data.  Confidence intervals are often, but not necessarily, in the form  :math:`\hat{\mu} \pm a\times \mbox{SD}_h` where :math:`\mbox{SE}_h`  is the standard error of the estimate and a is a statistic related to the desired confidence level (see z-score). Among the aggregate set of confidence intervals constructed using all samples that could be realized using the sampling design, 95% of such intervals are expected to include the true value of the population parameter :math:`\mu` , although which intervals do and which do not include :math:`\mu` is generally unknown. The IPCC Good Practice Guidelines (IPCC, 2006, Section 3.1.3) recommend the use of 95% confidence intervals in greenhouse gas inventories. 
 
 
 Design-based inference
@@ -99,7 +99,7 @@ Post-stratification refers to a stratification of the study area that is indepen
 
 
 Precision
-In the context of estimation, Cochran (1977, p. 16) states that because “of the difficulty of ensuring that no unsuspected bias enters into estimates [sic], we will usually speak of the precision of an estimate instead of its accuracy. Accuracy refers to the size of deviations from the true mean μ, whereas precision refers to the size of deviations from the mean m obtained by repeated application of the sampling procedure.”  In the context of this document, we often characterize the precision of an estimate with a 95% confidence interval – the larger the interval the less the precision (and greater the uncertainty).
+In the context of estimation, Cochran (1977, p. 16) states that because “of the difficulty of ensuring that no unsuspected bias enters into estimates [sic], we will usually speak of the precision of an estimate instead of its accuracy. Accuracy refers to the size of deviations from the true mean math:`\mu`, whereas precision refers to the size of deviations from the mean m obtained by repeated application of the sampling procedure.”  In the context of this document, we often characterize the precision of an estimate with a 95% confidence interval – the larger the interval the less the precision (and greater the uncertainty).
 
 
 Probability distribution function (PDF)
@@ -147,7 +147,7 @@ Entities that make up the sampling frame (Särndal et al., 1992, p.5). In the li
 
 
 Simple random sampling 
-“A method for selecting n units out of the N such that every one of [the sets of n specified units] has an equal chance of being drawn.” (Cochran 1977, p. 18).
+“A method for selecting n units out of the *N* such that every one of [the sets of n specified units] has an equal chance of being drawn.” (Cochran 1977, p. 18).
 
 
 Spatial assessment unit
@@ -155,11 +155,11 @@ In the context of accuracy assessment a spatial assessment unit is a “unit for
 
 
 Standard deviation
-The standard deviation of X is the square root of the variance: :math:`\mbox{SD}(X) = sqrt{\mbox{V}(X)}` and is often denoted by :math:`\mbox{S}(X)`, :math:`\mbox{SD}(X)`, :math:`\mbox{D}(X)`, or :math:`\sigma_X`. Because of the square root, the standard deviation has the same unit as the random variable as opposed to the variance. A standard deviation calculated from sample data is sometimes referred to as the sample standard deviation to distinguish it from the population standard deviation. The standard deviation of an estimate is referred to as its standard error.
+The standard deviation of X is the square root of the variance: :math:`\mbox{SD}(X) = \sqrt{\mbox{V}(X)}` and is often denoted by :math:`\mbox{S}(X)`, :math:`\mbox{SD}(X)`, :math:`\mbox{D}(X)`, or :math:`\sigma_X`. Because of the square root, the standard deviation has the same unit as the random variable as opposed to the variance. A standard deviation calculated from sample data is sometimes referred to as the sample standard deviation to distinguish it from the population standard deviation. The standard deviation of an estimate is referred to as its standard error.
 
 
 Standard Error
-The standard error is the standard deviation (i.e. square root of the variance) of an estimator (Rice, 1995, p. 192). For example, consider the situation in the explanation of variance below: we want to estimate the mean :math:`\overline{Y}` of a population of size N with variance :math:`\sigma^2`. To do this, we select a simple random sample of n units :math:`y_1 ... y_n; \overline{y}` is an estimate of :math:`y_1 ... y_n; \overline{Y}` and the estimated variance of the sample mean is :math:`\mbox{\hat{V}}(\overline{y}) = s^2 \div n`. The standard deviation of :math:`\overline{y}` is referred to as its standard error. Because the sample variance is an unbiased estimator of the population variance, we can estimate the standard error using the sample variance: :math:`\mbox{SE}(\hat{y}) = sqrt{\mbox{V}(\overline{y})} = s \div \sqrt(n)`. Note that because a standard error is a standard deviation of an estimator, all standard errors are also standard deviations but not all standard deviations are standard errors. This sometimes causes confusion even though the definitions of standard error and standard deviation are consistent. The confusion is exacerbated by the common use of the letter S to denote both standard errors and standard deviations.
+The standard error is the standard deviation (i.e. square root of the variance) of an estimator (Rice, 1995, p. 192). For example, consider the situation in the explanation of variance below: we want to estimate the mean :math:`\overline{Y}` of a population of size N with variance :math:`\sigma^2`. To do this, we select a simple random sample of *n* units :math:`y_1 ... y_n`; :math:`\overline{y}` is an estimate of :math:`y_1 ... y_n`; :math:`\overline{Y}` and the estimated variance of the sample mean is :math:`\mbox{\hat{V}}(\overline{y}) = s^2 \div n`. The standard deviation of :math:`\overline{y}` is referred to as its standard error. Because the sample variance is an unbiased estimator of the population variance, we can estimate the standard error using the sample variance: :math:`\mbox{SE}(\hat{y}) = \sqrt{\mbox{V}(\overline{y})} = s \div \sqrt(n)`. Note that because a standard error is a standard deviation of an estimator, all standard errors are also standard deviations but not all standard deviations are standard errors. This sometimes causes confusion even though the definitions of standard error and standard deviation are consistent. The confusion is exacerbated by the common use of the letter S to denote both standard errors and standard deviations.
 
 
 Strata
@@ -188,34 +188,36 @@ Uncertainty
 The opposite of precision.
 
 User’s accuracy
-From Stehman (1997, p. 79): “User’s accuracy for [category] i [is] the conditional probability that an area classified as category i by the map is classified as category i by the reference data”.   When expressed in terms of area, user’s accuracy is the proportion of the area that has the predicted class of the category of interest that is correctly classified as determined by comparison to the reference classification.  For a simple random sample of reference observations, each of which represents an equal area, user’s accuracy is estimated by dividing the number of correctly classified map units in each category by the total number of units classified into that category (Lillesand et al., 2008, p. 586). User’s accuracy is the complement of commission error (Olofsson et al., 2013).
+From Stehman (1997, p. 79): “User’s accuracy for [category] *i* [is] the conditional probability that an area classified as category *i* by the map is classified as category *i* by the reference data”.   When expressed in terms of area, user’s accuracy is the proportion of the area that has the predicted class of the category of interest that is correctly classified as determined by comparison to the reference classification.  For a simple random sample of reference observations, each of which represents an equal area, user’s accuracy is estimated by dividing the number of correctly classified map units in each category by the total number of units classified into that category (Lillesand et al., 2008, p. 586). User’s accuracy is the complement of commission error (Olofsson et al., 2013).
 
 
 Variance
-The formal definition of the variance of a random variable X with expected value 
-E(X), is V(X) = E(X – E(X))2 
-
-and provides “a measure of the degree of spread of a distribution around its mean” (Casella & Berger, 2002, p. 59). But this definition is not very relevant in the context of this document. Instead, we are concerned with situations where a sample has been selected from a population (e.g. all pixels of a country) with the objective of estimating a certain population parameter, :math:`\mu` (e.g. the area of deforestation). For example, let’s say we have a population of N units :math:`y_1 .. y_N` with mean :math:`\overline(Y)` and variance :math:`\sigma^2` from which a sample of n units :math:`y_1 .. y_n`  has been selected by simple random sampling. We have collected reference observations for the n sample units.  The sample variance is 
-
-s^2=∑(y_i-y ̅ )^2÷(n-1) 
-
-(Cochran, 1977, p. 26). Again, this is also not very helpful as we are usually not interested in the sample variance but in the variance of an estimate (e.g. the area of deforestation). For simple random sampling designs, the sample mean :math:`\overline(y)` is an unbiased estimator of the population mean :math:`\overline(Y)`, and the sample variance :math:`\s^2` is an unbiased estimator of the population variance :math:`\sigma^2`, such that :math:`\mbox{E(\overline{y})} = \overline(Y)`  and :math:`\mbox{E(s^2)}  = \sigma^2` (Cochran, 1977, p. 22, 26). The variance of :math:`\overline(y)` is :math:`\mbox{V(\overline{y})}  = \sigma^2 \div n` (assuming a small n relative N); the estimated variance of :math:`\overline(y)` substitutes the sample variance :math:`\s^2` for the population variance :math:`\sigma^2` to create the variance estimate of  :math:`\overline(\y)` as :math:`\mbox{\hat{V}(\overline{y})}  = \s^2 \div n` This is the variance that is of primary interest to us, and that allows us to calculate a standard error and a confidence interval of the estimated population parameter of interest.
+The formal definition of the variance of a random variable X with expected value :math:`\mbox{E(X)}`, is :math:`\mbox{V(X)}  =  \mbox{E(X - \mbox{E}(X))^2` and provides “a measure of the degree of spread of a distribution around its mean” (Casella & Berger, 2002, p. 59). But this definition is not very relevant in the context of this document. Instead, we are concerned with situations where a sample has been selected from a population (e.g. all pixels of a country) with the objective of estimating a certain population parameter, :math:`\mu` (e.g. the area of deforestation). For example, let’s say we have a population of N units :math:`y_1 .. y_N` with mean :math:`\overline(Y)` and variance :math:`\sigma^2` from which a sample of n units :math:`y_1 .. y_n`  has been selected by simple random sampling. We have collected reference observations for the n sample units.  The sample variance is  :math:`s^2  =  \sum{y_i - \overline{y})^2 \div (n-1)` (Cochran, 1977, p. 26). Again, this is also not very helpful as we are usually not interested in the sample variance but in the variance of an estimate (e.g. the area of deforestation). For simple random sampling designs, the sample mean :math:`\overline(y)` is an unbiased estimator of the population mean :math:`\overline(Y)`, and the sample variance :math:`\s^2` is an unbiased estimator of the population variance :math:`\sigma^2`, such that :math:`\mbox{E(\overline{y})} = \overline(Y)`  and :math:`\mbox{E(s^2)}  = \sigma^2` (Cochran, 1977, p. 22, 26). The variance of :math:`\overline(y)` is :math:`\mbox{V(\overline{y})}  = \sigma^2 \div n` (assuming a small n relative N); the estimated variance of :math:`\overline(y)` substitutes the sample variance :math:`\s^2` for the population variance :math:`\sigma^2` to create the variance estimate of  :math:`\overline(\y)` as :math:`\mbox{\hat{V}(\overline{y})}  = \s^2 \div n` This is the variance that is of primary interest to us, and that allows us to calculate a standard error and a confidence interval of the estimated population parameter of interest.
 
 
-Z-score
-A z-score (also referred to as standard score), z_(1-α/2) where 1-α is the confidence level between 0 and 100%, is a constant such that the area under the standard normal density function in between ±z_(1-α/2) is 1-α (Rice, 1995, p. 202). For example, a confidence interval at the 95% confidence level for an estimate :math:`\hat{\mu}`  would be computed as :math:`\hat{\mu} \pm z_{1-0.025} \times \mbox{SE}(\hat{\mu})`. A condition for using z to compute a confidence interval is that that the sampling distribution for :math:`\hat{\mu}`  is approximately a normal distribution, which we can assume for large sample sizes (Särndal et al.,1992). 
+**Z-score**
+
+A z-score (also referred to as standard score), :math:`z_(1- \alpha \div 2)` where :math:`1-\alpha` is the confidence level between 0 and 100%, is a constant such that the area under the standard normal density function in between :math:`\pm z_(1- \alpha \div 2)' is :math:`1-\alpha` (Rice, 1995, p. 202). For example, a confidence interval at the 95% confidence level for an estimate :math:`\hat{\mu}`  would be computed as :math:`\hat{\mu} \pm z_{1-0.025} \times \mbox{SE}(\hat{\mu})`. A condition for using z to compute a confidence interval is that that the sampling distribution for :math:`\hat{\mu}`  is approximately a normal distribution, which we can assume for large sample sizes (Särndal et al.,1992). 
 
 
-References
+**References**
+
 Box, G. E. P., Jenkins, G. M., & Reinsel, G. C. (1994). Time Series Analysis: Forecasting and Control (third). Upper Saddle River, NJ: Prentice-Hall.
+
 Casella, G., & Berger, R. L. (2002). Statistical inference (2nd ed.). Pacific Grove, CA: Duxbury Press. 
 Cochran, W. G. (1977). Sampling Techniques. New York, NY: Wiley. 
+
 Dawid, A. P. (1983). Inference, Statistical:  I. Encyclopedia  of  Statistical  Sciences Vol. 4, S. Kotz, N. L. Johnson and C. B. Read (Eds.). New York, NY: Wiley.
+
 Gut, A. (2009). An Intermediate Course in Probability. New York, NY: Springer.
 IPCC. (2006). 2006 IPCC Guidelines for National Greenhouse Gas Inventories. H. S. Eggleston, L. Buendia, K. Miwa, T. Ngara, & K. Tanabe (Eds.). Japan: IGES.
+
 Lillesand, T.M., Kiefer, R.W., Chipman, J.W.  (2008). Remote sensing and image interpretation, 6th ed.  New York, NY: Wiley. 
+
 Olofsson, P., Foody, G. M., Stehman, S. V, & Woodcock, C. E. (2013). Making better use of accuracy data in land change studies: Estimating accuracy and area and quantifying uncertainty using stratified estimation. Remote Sensing of Environment, 129, 122–131.
+
 Rice, J. A. (1995). Mathematical statistics and data analysis (2nd ed.). Belmont, CA: Duxbury Press.
 Särndal, C. E., Svensson, B. H., & Wretman, J. H. (1992). Model assisted survey sampling. New York, NY: Springer.
 Stehman, S. V. (1997). Selecting and interpreting measures of thematic classification accuracy. Remote Sensing of Environment, 62, 77–89.
+
 Stehman, S. V, & Wickham, J. D. (2011). Pixels, blocks of pixels, and polygons: Choosing a spatial unit for thematic accuracy assessment. Remote Sensing of Environment, 115(12), 3044–3055.

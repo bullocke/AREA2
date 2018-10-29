@@ -72,7 +72,7 @@ In a sampling framework, an inference expresses the relationship between the pop
 A relative measure of the uncertainty in an estimate. Note that the definitions of margin of error are not all the same. Typically, it is calculated as the ratio of the half width of a 95% confidence interval to an estimate.
 
 
-**Model-assisted estimator **
+**Model-assisted estimator**
 
 An estimator used in design-based inference that incorporates auxiliary information to increase precision by comparing a model’s predictions, often in the form of map unit values, to a probability sample of reference observations (Särndal et al., 1992, p. 219). Model-assisted estimators can be particularly effective when the response variable is continuous (e.g., proportion forest or biomass) rather than categorical (e.g., forest/non-forest or forest change class).
 
@@ -92,7 +92,7 @@ A technique in which a large quantity of randomly generated numbers are studied 
 Omission error is the proportion or percentage of area with the reference classification of the category of interest that is erroneously predicted (mapped) to be in other categories.  Omission error is the complement of producer’s accuracy (Olofsson et al., 2013).
 
 
-**Overall accuracy **
+**Overall accuracy**
 
 The overall accuracy is the “overall proportion of area correctly classified” (Stehman, 1997, p. 79).
 
@@ -103,7 +103,7 @@ See population parameter.
 
 
 
-**Population **
+**Population**
 
 “The aggregate [that we want to obtain information about] from which the sample is chosen” (Cochran, 1977, p. 5). (Example: all likely voters in the next U.S. presidential election; an example in the context of this document, is all Landsat pixels of a study area).
 
@@ -183,7 +183,7 @@ The sampling units drawn from the sampling frame for inclusion in a sample. I.e.
 Entities that make up the sampling frame (Särndal et al., 1992, p.5). In the literature, sometimes there is no distinction made between population units and sampling units (e.g. Cochran, 1977, p. 6). However, population and samplings units are different entities because the sampling frame and the population are sometimes different entities (in many situations though, the sampling frame is equivalent to the population).  
 
 
-**Simple random sampling **
+**Simple random sampling**
 
 “A method for selecting n units out of the *N* such that every one of [the sets of n specified units] has an equal chance of being drawn.” (Cochran 1977, p. 18).
 
@@ -200,7 +200,7 @@ The standard deviation of X is the square root of the variance: :math:`\mbox{SD}
 
 **Standard Error**
 
-The standard error is the standard deviation (i.e. square root of the variance) of an estimator (Rice, 1995, p. 192). For example, consider the situation in the explanation of variance below: we want to estimate the mean :math:`\overline{Y}` of a population of size N with variance :math:`\sigma^2`. To do this, we select a simple random sample of *n* units :math:`y_1 ... y_n`; :math:`\overline{y}` is an estimate of :math:`y_1 ... y_n`; :math:`\overline{Y}` and the estimated variance of the sample mean is :math:`\mbox{\hat{V}}(\overline{y}) = s^2 \div n`. The standard deviation of :math:`\overline{y}` is referred to as its standard error. Because the sample variance is an unbiased estimator of the population variance, we can estimate the standard error using the sample variance: :math:`\mbox{SE}(\hat{y}) = \sqrt{\mbox{V}(\overline{y})} = s \div \sqrt(n)`. Note that because a standard error is a standard deviation of an estimator, all standard errors are also standard deviations but not all standard deviations are standard errors. This sometimes causes confusion even though the definitions of standard error and standard deviation are consistent. The confusion is exacerbated by the common use of the letter S to denote both standard errors and standard deviations.
+The standard error is the standard deviation (i.e. square root of the variance) of an estimator (Rice, 1995, p. 192). For example, consider the situation in the explanation of variance below: we want to estimate the mean :math:`\overline{Y}` of a population of size N with variance :math:`\sigma^2`. To do this, we select a simple random sample of *n* units :math:`y_1 ... y_n`; :math:`\overline{y}` is an estimate of :math:`y_1 ... y_n`; :math:`\overline{Y}` and the estimated variance of the sample mean is :math:`\mbox{\hat{V}}(\overline{y}) = s^2 \div n`. The standard deviation of :math:`\overline{y}` is referred to as its standard error. Because the sample variance is an unbiased estimator of the population variance, we can estimate the standard error using the sample variance: :math:`\mbox{SE}(\hat{y}) = \sqrt{\mbox{V}(\overline{y})} = s \div \sqrt{n}`. Note that because a standard error is a standard deviation of an estimator, all standard errors are also standard deviations but not all standard deviations are standard errors. This sometimes causes confusion even though the definitions of standard error and standard deviation are consistent. The confusion is exacerbated by the common use of the letter :math:`S` to denote both standard errors and standard deviations.
 
 
 **Strata**
@@ -244,11 +244,15 @@ From Stehman (1997, p. 79): “User’s accuracy for [category] *i* [is] the con
 
 **Variance**
 
-The formal definition of the variance of a random variable X with expected value :math:`\mbox{E(X)}`, is
+The formal definition of the variance of a random variable X with expected value :math:`\mbox{E(X)}`, is :math:`\mbox{V}(X) = \mbox{E}(X - \mbox{E}(X))^2` and provides “a measure of the degree of spread of a distribution around its mean” (Casella & Berger, 2002, p. 59). But this definition is not very relevant in the context of this document. Instead, we are concerned with situations where a sample has been selected from a population (e.g. all pixels of a country) with the objective of estimating a certain population parameter, :math:`\mu` (e.g. the area of deforestation). For example, let’s say we have a population of N units :math:`y_1 .. y_N` with mean :math:`\overline(Y)` and variance :math:`\sigma^2` from which a sample of n units :math:`y_1 .. y_n`  has been selected by simple random sampling. We have collected reference observations for the n sample units.  The sample variance is  
 
-:math:`\mbox{V}(X) = \mbox{E}(X - \mbox{E}(X))^2` 
+:math:`s^2 = \sum{y_i - \overline{y})^2 \div (n-1)` 
 
-and provides “a measure of the degree of spread of a distribution around its mean” (Casella & Berger, 2002, p. 59). But this definition is not very relevant in the context of this document. Instead, we are concerned with situations where a sample has been selected from a population (e.g. all pixels of a country) with the objective of estimating a certain population parameter, :math:`\mu` (e.g. the area of deforestation). For example, let’s say we have a population of N units :math:`y_1 .. y_N` with mean :math:`\overline(Y)` and variance :math:`\sigma^2` from which a sample of n units :math:`y_1 .. y_n`  has been selected by simple random sampling. We have collected reference observations for the n sample units.  The sample variance is  :math:`s^2 = \sum{y_i - \overline{y})^2 \div (n-1)` (Cochran, 1977, p. 26). Again, this is also not very helpful as we are usually not interested in the sample variance but in the variance of an estimate (e.g. the area of deforestation). For simple random sampling designs, the sample mean :math:`\overline(y)` is an unbiased estimator of the population mean :math:`\overline(Y)`, and the sample variance :math:`s^2` is an unbiased estimator of the population variance :math:`\sigma^2`, such that :math:`\mbox{E(\overline{y})} = \overline(Y)`  and :math:`\mbox{E(s^2)}  = \sigma^2` (Cochran, 1977, p. 22, 26). The variance of :math:`\overline(y)` is :math:`\mbox{V(\overline{y})}  = \sigma^2 \div n` (assuming a small n relative N); the estimated variance of :math:`\overline(y)` substitutes the sample variance :math:`s^2` for the population variance :math:`\sigma^2` to create the variance estimate of  :math:`\overline(\y)` as :math:`\mbox{\hat{V}(\overline{y})}  = s^2 \div n` This is the variance that is of primary interest to us, and that allows us to calculate a standard error and a confidence interval of the estimated population parameter of interest.
+(Cochran, 1977, p. 26). Again, this is also not very helpful as we are usually not interested in the sample variance but in the variance of an estimate (e.g. the area of deforestation). For simple random sampling designs, the sample mean :math:`\overline(y)` is an unbiased estimator of the population mean :math:`\overline(Y)`, and the sample variance :math:`s^2` is an unbiased estimator of the population variance :math:`\sigma^2`, such that 
+
+:math:`\mbox{E}(\overline{y}) = \overline{Y)`  
+
+and :math:`\mbox{E(s^2)}  = \sigma^2` (Cochran, 1977, p. 22, 26). The variance of :math:`\overline(y)` is :math:`\mbox{V}(\overline{y})  = \sigma^2 \div n` (assuming a small n relative N); the estimated variance of :math:`\overline(y)` substitutes the sample variance :math:`s^2` for the population variance :math:`\sigma^2` to create the variance estimate of  :math:`\overline(\y)` as :math:`\mbox{\hat{V}}(\overline{y})  = s^2 \div n` This is the variance that is of primary interest to us, and that allows us to calculate a standard error and a confidence interval of the estimated population parameter of interest.
 
 
 **Z-score**

@@ -1,8 +1,8 @@
 .. image:: _twolinesoftext.png
    :width: 600pt
    
-Table of Contents
-=================
+Table of Contents of AREAA Documentation
+========================================
 
    
 .. toctree::

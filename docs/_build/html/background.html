@@ -29,7 +29,7 @@
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Terminology ✓" href="definitions.html" />
-    <link rel="prev" title="Overview ✓" href="overview.html" /> 
+    <link rel="prev" title="What is AREAA? ✓" href="overview.html" /> 
 
   
   <script src="_static/js/modernizr.min.js"></script>
@@ -84,20 +84,22 @@
             
               <p class="caption"><span class="caption-text">Introduction</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="overview.html">Overview ✓</a></li>
+<li class="toctree-l1"><a class="reference internal" href="overview.html">What is AREAA? ✓</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Theoretical background ✓</a></li>
 <li class="toctree-l1"><a class="reference internal" href="definitions.html">Terminology ✓</a></li>
+<li class="toctree-l1"><a class="reference internal" href="getting_started.html">Getting started ✓</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Sampling</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="srs_sample.html">Simple Random Sample</a></li>
-<li class="toctree-l1"><a class="reference internal" href="str_sample.html">Stratified Random Sample</a></li>
-<li class="toctree-l1"><a class="reference internal" href="sys_sample.html">Simple Systematic Sample</a></li>
-<li class="toctree-l1"><a class="reference internal" href="str_sys_sample.html">Stratified Systematic Sample</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sampling_srs.html">Simple Random Sampling ✓</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sampling_str.html">Stratified Random Sampling ✓</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sampling_sys.html">Simple Systematic Sampling ○</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sampling_str_sys.html">Stratified Systematic Sampling ○</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sampling_twostage.html">Two-stage Sampling ○</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Interpretation</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="tsviewer.html">Timeseries Viewer ○</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tsviewer.html">Time Series Viewer ○</a></li>
 <li class="toctree-l1"><a class="reference internal" href="colearth.html">Collect Earth ○</a></li>
 <li class="toctree-l1"><a class="reference internal" href="timesync.html">TimeSync ○</a></li>
 </ul>
@@ -109,6 +111,11 @@
 <li class="toctree-l1"><a class="reference internal" href="estimator_mod.html">Model-assisted Regression Estimator ○</a></li>
 <li class="toctree-l1"><a class="reference internal" href="estimator_diff.html">Model-assisted Difference Estimator ○</a></li>
 <li class="toctree-l1"><a class="reference internal" href="estimator_ratio.html">Model-assisted Ratio Estimator ○</a></li>
+<li class="toctree-l1"><a class="reference internal" href="estimator_twostage.html">Two-stage Estimator ○</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Tutorials</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="example_str.html">Stratified estimation of area of forest loss ○</a></li>
 </ul>
 
             
@@ -173,7 +180,8 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="theoretical-background-check">
+  <a class="reference internal image-reference" href="_images/_nolinesoftext.png"><img alt="_images/_nolinesoftext.png" src="_images/_nolinesoftext.png" style="width: 600pt;" /></a>
+<div class="section" id="theoretical-background-check">
 <h1>Theoretical background ✓<a class="headerlink" href="#theoretical-background-check" title="Permalink to this headline">¶</a></h1>
 <p>One of the most common results of remote sensing analyses is a quantification of various phenomena on the land surface, such as deforestation, farmland expansion, urbanization, land use patterns, etc. Remote sensing has the advantage of providing wall-to-wall coverage of the area of interest at little or no cost, but results are never perfect! Classification errors are inevitable when trying to translate reflected sunlight or backscattered longwave radiation into information about complex land surface processes. The presence of errors may introduce substantial bias in remote sensing-based maps <a class="footnote-reference" href="#id6" id="id1">[1]</a>. For remote sensing science to impact policy and decision-making for the benefit of Earth and its inhabitants, satellite image-based analyses must produce valid scientific inference – maps that lack inference-based assessments of the parameters of interest are of little utility for scientific inference; “essentially, they may be just pretty pictures” <a class="footnote-reference" href="#id7" id="id2">[2]</a>. With the emergence of free data and powerful computing platforms, map-making has never been easier, which makes the “pretty pictures” statement more true than ever before. Luckily, a typical remote sensing analysis is attractive from the perspective of design-based inference <a class="footnote-reference" href="#id8" id="id3">[3]</a>. In a design-based inference framework, a sample of population units (i.e. pixels in this case) is selected such that it represents the much larger population (i.e. all the pixels in the map), and reference conditions are observed at each sample location. Application of an unbiased estimator, that accommodates the effects of classification errors, to the sample data provides area estimates that are bias-adjusted. Measures of map accuracy are also estimated from the sample data. Further, application of a variance estimator allows for quantification of the uncertainty of estimates in the form of confidence intervals.</p>
 <p>A common bottleneck in the implementation of inference protocols is the collection of reference observations. A powerful source of reference data is the Landsat archive because it allows for examination of time series of observations at each sample location but downloading the data and extracting time series data require much storage space and time, especially for large areas. Google Earth Engine alleviates such demands as time series of Landsat in combination with Sentinel-2 data – both of which are hosted on GEE – can be extracted for any pixel in the world without having download a byte of data! This application provides support for selecting a sample from a study area (sampling design), extracting reference data for sample locations (response design), and applying an unbiased estimator to sample data for estimation of area and map accuracy (analysis):</p>
@@ -213,7 +221,7 @@
         <a href="definitions.html" class="btn btn-neutral float-right" title="Terminology ✓" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="overview.html" class="btn btn-neutral" title="Overview ✓" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="overview.html" class="btn btn-neutral" title="What is AREAA? ✓" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

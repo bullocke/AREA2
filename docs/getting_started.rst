@@ -1,5 +1,8 @@
 .. include:: <isopub.txt> 
 
+.. image:: _nolinesoftext.png
+   :width: 600pt
+
 Getting started |check|
 =======================
 

@@ -1,6 +1,3 @@
-AREAA: Area Estimation & Accuracy Estimation in Google Earth Engine
-===================================================================
-
 .. image:: g4403_.png
    :width: 600pt
 

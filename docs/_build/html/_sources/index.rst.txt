@@ -1,7 +1,8 @@
-Google Earth Engine Area/Accuracy Estimation Toolbox
-====================================================
+AREAA: Area Estimation & Accuracy Estimation in Google Earth Engine
+===================================================================
 
-Tools and guidance for estimating area and map accuracy on the Google Earth Engine.
+.. image:: g4403_.png
+   :width: 600pt
 
 .. toctree::
    :maxdepth: 2

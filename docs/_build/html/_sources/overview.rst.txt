@@ -1,7 +1,10 @@
 .. include:: <isopub.txt> 
 
-Overview |check|
-================
+What is AREAA? |check|
+======================
+
+AREAA, short for *Area Estimation & Accuracy Estimation*, is a Google Earth Engine application that provides comprehensive support for sampling and estimation of area of and map accuracy. Sevreal samplinig designs are supported 
+
 
 As explained in the `Theoretical Background <https://gee-assessment-tools.readthedocs.io/en/latest/background.html>`_, areas of map categories should not be obtained by counting pixels in maps because of classification errors. Instead, a sample of reference observations need to be collected to which an unbiased estimator is applied to obtain an area estimate with confidence intervals. The tools provided here lend support for each step the estimation workflow.
 

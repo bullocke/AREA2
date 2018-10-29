@@ -1,7 +1,5 @@
-
-.. image:: g4403_.png
+.. image:: g4403.png
    :width: 600pt
-
    
 Table of Contents
 =================

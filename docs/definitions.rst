@@ -251,13 +251,9 @@ A z-score (also referred to as standard score), :math:`z_{1- \alpha \div 2}` whe
 
 Box, G. E. P., Jenkins, G. M., & Reinsel, G. C. (1994). Time Series Analysis: Forecasting and
 |   Control (third). Upper Saddle River, NJ: Prentice-Hall.
-
 Casella, G., & Berger, R. L. (2002). Statistical inference (2nd ed.). Pacific Grove, CA: Duxbury 
 |   Press. 
-
-
 Cochran, W. G. (1977). Sampling Techniques. New York, NY: Wiley. 
-
 Dawid, A. P. (1983). Inference, Statistical:  I. Encyclopedia  of  Statistical  Sciences Vol. 4, 
 |   S. Kotz, N. L. Johnson and C. B. Read (Eds.). New York, NY: Wiley.
 

@@ -84,20 +84,22 @@
             
               <p class="caption"><span class="caption-text">Introduction</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="overview.html">Overview ✓</a></li>
+<li class="toctree-l1"><a class="reference internal" href="overview.html">What is AREAA? ✓</a></li>
 <li class="toctree-l1"><a class="reference internal" href="background.html">Theoretical background ✓</a></li>
 <li class="toctree-l1"><a class="reference internal" href="definitions.html">Terminology ✓</a></li>
+<li class="toctree-l1"><a class="reference internal" href="getting_started.html">Getting started ✓</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Sampling</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="srs_sample.html">Simple Random Sample ○</a></li>
-<li class="toctree-l1"><a class="reference internal" href="str_sample.html">Stratified Random Sample ○</a></li>
-<li class="toctree-l1"><a class="reference internal" href="sys_sample.html">Simple Systematic Sample ○</a></li>
-<li class="toctree-l1"><a class="reference internal" href="str_sys_sample.html">Stratified Systematic Sample ○</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sampling_srs.html">Simple Random Sampling ✓</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sampling_str.html">Stratified Random Sampling ✓</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sampling_sys.html">Simple Systematic Sampling ○</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sampling_str_sys.html">Stratified Systematic Sampling ○</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sampling_twostage.html">Two-stage Sampling ○</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Interpretation</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="tsviewer.html">Timeseries Viewer ○</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tsviewer.html">Time Series Viewer ○</a></li>
 <li class="toctree-l1"><a class="reference internal" href="colearth.html">Collect Earth ○</a></li>
 <li class="toctree-l1"><a class="reference internal" href="timesync.html">TimeSync ○</a></li>
 </ul>
@@ -109,6 +111,11 @@
 <li class="toctree-l1"><a class="reference internal" href="estimator_mod.html">Model-assisted Regression Estimator ○</a></li>
 <li class="toctree-l1"><a class="reference internal" href="estimator_diff.html">Model-assisted Difference Estimator ○</a></li>
 <li class="toctree-l1"><a class="reference internal" href="estimator_ratio.html">Model-assisted Ratio Estimator ○</a></li>
+<li class="toctree-l1"><a class="reference internal" href="estimator_twostage.html">Two-stage Estimator ○</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Tutorials</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="example_str.html">Stratified estimation of area of forest loss ○</a></li>
 </ul>
 
             
@@ -173,7 +180,9 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="stratified-estimator-cir">
+  <a class="reference internal image-reference" href="_images/_nolinesoftext.png"><img alt="_images/_nolinesoftext.png" src="_images/_nolinesoftext.png" style="width: 175pt;" /></a>
+<hr class="docutils" />
+<div class="section" id="stratified-estimator-cir">
 <h1>Stratified Estimator ○<a class="headerlink" href="#stratified-estimator-cir" title="Permalink to this headline">¶</a></h1>
 <p>To use the stratified estimator for estimation of map accuracy and the area of map categories, make sure that you have in place a sample and a map to define strata. The sample should have been collected by stratified sampling and a reference observations should exist for each sample unit. In case the sample data was collected by simple random and simple systematic sampling, use the <a class="reference external" href="https://gee-assessment-tools.readthedocs.io/en/latest/estimator_post_str.html">post-stratified estimator</a>.</p>
 <ol class="arabic simple">

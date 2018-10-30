@@ -8,7 +8,7 @@
 What is AREAA? |check|
 ======================
 
-AREAA, short for *Area Estimation & Accuracy Estimation*, is a Google Earth Engine application that provides comprehensive support for sampling and estimation in a design-based inference framework. Several sampling designs and estimators are supported. The aim of AREAA is to provide users the tools necessary to comply with recommended practices and international guidance for estimation areas of land categories and land change, and to assess the accuracy of maps.
+AREAA, short for *Area Estimation & Accuracy Assessment*, is a Google Earth Engine application that provides comprehensive support for sampling and estimation in a design-based inference framework. Several sampling designs and estimators are supported. The aim of AREAA is to provide users the tools necessary to comply with recommended practices and international guidance for estimation areas of land categories and land change, and to assess the accuracy of maps.
 
 As explained in the `Theoretical Background <https://gee-assessment-tools.readthedocs.io/en/latest/background.html>`_, areas of map categories should not be obtained by counting pixels in maps because of classification errors. Instead, a sample of reference observations need to be collected to which an unbiased estimator is applied. AREAA allows users to design a sample according to various design criteria and objectives. 
 

@@ -1,4 +1,4 @@
-.. image:: _nolinesoftext_index.png
+.. image:: _nolinesoftext.png
    :width: 600pt
    
 ------------

@@ -1,7 +1,7 @@
 .. include:: <isopub.txt> 
 
 .. image:: _nolinesoftext.png
-   :width: 300pt
+   :width: 150pt
 
 What is AREAA? |check|
 ======================

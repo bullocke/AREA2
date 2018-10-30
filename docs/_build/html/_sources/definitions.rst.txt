@@ -1,7 +1,7 @@
 .. include:: <isopub.txt> 
 
 .. image:: _nolinesoftext.png
-   :width: 300pt
+   :width: 150pt
 
 Terminology |check|
 ===================
@@ -34,7 +34,7 @@ Commission error is the proportion or percentage of the area mapped as the categ
 
 **Confidence interval**
 
-A 95% confidence interval for a population parameter, :math:`\mu`, expresses uncertainty in the parameter estimate, :math:`\hat{\mu}`, and is calculated using the sample data.  Confidence intervals are often, but not necessarily, in the form  :math:`\hat{\mu} \pm a\times \mbox{SD}_h` where :math:`\mbox{SE}_h`  is the standard error of the estimate and :math:`a` is a statistic related to the desired confidence level (see z-score). Among the aggregate set of confidence intervals constructed using all samples that could be realized using the sampling design, 95% of such intervals are expected to include the true value of the population parameter :math:`\mu` , although which intervals do and which do not include :math:`\mu` is generally unknown. The IPCC Good Practice Guidelines (IPCC, 2006, Section 3.1.3) recommend the use of 95% confidence intervals in greenhouse gas inventories. 
+A 95% confidence interval for a population parameter, :math:`\mu`, expresses uncertainty in the parameter estimate, :math:`\hat{\mu}`, and is calculated using the sample data.  Confidence intervals are often, but not necessarily, in the form  :math:`\hat{\mu} \pm a\times \mbox{SE}(\hat{\mu})` where :math:`\mbox{SE}(\hat{\mu})` is the standard error of the estimate and :math:`a` is a statistic related to the desired confidence level (see z-score). Among the aggregate set of confidence intervals constructed using all samples that could be realized using the sampling design, 95% of such intervals are expected to include the true value of the population parameter :math:`\mu` , although which intervals do and which do not include :math:`\mu` is generally unknown. The IPCC Good Practice Guidelines (IPCC, 2006, Section 3.1.3) recommend the use of 95% confidence intervals in greenhouse gas inventories. 
 
 
 **Design-based inference**

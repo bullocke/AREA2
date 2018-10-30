@@ -1,8 +1,10 @@
-.. image:: _twolinesoftext.png
+.. image:: _nolinesoftext.png
    :width: 600pt
    
-Table of Contents of AREAA Documentation
-========================================
+------------
+   
+AREAA Documentation
+===================
 
    
 .. toctree::

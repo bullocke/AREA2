@@ -1,8 +1,10 @@
 .. include:: <isopub.txt> 
 
 .. image:: _nolinesoftext.png
-   :width: 600pt
+   :width: 175pt
 
+------------   
+   
 Theoretical background |check|
 ==============================
 

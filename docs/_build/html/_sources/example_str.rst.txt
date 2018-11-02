@@ -7,8 +7,8 @@
   
 ------------
 
-Stratified estimation of area of forest loss |cir|
-==================================================
+Stratified estimation of area of forest loss |check|
+====================================================
 
 An example is provided here to illustrate the estimation of the area of forest loss for the country of Cambodia between 2000 and 2010 using stratified estimation. The example has three different parts: 1) sampling design -- a sample is selected by stratified random sampling; 2) response design which involves observing the reference conditions at sample unit in  various satellite data available in Google Earth Engine; and 3) the analysis which is based on the application of a stratified estimator to the sample data.
 
@@ -56,7 +56,7 @@ where :math:`W_h` are the strata weights that are automatically extracted from t
    5. Forest gain: 30
    6. Forest gain/loss: 30   
 
-11. **Export sample.** Clicking *Add to map* will display the sample units as red dots in the Map display. The final step is to export the sample: click the Tasks tab, and then *Export sample* in the Dialog -- two entries named "sample" will appear in Tasks. These are identical but one is of exporting the sample as a CSV file and one as a GEE Asset file for use in Google Earth Engine. Click the *Run* button right next one of the  "sample" entries and save as an GEE Asset; redo for the other sample entry but save as a CSV file on Google Drive. 
+11. **Export sample.** Clicking *Add to map* will display the sample units as red dots in the Map display. The final step is to export the sample: click the Tasks tab, and then *Export sample* in the Dialog -- two entries named "sample" will appear in Tasks. These are identical but one is of exporting the sample as a CSV file and one as a GEE Asset file for use in Google Earth Engine. Click the *Run* button right next one of the  "sample" entries and save as an GEE Asset; redo for the other sample entry but save as a CSV file on Google Drive. Use the name "STR_sample_Cambodia" for GEE Asset, the KML and the CSV file.
 
 2. Response Design
 ------------------
@@ -65,7 +65,7 @@ We now need to provide reference observations for each unit in the sample that w
 
 1. To view satellite data at sample locations, first run the script 1_5_save_feature_timeseries -- specify the  the GEE Asset Table that contains the sample (i.e. the GEE Asset you created in  Sampling Design, Step 11, above), and click OK. 2. An entry in the Tasks tab will appear called TSData. In the Tasks tab, click Run next to TSData as save as a GEE Asset. This will extract time series data at each location in the sample. It might take a while. 
 2. When done, display the script 2_0_Time_Series_Viewer in the Code Editor.
-3. In the Assets tab, click the GEE Asset Table contains the sample (i.e. the GEE Asset you created in Step 2). A dialog box should pop up with the header "Table: [file name]" -- click *Import*.
+3. In the Assets tab, click the GEE Asset Table contains the sample (i.e. the GEE Asset you created in Step 2). A dialog box should pop up with the header "Table: STR_sample_Cambodia" -- click *Import*.
 4. This will import the sample into 2_Time_Series_Viewer; at the top of the script where is it says "Imports (1 entry)", change the second line by replacing "table:" with "sample:" such that it looks like in the Figure below.
 5. Click *Save* and then *Run* in the Code Editor to run the script 2_0_Time_Series_Viewer.
 6. In the dialog that appears next to the Map pane, check the box *Load data from feature collection*
@@ -88,12 +88,24 @@ Figure 1. Screen shot of using Time Series Viewer to collect reference observati
 	date_event: 2010
 	confidence: 3
 
-	
+11. Once you have started collecting reference observations, save the CSV as "STR_sample_Cambodia_interpreted.csv". 
+
+12. When all units in the sample have been interpreted, save the CSV file and open it in software that allow you to export the CSV as a shapefile. We recommend using QGIS which executes the GDAL program ogr2ogr -- in QGIS, just click Layer > Add Layer > Add Delimited Text Layer; once displayed  right-click the CSV file in QGIS layer pane and click Export > Save Feature As; specify ESRI Shapefile as *Format*  and click OK.
+
+13. In Google Earth Engine, click *Assets* tab > *New*  > Table Upload; upload the .prj .shp .shx and .dbf files of shapefile. The shapefile that contains the sample data should appear in the Assets tab with the name "STR_sample_Cambodia_interpreted" -- you are now ready to analyze the sample data.  
 	
 3. Analysis
 ------------------
 
-Text
+1. As explained in Choosing an estimator <https://gee-assessment-tools.readthedocs.io/en/latest/estimator_guidance.html>`_ because the sample was selected under stratified random sampling using a categorical change map to define strata, the stratified estimator is efficient for estimating area.   Run the script 3_0_stratified_estimation.
+
+2. Because we need the strata weights and because we can easily estimate the  accuracy of the map using the sample data, under *Specify the map used to stratify*, specify "stratification_cambodia_utm_small"; specify "reference" under *Specify the reference attribute name*; and "STR_sample_Cambodia_interpreted" under *Specify the reference feature collection* -- click *Load data*; and then "Apply stratified estimator". 
+
+3. Click *Show error matrices* to display a cross tabulation of map and reference labels at sample locations. The first matrix shows the number of sample units, ::math`n_{ih} identified as class :math:`i` in the reference data in stratum :math:`h`. The second matrix shows the estimated area proportion of class :math:`i` in stratum ::math`h` as :math:`\hat{p}_{ih} = W_h \times n_(ik) \div n_{i+}.
+
+4. The stratification we used doesn't have a buffer stratum so we won't click *Use buffer stratum*. (If the forest loss stratum would have been small and the forest stratum large, it would have been a good idea to create and use a buffer around mapped forest loss.) 
+
+5. In the Dialog, specify class number "4" (forest loss) under *Select map class for which to estimate area and accuracy*. This will print the area and accuracy estimates with 95% confidence intervals.
 
 
 .. [1] Hansen, M. C., Potapov, P. V., Moore, R., Hancher, M., Turubanova, S. A. A., Tyukavina, A., ... & Kommareddy, A. (2013). High-resolution global maps of 21st-century forest cover change. *Science*, 342(6160), 850-853.

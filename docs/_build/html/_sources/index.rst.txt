@@ -3,8 +3,8 @@
    
 ------------
    
-AREAA Documentation, ToC
-========================
+AREAA Documentation
+===================
 
    
 .. toctree::

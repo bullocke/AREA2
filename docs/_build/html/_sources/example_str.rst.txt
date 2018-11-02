@@ -101,7 +101,7 @@ Figure 1. Screen shot of using Time Series Viewer to collect reference observati
 
 2. Because we need the strata weights and because we can easily estimate the  accuracy of the map using the sample data, under *Specify the map used to stratify*, specify "stratification_cambodia_utm_small"; specify "reference" under *Specify the reference attribute name*; and "STR_sample_Cambodia_interpreted" under *Specify the reference feature collection* -- click *Load data*; and then "Apply stratified estimator". 
 
-3. Click *Show error matrices* to display a cross tabulation of map and reference labels at sample locations. The first matrix shows the number of sample units, ::math`n_{ih} identified as class :math:`i` in the reference data in stratum :math:`h`. The second matrix shows the estimated area proportion of class :math:`i` in stratum :math:`h` as :math:`\hat{p}_{ih} = W_h \times n_(ik) \div n_{i+}`.
+3. Click *Show error matrices* to display a cross tabulation of map and reference labels at sample locations. The first matrix shows the number of sample units, :math:`n_{ih} identified as class :math:`i` in the reference data in stratum :math:`h`. The second matrix shows the estimated area proportion of class :math:`i` in stratum :math:`h` as :math:`\hat{p}_{ih} = W_h \times n_{ik) \div n_{i+}`.
 
 4. The stratification we used doesn't have a buffer stratum so we won't click *Use buffer stratum*. (If the forest loss stratum would have been small and the forest stratum large, it would have been a good idea to create and use a buffer around mapped forest loss.) 
 

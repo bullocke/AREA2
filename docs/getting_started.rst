@@ -5,8 +5,8 @@
    
 ------------
 
-Getting started with AREA :superscript:`2`|check|
-=================================================
+Getting started |check|
+=======================
 
 1. A general in-depth guide to the Google Earth Engine API is provided here https://developers.google.com/earth-engine/ -- below is provided a short guide for accessing AREA :superscript:`2` on Google Earth Engine.
 2. Navigate in a web browser to https://code.earthengine.google.com/?accept_repo=users/bullocke/assessment-tools

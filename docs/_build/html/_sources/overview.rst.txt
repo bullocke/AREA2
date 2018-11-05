@@ -5,8 +5,8 @@
    
 ------------
 
-What is AREA :superscript:`2`? |check|
-======================================
+What is AREA2? |check|
+======================
 
 AREA :superscript:`2` ("area squared"), short for *Area Estimation & Accuracy Assessment*, is a Google Earth Engine application that provides comprehensive support for sampling and estimation in a design-based inference framework. Several sampling designs and estimators are supported. The aim of AREA :superscript:`2` is to provide users the tools necessary to comply with recommended practices and international guidance for estimation areas of land categories and land change, and to assess the accuracy of maps.
 

@@ -1,10 +1,10 @@
-.. image:: _nolinesoftext.png
+.. image:: _onelineoftext.png
    :width: 600pt
    
 ------------
    
-AREAA Documentation
-===================
+Documentation
+=============
 
    
 .. toctree::

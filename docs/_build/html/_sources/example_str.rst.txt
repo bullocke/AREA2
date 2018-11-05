@@ -97,7 +97,7 @@ Figure 1. Screen shot of using Time Series Viewer to collect reference observati
 3. Analysis
 ------------------
 
-1. As explained in Choosing an estimator <https://gee-assessment-tools.readthedocs.io/en/latest/estimator_guidance.html>`_ because the sample was selected under stratified random sampling using a categorical change map to define strata, the stratified estimator is efficient for estimating area.   Run the script 3_0_stratified_estimation.
+1. As explained in `Choosing an estimator <https://gee-assessment-tools.readthedocs.io/en/latest/estimator_guidance.html>`_ because the sample was selected under stratified random sampling using a categorical change map to define strata, the stratified estimator is efficient for estimating area.   Run the script 3_0_stratified_estimation.
 
 2. Because we need the strata weights and because we can easily estimate the  accuracy of the map using the sample data, under *Specify the map used to stratify*, specify "stratification_cambodia_utm_small"; specify "reference" under *Specify the reference attribute name*; and "STR_sample_Cambodia_interpreted" under *Specify the reference feature collection* -- click *Load data*; and then "Apply stratified estimator". 
 

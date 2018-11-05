@@ -83,10 +83,10 @@
             
               <p class="caption"><span class="caption-text">Introduction</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="overview.html">What is AREAA? ✓</a></li>
+<li class="toctree-l1"><a class="reference internal" href="overview.html">What is AREA2? ✓</a></li>
 <li class="toctree-l1"><a class="reference internal" href="background.html">Theoretical background ✓</a></li>
 <li class="toctree-l1"><a class="reference internal" href="definitions.html">Terminology ✓</a></li>
-<li class="toctree-l1"><a class="reference internal" href="getting_started.html">Getting started ✓</a></li>
+<li class="toctree-l1"><a class="reference internal" href="getting_started.html">Getting started with AREA:superscript:`2`|check|</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Sampling</span></p>
 <ul>
@@ -269,7 +269,7 @@ confidence: 3</p>
 <div class="section" id="analysis">
 <h2>3. Analysis<a class="headerlink" href="#analysis" title="Permalink to this headline">¶</a></h2>
 <ol class="arabic simple">
-<li>As explained in Choosing an estimator &lt;<a class="reference external" href="https://gee-assessment-tools.readthedocs.io/en/latest/estimator_guidance.html">https://gee-assessment-tools.readthedocs.io/en/latest/estimator_guidance.html</a>&gt;`_ because the sample was selected under stratified random sampling using a categorical change map to define strata, the stratified estimator is efficient for estimating area.   Run the script 3_0_stratified_estimation.</li>
+<li>As explained in <a class="reference external" href="https://gee-assessment-tools.readthedocs.io/en/latest/estimator_guidance.html">Choosing an estimator</a> because the sample was selected under stratified random sampling using a categorical change map to define strata, the stratified estimator is efficient for estimating area.   Run the script 3_0_stratified_estimation.</li>
 <li>Because we need the strata weights and because we can easily estimate the  accuracy of the map using the sample data, under <em>Specify the map used to stratify</em>, specify “stratification_cambodia_utm_small”; specify “reference” under <em>Specify the reference attribute name</em>; and “STR_sample_Cambodia_interpreted” under <em>Specify the reference feature collection</em> – click <em>Load data</em>; and then “Apply stratified estimator”.</li>
 <li>Click <em>Show error matrices</em> to display a cross tabulation of map and reference labels at sample locations. The first matrix shows the number of sample units, <span class="math notranslate nohighlight">\(n_{ih}\)</span> identified as class <span class="math notranslate nohighlight">\(i\)</span> in the reference data in stratum <span class="math notranslate nohighlight">\(h\)</span>. The second matrix shows the estimated area proportion of class <span class="math notranslate nohighlight">\(i\)</span> in stratum <span class="math notranslate nohighlight">\(h\)</span> as <span class="math notranslate nohighlight">\(\hat{p}_{ih} = W_h \times n_{ik} \div n_{i+}\)</span>.</li>
 <li>The stratification we used doesn’t have a buffer stratum so we won’t click <em>Use buffer stratum</em>. (If the forest loss stratum would have been small and the forest stratum large, it would have been a good idea to create and use a buffer around mapped forest loss.)</li>

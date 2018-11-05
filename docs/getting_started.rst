@@ -5,8 +5,8 @@
    
 ------------
 
-Getting started |check|
-=======================
+Getting started with AREA:superscript:`2`|check|
+================================================
 
 1. A general in-depth guide to the Google Earth Engine API is provided here https://developers.google.com/earth-engine/ -- below is provided a short guide for accessing the Google Earth Engine Area/Accuracy Estimation Toolbox.
 2. To access the Google Earth Engine Area/Accuracy Estimation Toolbox navigate in a web browser to https://code.earthengine.google.com/?accept_repo=users/bullocke/assessment-tools

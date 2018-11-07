@@ -52,7 +52,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'gee-assessment-tools'
-copyright = u'2018, Eric Bullock'
+copyright = u'2018, Eric Bullock and Pontus Olofsson'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -274,7 +274,7 @@ texinfo_documents = [
 epub_title = u'gee-assessment-tools'
 epub_author = u'Eric Bullock'
 epub_publisher = u'Eric Bullock'
-epub_copyright = u'2018, Eric Bullock'
+epub_copyright = u'2018, Eric Bullock and Pontus Olofsson'
 
 # The basename for the epub file. It defaults to the project name.
 #epub_basename = u'gee-assessment-tools'

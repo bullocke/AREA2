@@ -56,19 +56,19 @@ where :math:`W_h` are the strata weights that are automatically extracted from t
    5. Forest gain: 30
    6. Forest gain/loss: 30   
 
-11. **Export sample.** Clicking *Add to map* will display the sample units as red dots in the Map display. The final step is to export the sample: click the Tasks tab, and then *Export sample* in the Dialog -- two entries named "sample" will appear in Tasks. These are identical but one is of exporting the sample as a CSV file and one as a GEE Asset file for use in Google Earth Engine. Click the *Run* button right next one of the  "sample" entries and save as an GEE Asset; redo for the other sample entry but save as a CSV file on Google Drive. Use the name "STR_sample_Cambodia" for GEE Asset, the KML and the CSV file.
+11. **Export sample.** Clicking *Add to map* will display the sample units as red dots in the Map display. The final step is to export the sample: click the Tasks tab, and then *Export sample* in the Dialog -- three entries named "sample" will appear in Tasks. These are identical but one is for exporting the sample as a CSV file, one to save as a GEE Asset file for use in Google Earth Engine, and one for export to a KML file to allow sample locations to be viewed in Google Earth. Click the *Run* button right next to the "sample" entries and save as GEE Asset, CSV and KML (the latter to should be saved to your Google Drive). Use the name "STR_sample_Cambodia" for GEE Asset, the KML and the CSV file.
 
 2. Response Design
 ------------------
 
 We now need to provide reference observations for each unit in the sample that we designed in the previous step. Reference data are required for observing reference conditions. A powerful reference dataset is the combination of high resolution imagery and time series. Different  applications have been developed that allow you to display such data at sample locations. In this tutorial we will use an application in the Earth Engine called Time Series Viewer. (Other applications include `TimeSync <https://gee-assessment-tools.readthedocs.io/en/latest/timesync.html>`_ and `Collect Earth Online <https://gee-assessment-tools.readthedocs.io/en/latest/coleearth.html>`_ .)
 
-1. To view satellite data at sample locations, first run the script 1_5_save_feature_timeseries -- specify the  the GEE Asset Table that contains the sample (i.e. the GEE Asset you created in  Sampling Design, Step 11, above), and click OK. 2. An entry in the Tasks tab will appear called TSData. In the Tasks tab, click Run next to TSData as save as a GEE Asset. This will extract time series data at each location in the sample. It might take a while. 
-2. When done, display the script 2_0_Time_Series_Viewer in the Code Editor.
-3. In the Assets tab, click the GEE Asset Table contains the sample (i.e. the GEE Asset you created in Step 2). A dialog box should pop up with the header "Table: STR_sample_Cambodia" -- click *Import*.
-4. This will import the sample into 2_Time_Series_Viewer; at the top of the script where is it says "Imports (1 entry)", change the second line by replacing "table:" with "sample:" such that it looks like in the Figure below.
-5. Click *Save* and then *Run* in the Code Editor to run the script 2_0_Time_Series_Viewer.
-6. In the dialog that appears next to the Map pane, check the box *Load data from feature collection*
+1. Run the script 2_0_Time_Series_Viewer in the Code Editor. A dialog appears that asks you to specify the sample data and the characteristics of the reference data. 
+2. First, under *Specify sample data as a GEE asset*, specify the GEE Asset that contains the sample which should be /user/[your name]/STR_sample_Cambodia; you created the GEE Asset in Step 2.11 
+3. Second, specify under *Specify start year of reference data* and *...end year...* the start and end as YYYY-01-01 of the time series plots.  In this case, we are assessing conditions from 2000 to 2010 so a start of 1998-01-01 and 2012-01-01 might be sufficient. Note that longer time times will take longer time to plot.
+4. Next, specify under *Select variables to plot as time series* which Landsat bands or indices to display as time series  at each sample location. We recommend SWIR1, EVI, NBR and Wetness.
+5. In the Assets tab, click the GEE Asset Table contains the sample (i.e. the GEE Asset you created in Step 2). A dialog box should pop up with the header "Table: STR_sample_Cambodia" -- click *Import*.
+6. Click *View* to start interpreting the sample units.
 7. Click either Next or add "1" as *Search ID* and hit Enter -- the first unit in the sample will appear as a red square in the Map pane and plots of time series  of surface reflectance and spectral transforms based on Landsat data will appear in the Dialog (as shown in Figure 1 below).
 8. Clicking a point in the time series will display the associated Landsat image in the Map pane -- use this data to collect reference observations on the land surface. In this example, the response legend corresponds to the map legend -- i.e. each sample unit will be labeled either forest, non-forest, water, forest loss, forest gain, and forest gain/loss (the latter being pixels that experienced forest loss but recovered during the study period 2000-2010). 
 
@@ -79,33 +79,31 @@ We now need to provide reference observations for each unit in the sample that w
 
 Figure 1. Screen shot of using Time Series Viewer to collect reference observations for sample units.
 
-9. To record the reference labels, open the CSV file you created in Sampling Design, Step 11, in Google Sheets. **Delete** columns "classification" and ".geo".; and **add** columns "reference", "reference_name", "date_event", "confidence" to the right of column ".geo". 
+9. To record the reference labels, open the CSV file you created in step 2:11 in Google Sheets. **Delete** columns "classification" and ".geo".; and **add** columns "reference", "reference_name", "date_event", "confidence" to the right of column ".geo". 
 
-10. In column "reference", record the grid code of the reference label (1: forest, 2: non-forest, 3: water, 4: forest loss, 5: forest gain, and 6: forest loss and gain); in column "reference_name", write the name of the reference label; in "date_event", note the year of the loss or gain events; in column "confidence", indicate by how confident you are that the label is correct -- specify 1 if label is uncertain, 2 if probable but not certain, and 3 if certain. For example, I am certain that sample unit #7 in Figure 1 above experienced a forest loss event in 2010. I would then add 
+10. In column "reference", record the grid code of the reference label (1: forest, 2: non-forest, 3: water, 4: forest loss, 5: forest gain, and 6: forest loss and gain); in column "reference_name", write the name of the reference label; in "date_event", note the year of the loss or gain events; in column "confidence", indicate by how confident you are that the label is correct -- specify 1 if label is uncertain, 2 if probable but not certain, and 3 if certain. For example, I am certain that sample unit #7 in Figure 1 above experienced a forest loss event in 2010. I would then add:: 
 
 	reference: 1
 	reference_name: Forest loss  
 	date_event: 2010
 	confidence: 3
 
-11. Once you have started collecting reference observations, save the CSV as "STR_sample_Cambodia_interpreted.csv". 
+11. Because this is just a tutorial, we won't go through all sample units. If this was a "real life situation", you would save the CSV after completion as "STR_sample_Cambodia_interpreted.csv" and open it in software that allow you to export the CSV as a shapefile. We recommend using QGIS which executes the GDAL program ogr2ogr -- in QGIS, just click Layer > Add Layer > Add Delimited Text Layer; once displayed  right-click the CSV file in QGIS layer pane and click Export > Save Feature As; specify ESRI Shapefile as *Format*  and click OK.
 
-12. When all units in the sample have been interpreted, save the CSV file and open it in software that allow you to export the CSV as a shapefile. We recommend using QGIS which executes the GDAL program ogr2ogr -- in QGIS, just click Layer > Add Layer > Add Delimited Text Layer; once displayed  right-click the CSV file in QGIS layer pane and click Export > Save Feature As; specify ESRI Shapefile as *Format*  and click OK.
-
-13. In Google Earth Engine, click *Assets* tab > *New*  > Table Upload; upload the .prj .shp .shx and .dbf files of shapefile. The shapefile that contains the sample data should appear in the Assets tab with the name "STR_sample_Cambodia_interpreted" -- you are now ready to analyze the sample data.  
+13. We have prepared a shape file that contains reference labels for each sample unit. Download the following individual files of the shapefile: `.prj <https://drive.google.com/open?id=1hDWMyuizYbY9vW6iS8yytTkXT9W9Nw_n>`_ `.shp <https://drive.google.com/open?id=1Aqct_g6Bdwh1pHJ3XVfiaF1JgF0mYprn>`_ `.shx <https://drive.google.com/open?id=1620tAtb0AKYvp8ZhJf5wV8YtxayVwtC0>`_ and  `.dbf <https://drive.google.com/open?id=1LqGizRKLPFBlDnjmHfOPvhGWFzcCL1jP>`_ . In Google Earth Engine, click *Assets* tab > *New*  > Table Upload; navigate to downloaded files and upload the individual .prj .shp .shx and .dbf files of shapefile. Ingesting the shapefile will take about five minutes. The shapefile that contains the sample data should appear in the Assets tab with the name "STR_sample_Cambodia_interpreted" -- you are now ready to analyze the sample data.  
 	
 3. Analysis
-------------------
+-----------
 
-1. As explained in `Choosing an estimator <https://gee-assessment-tools.readthedocs.io/en/latest/estimator_guidance.html>`_ because the sample was selected under stratified random sampling using a categorical change map to define strata, the stratified estimator is efficient for estimating area.   Run the script 3_0_stratified_estimation.
+1. As explained in `Choosing an estimator <https://gee-assessment-tools.readthedocs.io/en/latest/estimator_guidance.html>`_ because the sample was selected under stratified random sampling using a categorical change map to define strata, the stratified estimator is efficient for estimating area.   
 
-2. Because we need the strata weights and because we can easily estimate the  accuracy of the map using the sample data, under *Specify the map used to stratify*, specify "stratification_cambodia_utm_small"; specify "reference" under *Specify the reference attribute name*; and "STR_sample_Cambodia_interpreted" under *Specify the reference feature collection* -- click *Load data*; and then "Apply stratified estimator". 
+2. Run the script 3_0_stratified_estimation. Because we need the strata weights and because we can easily estimate the  accuracy of the map using the sample data, under *Specify the map used to stratify*, specify "stratification_cambodia_utm_small"; specify "reference" under *Specify the reference attribute name*; and "STR_sample_Cambodia_interpreted" under *Specify the reference feature collection* -- click *Load data*; and then "Apply stratified estimator". 
 
 3. Click *Show error matrices* to display a cross tabulation of map and reference labels at sample locations. The first matrix shows the number of sample units, :math:`n_{ih}` identified as class :math:`i` in the reference data in stratum :math:`h`. The second matrix shows the estimated area proportion of class :math:`i` in stratum :math:`h` as :math:`\hat{p}_{ih} = W_h \times n_{ik} \div n_{i+}`.
 
 4. The stratification we used doesn't have a buffer stratum so we won't click *Use buffer stratum*. (If the forest loss stratum would have been small and the forest stratum large, it would have been a good idea to create and use a buffer around mapped forest loss.) 
 
-5. In the Dialog, specify class number "4" (forest loss) under *Select map class for which to estimate area and accuracy*. This will print the area and accuracy estimates with 95% confidence intervals.
+5. In the Dialog, specify class number "4" (forest loss) under *Select map class for which to estimate area and accuracy*. This will print the area and accuracy estimates with 95% confidence intervals. Change class to view estimates for the other classes. For Forest loss  (class 4), the area ± a 95% confidence interval should be 944,987 ± 219,536 ha (user accuracy 0.62, producers 0.8 and overall accuracy 0.92).
 
 
 .. [1] Hansen, M. C., Potapov, P. V., Moore, R., Hancher, M., Turubanova, S. A. A., Tyukavina, A., ... & Kommareddy, A. (2013). High-resolution global maps of 21st-century forest cover change. *Science*, 342(6160), 850-853.

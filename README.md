@@ -1,8 +1,8 @@
-# Google Earth Engine Assessment Tools
+# Area Estimation & Accuracy Assessment (AREA2) Toolbox
 
 [Link to Earth Engine Code](https://code.earthengine.google.com/?accept_repo=users/bullocke/assessment-tools)
 
-[Documentation](https://gee-assessment-tools.readthedocs.io/en/latest/)
+[Documentation](https://area2.readthedocs.io/en/latest/)
 
 This repository provides tools and guidance for estimating map accuracy and area on the Google Earth Engine. The tools provided in this repository should be seen an non-exhaustive and relying on existing tools as much as possible (such as [TimeSync](http://timesync.forestry.oregonstate.edu/) or [Collect Earth](http://www.openforis.org/tools/collect-earth.html)). This is an ongoing project and community involvement is welcomed. 
 

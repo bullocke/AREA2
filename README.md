@@ -1,6 +1,6 @@
 # Area Estimation & Accuracy Assessment (AREA2) Toolbox
 
-[Link to Earth Engine Code](https://code.earthengine.google.com/?accept_repo=users/bullocke/assessment-tools)
+[Link to Earth Engine Code](https://code.earthengine.google.com/?accept_repo=projects/AREA2/public)
 
 [Documentation](https://area2.readthedocs.io/en/latest/)
 

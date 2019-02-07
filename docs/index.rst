@@ -50,3 +50,4 @@ Documentation
   
    example_str
    example_twostage
+   example_ratio

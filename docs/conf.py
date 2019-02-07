@@ -51,7 +51,7 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'area2'
+project = u'gee-assessment-tools'
 copyright = u'2018, Eric Bullock and Pontus Olofsson'
 
 # The version info for the project you're documenting, acts as replacement for
@@ -186,7 +186,7 @@ html_static_path = ['_static']
 #html_file_suffix = None
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'areasdoc'
+htmlhelp_basename = 'gee-assessment-toolsdoc'
 
 
 # -- Options for LaTeX output ---------------------------------------------
@@ -206,7 +206,7 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-  ('index', 'area2.tex', u'area2 Documentation',
+  ('index', 'gee-assessment-tools.tex', u'gee-assessment-tools Documentation',
    u'Eric Bullock', 'manual'),
 ]
 
@@ -236,7 +236,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    ('index', 'area2', u'area2 Documentation',
+    ('index', 'gee-assessment-tools', u'gee-assessment-tools Documentation',
      [u'Eric Bullock'], 1)
 ]
 
@@ -250,8 +250,8 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-  ('index', 'area2', u'area2 Documentation',
-   u'Eric Bullock', 'area2', 'One line description of project.',
+  ('index', 'gee-assessment-tools', u'gee-assessment-tools Documentation',
+   u'Eric Bullock', 'gee-assessment-tools', 'One line description of project.',
    'Miscellaneous'),
 ]
 
@@ -271,7 +271,7 @@ texinfo_documents = [
 # -- Options for Epub output ----------------------------------------------
 
 # Bibliographic Dublin Core info.
-epub_title = u'area2'
+epub_title = u'gee-assessment-tools'
 epub_author = u'Eric Bullock'
 epub_publisher = u'Eric Bullock'
 epub_copyright = u'2018, Eric Bullock and Pontus Olofsson'

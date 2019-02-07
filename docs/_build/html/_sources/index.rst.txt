@@ -42,7 +42,6 @@ Documentation
    estimator_str
    estimator_post_str
    estimator_mod
-   estimator_diff
    estimator_ratio
    estimator_twostage
   

@@ -7,8 +7,8 @@
   
 ------------
 
-Model-assisted Ratio Estimator |cir|
-====================================
+Ratio Estimator for when strata ≠ map classes |cir|
+===================================================
 
 Coming soon
 

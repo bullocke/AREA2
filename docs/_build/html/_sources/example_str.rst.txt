@@ -21,9 +21,9 @@ An example is provided here to illustrate the estimation of the area of forest l
 
 2. You can download the stratification of Cambodia `here <https://drive.google.com/open?id=1XYzslxY0F7X0Dum58-4_KTEBGqm2EEe3>`_. Once downloaded to your local computer, click the *Assets* tab next to the *Scripts* tab and *NEW* > *Image upload* > *SELECT*; click *Advanced* > *Masking mode* > and set *No-data value* to "0". Click *OK* to upload the stratification as an image file. You can check the progress in the *Tasks* tab (the upload will take several minutes).
 
-3. Once the stratification has been added to *Assets*, highlight the script "1_sampling_design" in the *Scripts* tab and click *Run*. (Check `Overview <https://gee-assessment-tools.readthedocs.io/en/latest/overview.html>`_ to familiarize yourself with GEE interface if you have done so already.)
+3. Once the stratification has been added to *Assets*, highlight the script "1_Sampling_Design" in the *Scripts* tab and click *Run*. (Check `Overview <https://gee-assessment-tools.readthedocs.io/en/latest/overview.html>`_ to familiarize yourself with GEE interface if you have done so already.)
 
-4. In Sampling Design dialog, add the path to the stratification under *Specify an image to define study area*. The path is likely something like "users/[your name]/stratification_cambodia_utm_small". Set the band to "1" and mask value to "0" and click *Load image*. 
+4. In Sampling Design dialog, click *Stratified or Simple Random Sampling* > add the path to the stratification under *Specify an image to define study area*. The path is likely something like "users/[your name]/stratification_cambodia_utm_small". Set the band to "1" and mask value to "0" and click *Load image*. 
 
 5. **Sampling scheme.** Because the objective of the exercise is to estimate the area forest loss which is a small part of the study area, the sample will be selected by stratified random sampling -- under *Select a sampling scheme* select *Stratified random*. 
 
@@ -103,7 +103,7 @@ Figure 1. Screen shot of using Time Series Viewer to collect reference observati
 
 4. The stratification we used doesn't have a buffer stratum so we won't click *Use buffer stratum*. (If the forest loss stratum would have been small and the forest stratum large, it would have been a good idea to create and use a buffer around mapped forest loss.) 
 
-5. In the Dialog, specify class number "4" (forest loss) under *Select map class for which to estimate area and accuracy*. This will print the area and accuracy estimates with 95% confidence intervals. Change class to view estimates for the other classes. For Forest loss  (class 4), the area ± a 95% confidence interval should be 944,987 ± 219,536 ha (user accuracy 0.62, producers 0.8 and overall accuracy 0.92).
+5. In the Dialog, specify class number "4" (forest loss) under *Select map class for which to estimate area and accuracy*. This will print the area and accuracy estimates with 95% confidence intervals. Change class to view estimates for the other classes. For Forest loss  (class 4), the area ± a 95% confidence interval should be 0.0517 ± 0.0120 expressed as proportion of the total study area or 944,987 ± 219,536 ha. User's accuracy is 0.62, producer's 0.80 and overall accuracy 0.92.
 
 
 .. [1] Hansen, M. C., Potapov, P. V., Moore, R., Hancher, M., Turubanova, S. A. A., Tyukavina, A., ... & Kommareddy, A. (2013). High-resolution global maps of 21st-century forest cover change. *Science*, 342(6160), 850-853.

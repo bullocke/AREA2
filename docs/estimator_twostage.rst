@@ -7,8 +7,8 @@
   
 ------------
 
-Two-stage Estimator |cir|
-=========================
+Ratio Estimator for two-stage designs |cir|
+===========================================
 
 Coming soon
 

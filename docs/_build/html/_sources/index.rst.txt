@@ -49,3 +49,4 @@ Documentation
    :caption: Tutorials
   
    example_str
+   example_twostage

@@ -32,7 +32,6 @@ Documentation
 
    tsviewer
    colearth
-   timesync
 
 .. toctree::
    :maxdepth: 2

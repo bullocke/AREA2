@@ -51,7 +51,7 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'gee-assessment-tools'
+project = u'area2'
 copyright = u'2018, Eric Bullock and Pontus Olofsson'
 
 # The version info for the project you're documenting, acts as replacement for

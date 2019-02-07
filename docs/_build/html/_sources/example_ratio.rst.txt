@@ -7,8 +7,8 @@
   
 ------------
 
-Ratio estimator for estimation of area and accuracy when strata ≠ map classes |circle|
-======================================================================================
+Ratio estimator for area and accuracy when strata ≠ map classes |circle|
+========================================================================
 
 The following tutorial replicates the workflow in [1]_
 

@@ -7,8 +7,8 @@
   
 ------------
 
-Two-stage sampling and estimation of the area of forest loss |cir|
-==================================================================
+Two-stage sampling and estimation of area |cir|
+===============================================
 
 Coming soon
 

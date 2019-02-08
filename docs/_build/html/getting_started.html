@@ -95,13 +95,12 @@
 <li class="toctree-l1"><a class="reference internal" href="sampling_str.html">Stratified Random Sampling ✓</a></li>
 <li class="toctree-l1"><a class="reference internal" href="sampling_sys.html">Simple Systematic Sampling ○</a></li>
 <li class="toctree-l1"><a class="reference internal" href="sampling_str_sys.html">Stratified Systematic Sampling ○</a></li>
-<li class="toctree-l1"><a class="reference internal" href="sampling_twostage.html">Two-stage Sampling ○</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sampling_twostage.html">Two-stage Sampling ✓</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Interpretation</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="tsviewer.html">Time Series Viewer ○</a></li>
-<li class="toctree-l1"><a class="reference internal" href="colearth.html">Collect Earth ○</a></li>
-<li class="toctree-l1"><a class="reference internal" href="timesync.html">TimeSync ○</a></li>
+<li class="toctree-l1"><a class="reference internal" href="colearth.html">Use Collect Earth Online with AREA2 ○</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Analysis</span></p>
 <ul>
@@ -114,7 +113,9 @@
 </ul>
 <p class="caption"><span class="caption-text">Tutorials</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="example_str.html">Stratified estimation of area of forest loss ✓</a></li>
+<li class="toctree-l1"><a class="reference internal" href="example_str.html">Stratified estimation of area and accuracy ✓</a></li>
+<li class="toctree-l1"><a class="reference internal" href="example_twostage.html">Two-stage sampling and estimation of area ○</a></li>
+<li class="toctree-l1"><a class="reference internal" href="example_ratio.html">Ratio estimation of area and accuracy when strata ≠ map classes ○</a></li>
 </ul>
 
             
@@ -185,7 +186,7 @@
 <h1>Getting started ✓<a class="headerlink" href="#getting-started-check" title="Permalink to this headline">¶</a></h1>
 <ol class="arabic simple">
 <li>A general in-depth guide to the Google Earth Engine API is provided here <a class="reference external" href="https://developers.google.com/earth-engine/">https://developers.google.com/earth-engine/</a> – below is provided a short guide for accessing AREA <sup>2</sup> on Google Earth Engine.</li>
-<li>Navigate in a web browser to <a class="reference external" href="https://code.earthengine.google.com/?accept_repo=users/bullocke/assessment-tools">https://code.earthengine.google.com/?accept_repo=users/bullocke/assessment-tools</a></li>
+<li>Navigate in a web browser to <a class="reference external" href="https://code.earthengine.google.com/?accept_repo=projects/area2/public">https://code.earthengine.google.com/?accept_repo=projects/area2/public</a></li>
 <li>Login with a Google account if you are not already logged in. You should see a screen similar to the figure below but with a blank script editor and console.</li>
 <li>To run a script, highlight it in Script Manager (A), which displays the code in the Code Editor (B), and click the Run button (located in the Code Editor).</li>
 <li>When running the scripts in  AREA <sup>2</sup>, a Dialog Pane will appear (E). The Dialog Pane is where you specify the information required for each step of the sampling design, response design, and analysis.  Note that after communicating via the Dialog Pane (loading a map for example), <strong>Earth Engine does not indicate if the application running. Therefore, push the buttons only once and wait for the application to respond before continuing</strong>.</li>

@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Two-stage Sampling ○ &mdash; gee-assessment-tools 0.1 documentation</title>
+  <title>Two-stage Sampling ✓ &mdash; gee-assessment-tools 0.1 documentation</title>
   
 
   
@@ -95,13 +95,12 @@
 <li class="toctree-l1"><a class="reference internal" href="sampling_str.html">Stratified Random Sampling ✓</a></li>
 <li class="toctree-l1"><a class="reference internal" href="sampling_sys.html">Simple Systematic Sampling ○</a></li>
 <li class="toctree-l1"><a class="reference internal" href="sampling_str_sys.html">Stratified Systematic Sampling ○</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Two-stage Sampling ○</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Two-stage Sampling ✓</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Interpretation</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="tsviewer.html">Time Series Viewer ○</a></li>
-<li class="toctree-l1"><a class="reference internal" href="colearth.html">Collect Earth ○</a></li>
-<li class="toctree-l1"><a class="reference internal" href="timesync.html">TimeSync ○</a></li>
+<li class="toctree-l1"><a class="reference internal" href="colearth.html">Use Collect Earth Online with AREA2 ○</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Analysis</span></p>
 <ul>
@@ -114,7 +113,9 @@
 </ul>
 <p class="caption"><span class="caption-text">Tutorials</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="example_str.html">Stratified estimation of area of forest loss ✓</a></li>
+<li class="toctree-l1"><a class="reference internal" href="example_str.html">Stratified estimation of area and accuracy ✓</a></li>
+<li class="toctree-l1"><a class="reference internal" href="example_twostage.html">Two-stage sampling and estimation of area ○</a></li>
+<li class="toctree-l1"><a class="reference internal" href="example_ratio.html">Ratio estimation of area and accuracy when strata ≠ map classes ○</a></li>
 </ul>
 
             
@@ -160,7 +161,7 @@
     
       <li><a href="index.html">Docs</a> &raquo;</li>
         
-      <li>Two-stage Sampling ○</li>
+      <li>Two-stage Sampling ✓</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -181,9 +182,23 @@
             
   <a class="reference internal image-reference" href="_images/_nolinesoftext.png"><img alt="_images/_nolinesoftext.png" src="_images/_nolinesoftext.png" style="width: 175pt;" /></a>
 <hr class="docutils" />
-<div class="section" id="two-stage-sampling-cir">
-<h1>Two-stage Sampling ○<a class="headerlink" href="#two-stage-sampling-cir" title="Permalink to this headline">¶</a></h1>
-<p>Coming soon</p>
+<div class="section" id="two-stage-sampling-check">
+<h1>Two-stage Sampling ✓<a class="headerlink" href="#two-stage-sampling-check" title="Permalink to this headline">¶</a></h1>
+<p>Selecting a sample by two-stage sampling requires you to specify a stratification of the study area, a shapefile that defines the population of Primary Sampling Units (PSUs), and a sample size of both Primary and Secondary  Sampling Units (PSUs and SSUs). The sampling is limited to simple random selection of SSUs in PSUs, and to selection of PSUs in strata based on the proportion of a single class of interest.</p>
+<ol class="arabic simple">
+<li>Start by running the Sampling Design script in the Scripts pane &gt; click <em>Two-stage sampling</em>.</li>
+<li>In the first entry box <em>Specify stratification of the study area</em>, specify a map that defines the study area.</li>
+<li>Under <em>Specify the band values in the stratification that correspond to the class of interest</em>, list the band values in stratification that correspond to the class of interest. For example, if the forest is the class of interest, specify all band values separated by comma that correspond to the forest strata.</li>
+<li>If the map has a no-data value or if you want to exclude a certain value in the map when defining the study area, specify the value in <em>Specify no data value</em>.</li>
+<li>Under <em>Specify vector asset that defines PSU population</em>, specify a GEE vector asset that outlines the population of PSUs. If shapefile exist, import into GEE from the Assets tab &gt; New &gt; Table upload.</li>
+<li>Click <em>Load image</em> – the map should be displayed in the image pane with all PSUs draped on top.</li>
+<li>Optional: click <em>Display Class of Interest in PSUs</em> to calculate and display the proportion of the class of interest in each PSU as a proportion between zero and one.</li>
+<li>In order to create the strata, you need specify a threshold or thresholds to divide the population of PSUs based on the proportion of the class of interest. For example, a threshold of 0.3 would create one stratum corresponding to the PSUs that contain the top 30% of the class of interest, and one stratum corresponding to the remaining PSUs. Specifying three thresholds of “0.25, 0.50, 0.75” would create four strata, one stratum that contains the top 25% PSUs, one that contains 25-50% of the top PSUs, one that contains 50-75% of the top PSUs and one with the remaining PSU. To understand what “Top x% PSUs” measn in this case. Think of a list of all the PSUs ranked by how much they contain the class of interest from 0 to 1. Specify the threshold under <em>Select proportion for dividing strata (0-1)</em> and click <em>Divide into strata</em>.</li>
+<li>Specify the number of 30 PSUs to be included in the sample under <em>Specify desired number of Primary Sampling Units</em>, and click <em>Select PSUs</em>.</li>
+<li>Specify the number of SSUs to selected in each of PSUs under <em>Specify desired number of SSUs in each PSU</em>. The total sample size will the number of selected PSUs times the number of selected SSUs.</li>
+<li>Optional: export the PSUs by clicking <em>Export PSUs</em> – note that this is not necessarily for collecting sample data.</li>
+<li>Export the total sample for interpretation, click <em>Export sample</em> and select the desired file format.</li>
+</ol>
 </div>
 
 

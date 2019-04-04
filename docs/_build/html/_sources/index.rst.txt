@@ -31,7 +31,6 @@ Documentation
    :caption: Interpretation
 
    tsviewer
-   colearth
 
 .. toctree::
    :maxdepth: 2
@@ -51,3 +50,4 @@ Documentation
    example_str
    example_twostage
    example_ratio
+   example_colearth

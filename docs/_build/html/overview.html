@@ -95,13 +95,12 @@
 <li class="toctree-l1"><a class="reference internal" href="sampling_str.html">Stratified Random Sampling ✓</a></li>
 <li class="toctree-l1"><a class="reference internal" href="sampling_sys.html">Simple Systematic Sampling ○</a></li>
 <li class="toctree-l1"><a class="reference internal" href="sampling_str_sys.html">Stratified Systematic Sampling ○</a></li>
-<li class="toctree-l1"><a class="reference internal" href="sampling_twostage.html">Two-stage Sampling ○</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sampling_twostage.html">Two-stage Sampling ✓</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Interpretation</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="tsviewer.html">Time Series Viewer ○</a></li>
-<li class="toctree-l1"><a class="reference internal" href="colearth.html">Collect Earth ○</a></li>
-<li class="toctree-l1"><a class="reference internal" href="timesync.html">TimeSync ○</a></li>
+<li class="toctree-l1"><a class="reference internal" href="colearth.html">Use Collect Earth Online with AREA2 ○</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Analysis</span></p>
 <ul>
@@ -114,7 +113,9 @@
 </ul>
 <p class="caption"><span class="caption-text">Tutorials</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="example_str.html">Stratified estimation of area of forest loss ✓</a></li>
+<li class="toctree-l1"><a class="reference internal" href="example_str.html">Stratified estimation of area and accuracy ✓</a></li>
+<li class="toctree-l1"><a class="reference internal" href="example_twostage.html">Two-stage sampling and estimation of area ○</a></li>
+<li class="toctree-l1"><a class="reference internal" href="example_ratio.html">Ratio estimation of area and accuracy when strata ≠ map classes ○</a></li>
 </ul>
 
             
@@ -183,7 +184,7 @@
 <hr class="docutils" />
 <div class="section" id="what-is-area2-check">
 <h1>What is AREA2? ✓<a class="headerlink" href="#what-is-area2-check" title="Permalink to this headline">¶</a></h1>
-<p>AREA <sup>2</sup> (“area squared”), short for <em>Area Estimation &amp; Accuracy Assessment</em>, is a Google Earth Engine application that provides comprehensive support for sampling and estimation in a design-based inference framework. Several sampling designs and estimators are supported. The aim of AREA <sup>2</sup> is to provide users the tools necessary to comply with recommended practices and international guidance for estimation areas of land categories and land change, and to assess the accuracy of maps.</p>
+<p>AREA <sup>2</sup> (“area squared” or “area two”), short for <em>Area Estimation &amp; Accuracy Assessment</em>, is a Google Earth Engine application that provides comprehensive support for sampling and estimation in a design-based inference framework. Several sampling designs and estimators are supported. The aim of AREA <sup>2</sup> is to provide users the tools necessary to comply with recommended practices and international guidance for estimation areas of land categories and land change, and to assess the accuracy of maps.</p>
 <p>As explained in the <a class="reference external" href="https://gee-assessment-tools.readthedocs.io/en/latest/background.html">Theoretical Background</a>, areas of map categories should not be obtained by counting pixels in maps because of classification errors. Instead, a sample of reference observations need to be collected to which an unbiased estimator is applied. AREA <sup>2</sup> allows users to design a sample according to various design criteria and objectives.</p>
 <p>A big benefit of Google Earth Engine is that the data needed to observe the reference conditions on the land surface are available without having to download the data. <a class="reference external" href="https://gee-assessment-tools.readthedocs.io/en/latest/tsviewer.html">Time Series Viewer</a> is a part of AREA <sup>2</sup> it extracts time series of all available Landsat and Sentinel-2 observations for reconstruction of changes on the land surface. <a class="reference external" href="https://gee-assessment-tools.readthedocs.io/en/latest/colearth.html">Collect Earth Online</a>  and  <a class="reference external" href="https://gee-assessment-tools.readthedocs.io/en/latest/timesync.html">TimeSync</a> are other applications that provide direct access to reference data using Google Earth Engine.</p>
 <p>Once the sample data have been collected, an estimator that corresponds to the sampling design provide an estimate or area or accuracy with confidence intervals when applied to the sample data. Different estimator are more or less efficient Support for various estimators are provided in addition to guidance for choosing an appropriate estimator.</p>

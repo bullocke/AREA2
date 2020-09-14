@@ -1,5 +1,9 @@
 # Area Estimation & Accuracy Assessment (AREA2) Toolbox
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.3451452.svg)](https://doi.org/10.5281/zenodo.3451452)
+
+## About
+
 [Link to Earth Engine Code](https://code.earthengine.google.com/?accept_repo=projects/AREA2/public)
 
 [Documentation](https://area2.readthedocs.io/en/latest/)
